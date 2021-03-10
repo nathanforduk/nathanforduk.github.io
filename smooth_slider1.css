@@ -57,7 +57,7 @@
 #static_text_area {
 	opacity:0.8;
 	filter:alpha(opacity=60); /* For IE8 and earlier */
-	width:440px;
+	width:500px;
 	background-color:white;
 	position:absolute;
 	left:0px;

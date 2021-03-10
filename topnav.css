@@ -1,3 +1,9 @@
+@font-face
+{
+font-family: 'Special Elite';
+src: url(special_elite.ttf);
+}
+
 body
 {
 margin: 0;
