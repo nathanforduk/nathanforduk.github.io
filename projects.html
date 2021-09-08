@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+	<head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src = "https://www.googletagmanager.com/gtag/js?id=G-7WP82B4W69"></script>
+        <script src = js/main.js></script>
+
+        <meta charset = utf-8>
+        <meta name = viewport content = "width = device-width, initial-scale = 1">
+        <link rel = stylesheet href = css/main.css>
+
+        <title>Project GreyHope</title>
+	</head>
+
+    <body>
+        <section class = top>
+            <a href = index.html><img src = images/crossed.png></a>
+            <a href = works.html><img src = images/works.png></a>
+            <a href = projects.html class = this><img src = images/projects.png></a>
+            <a href = about.html><img src = images/about.png></a>
+            <a href = lockdown.html><img src = images/lockdown.png></a>
+            <a class = icon onclick = bar(this)><img src = images/bars.png></a>
+        </section>
+
+        <section class = main>
+            <h1>Project GreyHope</h1>
+
+            <div class = display></div>
+
+			<footer>
+				<a class = email href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
+				&copy; Copyright Nathan Ford, <span id = year></span>. Website by <a href = https://greyhope.uk target = _blank>Reuben Ford</a>.
+			</footer>
+		</section>
+
+        <script>
+            const SLIDESHOW_CONTAINERS = [
+                {
+                    title: "Wash Day",
+                    width: 107,
+                    height: 69,
+                    year: 2018,
+                    paint: "mixed media",
+                    surface: "board",
+                    sold: true,
+                    slides: 8,
+                    current: 1,
+                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714216421674713089"
+                }, {
+                    title: "Smoking Fags at the Exit",
+                    width: 121,
+                    height: 80,
+                    year: 2018,
+                    paint: "mixed media",
+                    surface: "board",
+                    sold: true,
+                    slides: 9,
+                    current: 1,
+                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714217521186340865"
+                }, {
+                    title: "Five Plus",
+                    width: 121,
+                    height: 80,
+                    year: 2018,
+                    paint: "mixed media",
+                    surface: "board",
+                    sold: true,
+                    slides: 9,
+                    current: 7,
+                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714218620697968641"
+                }, {
+                    title: "Flash Mob",
+                    width: 210,
+                    height: 120,
+                    year: 2015,
+                    paint: "mixed media",
+                    surface: "board",
+                    sold: true,
+                    slides: 9,
+                    current: 9,
+                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714219720209596417"
+                }, {
+                    title: "Carnival",
+                    width: 112,
+                    height: 54,
+                    year: 2014,
+                    paint: "mixed media",
+                    surface: "canvas",
+                    sold: true,
+                    slides: 1,
+                    current: 1,
+                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714220819721224193"
+                }, {
+                    title: "Point One",
+                    width: 91,
+                    height: 38,
+                    year: 2014,
+                    paint: "mixed media",
+                    surface: "canvas",
+                    sold: true,
+                    slides: 1,
+                    current: 1,
+                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714221919232851969"
+                }, {
+                    title: "Bugs",
+                    width: 100,
+                    height: 70,
+                    year: 2013,
+                    paint: "mixed media",
+                    surface: "board",
+                    sold: true,
+                    slides: 1,
+                    current: 1,
+                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714223018744479745"
+                }
+            ]
+
+            const display = document.querySelector(".display")
+
+			SLIDESHOW_CONTAINERS.forEach((item, index) => {
+                const main = document.createElement("div")
+				const container = document.createElement("div")
+
+                for (let i = 1; i <= item.slides; i ++) {
+                    const slide = document.createElement("div")
+                    const number = document.createElement("div")
+                    const image = document.createElement("img")
+
+                    number.innerText = i + " / " + item.slides
+                    image.src = "images/" + item.title.toLowerCase().replace(/\s/g, "_") + "_" + i + ".jpg"
+                    if (i != item.current) slide.style.display = "none"
+
+                    slide.appendChild(number)
+                    slide.appendChild(image)
+                    container.appendChild(slide)
+                }
+
+                if (item.slides > 1) {
+                    const next = document.createElement("img")
+                    const previous = document.createElement("img")
+
+                    previous.className = "previous"
+                    previous.setAttribute("onclick", "shuffle(" + index + ", -1)")
+                    previous.src = "images/left.png"
+
+                    next.className = "next"
+                    next.setAttribute("onclick", "shuffle(" + index + ", 1)")
+                    next.src = "images/right.png"
+
+                    container.appendChild(previous)
+                    container.appendChild(next)
+                }
+                
+				main.appendChild(container)
+
+                main.innerHTML += (
+                    "<h2>" + item.title + "</h2>" + item.paint + " on " +
+                    item.surface + " ~ " + item.width + "cm \u00d7 " +
+                    item.height + "cm ~ " + item.year + (item.sold ? " ~ sold" : "") +
+                    " ~ <a class = nft href = " + item.nft + " target = _blank>nft available</a>"
+                )
+
+                display.appendChild(main)
+			})
+
+            const shuffle = (index, direction) => {
+                const display = document.querySelector(".display")                
+                const children = display.children[index].firstChild.children
+                const data = SLIDESHOW_CONTAINERS[index]
+
+                children[data.current - 1].style.display = "none"
+
+                data.current += direction
+                if (data.current > data.slides) data.current = 1
+                else if (data.current < 1) data.current = data.slides
+
+                children[data.current - 1].style.display = "block"
+            }
+        </script>
+    </body>
+</html>

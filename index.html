@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src = "https://www.googletagmanager.com/gtag/js?id=G-7WP82B4W69"></script>
+		<script src = js/main.js></script>
+
+		<meta charset = utf-8>
+        <meta name = viewport content = "width = device-width, initial-scale = 1">
+		<meta name = keywords content = "nathan ford, nathan ford artist, nathan ford works, nathan ford british artist, nathan ford uk, nathan ford art, nathan ford drawings, nathan ford paintings, project greyhope, greyhope paintings">
+
+		<link rel = stylesheet href = css/main.css>
+
+		<title>Nathan Ford</title>
+	</head>
+
+	<body>
+		<a href = works.html>
+			<div class = tag>nathanford.co.uk</div>
+			<canvas id = canvas></canvas>
+		</a>
+		
+		<script>
+			const AMOUNT_OF_TIME_EACH_IMAGE_STAYS_ON_THE_SCREEN_IN_SECONDS = 1
+			const AMOUNT_OF_TIME_IT_TAKES_FOR_ONE_IMAGE_TO_FADE_INTO_ANOTHER_IN_SECONDS = 8
+			const TOTAL_NUMBER_OF_SLIDESHOW_IMAGES = 4
+
+			const resize = () => {
+				canvas.width = innerWidth
+				canvas.height = innerHeight
+			}
+
+			const start = () => {
+				document.body.style.overflow = "hidden"
+
+				for (let i = 1; i <= TOTAL_NUMBER_OF_SLIDESHOW_IMAGES; i ++) {
+					const image = new Image()
+					image.src = "images/slider_" + i + ".jpg"
+					images.push(image)
+				}
+
+				addEventListener("resize", resize)
+				resize()
+				loop()
+			}
+
+			const loop = () => {
+				context.clearRect(0, 0, canvas.width, canvas.height)
+
+				const draw = (index, fade) => {
+					const width = canvas.width / images[index].width
+					const height = canvas.height / images[index].height
+					const scale = width > height ? width : height
+
+					context.globalAlpha = fade
+
+					context.drawImage(
+						images[index],
+						canvas.width / 2 - images[index].width * scale / 2,
+						canvas.height / 2 - images[index].height * scale / 2,
+						images[index].width * scale,
+						images[index].height * scale
+					)
+				}
+
+				slider.timer ++
+
+				if (slider.timer == (a + b) * 60) {
+					slider.start = false
+					slider.index ++
+					slider.timer = 0
+
+					if (slider.index == c)
+						slider.index = 0
+				}
+
+				if (slider.timer < b / 2 * 60) {
+					const previous = slider.index - 1
+					const fade = (slider.timer + b / 2 * 60) / (b * 60)
+
+					if (!slider.start) draw(previous == -1 ? c - 1 : previous, 1 - fade)
+					draw(slider.index, fade)
+				}
+
+				else if (slider.timer < (a + b / 2) * 60) {
+					draw(slider.index, (slider.timer + b / 2 * 60) / (b * 60))
+				}
+
+				else {
+					const next = slider.index + 1
+					const fade = ((a + b) * 60 - (slider.timer - b / 2 * 60)) / (b * 60)
+
+					draw(slider.index, fade)
+					draw(next == c ? 0 : next, 1 - fade)
+				}
+
+				requestAnimationFrame(loop)
+			}
+
+			const a = AMOUNT_OF_TIME_EACH_IMAGE_STAYS_ON_THE_SCREEN_IN_SECONDS
+			const b = AMOUNT_OF_TIME_IT_TAKES_FOR_ONE_IMAGE_TO_FADE_INTO_ANOTHER_IN_SECONDS
+			const c = TOTAL_NUMBER_OF_SLIDESHOW_IMAGES
+			const context = canvas.getContext("2d")
+			const images = []
+			const slider = {start: true, index: 0, timer: b / 2 *- 60}
+
+			start()
+		</script>
+	</body>
+</html>
