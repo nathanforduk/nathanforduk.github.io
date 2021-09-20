@@ -1,7 +1,6 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
 <urlset xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image = "http://www.google.com/schemas/sitemap-image/1.1">
-    <url><loc>https://nathanford.co.uk/works.html</loc></url>
     <url><loc>https://nathanford.co.uk/projects.html</loc></url>
     <url><loc>https://nathanford.co.uk/about.html</loc></url>
     <url><loc>https://nathanford.co.uk/lockdown.html</loc></url>
@@ -30,6 +29,866 @@
         <image:image>
             <image:loc>https://nathanford.co.uk/images/sider_4.png</image:loc>
             <image:title>Reuben 7.20</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://nathanford.co.uk/works.html</loc>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_7.20_small.jpg</image:loc>
+            <image:title>Joachim 7.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_7.20_small.jpg</image:loc>
+            <image:title>Joachim 7.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_dump_small.jpg</image:loc>
+            <image:title>The Dump</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_dump_small.jpg</image:loc>
+            <image:title>The Dump</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/salvage_2.20_small.jpg</image:loc>
+            <image:title>Salvage 2.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/salvage_2.20_small.jpg</image:loc>
+            <image:title>Salvage 2.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/staying_small.jpg</image:loc>
+            <image:title>Staying</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/staying_small.jpg</image:loc>
+            <image:title>Staying</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_race_small.jpg</image:loc>
+            <image:title>The Race</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_race_small.jpg</image:loc>
+            <image:title>The Race</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/salvage_12.19_small.jpg</image:loc>
+            <image:title>Salvage 12.19</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/salvage_12.19_small.jpg</image:loc>
+            <image:title>Salvage 12.19</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_12.19_small.jpg</image:loc>
+            <image:title>Joachim 12.19</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_12.19_small.jpg</image:loc>
+            <image:title>Joachim 12.19</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/se27_small.jpg</image:loc>
+            <image:title>SE27</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/se27_small.jpg</image:loc>
+            <image:title>SE27</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_7.18_small.jpg</image:loc>
+            <image:title>Reuben 7.18</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_7.18_small.jpg</image:loc>
+            <image:title>Reuben 7.18</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/apart_small.jpg</image:loc>
+            <image:title>Apart</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/apart_small.jpg</image:loc>
+            <image:title>Apart</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dad_11.14_small.jpg</image:loc>
+            <image:title>Dad 11.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dad_11.14_small.jpg</image:loc>
+            <image:title>Dad 11.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/half_term_small.jpg</image:loc>
+            <image:title>Half Term</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/half_term_small.jpg</image:loc>
+            <image:title>Half Term</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/vicenza_small.jpg</image:loc>
+            <image:title>Vicenza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/vicenza_small.jpg</image:loc>
+            <image:title>Vicenza</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/anna_11.14_small.jpg</image:loc>
+            <image:title>Anna 11.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/anna_11.14_small.jpg</image:loc>
+            <image:title>Anna 11.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/greyhope_small.jpg</image:loc>
+            <image:title>Greyhope</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/greyhope_small.jpg</image:loc>
+            <image:title>Greyhope</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/self_10.14_small.jpg</image:loc>
+            <image:title>Self 10.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/self_10.14_small.jpg</image:loc>
+            <image:title>Self 10.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_bees_small.jpg</image:loc>
+            <image:title>The Bees</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_bees_small.jpg</image:loc>
+            <image:title>The Bees</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_7.16_small.jpg</image:loc>
+            <image:title>Joachim 7.16</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_7.16_small.jpg</image:loc>
+            <image:title>Joachim 7.16</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_crossing_small.jpg</image:loc>
+            <image:title>The Crossing</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_crossing_small.jpg</image:loc>
+            <image:title>The Crossing</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_2.15_small.jpg</image:loc>
+            <image:title>Joachim 2.15</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_2.15_small.jpg</image:loc>
+            <image:title>Joachim 2.15</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/going_small.jpg</image:loc>
+            <image:title>Going</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/going_small.jpg</image:loc>
+            <image:title>Going</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/greg_small.jpg</image:loc>
+            <image:title>Greg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/greg_small.jpg</image:loc>
+            <image:title>Greg</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/alone_small.jpg</image:loc>
+            <image:title>Alone</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/alone_small.jpg</image:loc>
+            <image:title>Alone</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/cormack_2_small.jpg</image:loc>
+            <image:title>Cormack 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/cormack_2_small.jpg</image:loc>
+            <image:title>Cormack 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/boundary_2_small.jpg</image:loc>
+            <image:title>Boundary 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/boundary_2_small.jpg</image:loc>
+            <image:title>Boundary 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_1.12_small.jpg</image:loc>
+            <image:title>Joachim 1.12</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_1.12_small.jpg</image:loc>
+            <image:title>Joachim 1.12</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/at_the_exit_small.jpg</image:loc>
+            <image:title>At The Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/at_the_exit_small.jpg</image:loc>
+            <image:title>At The Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/monument_small.jpg</image:loc>
+            <image:title>Monument</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/monument_small.jpg</image:loc>
+            <image:title>Monument</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/epic_small.jpg</image:loc>
+            <image:title>Epic</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/epic_small.jpg</image:loc>
+            <image:title>Epic</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/self_11.20_small.jpg</image:loc>
+            <image:title>Self 11.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/self_11.20_small.jpg</image:loc>
+            <image:title>Self 11.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/transit_small.jpg</image:loc>
+            <image:title>Transit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/transit_small.jpg</image:loc>
+            <image:title>Transit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dad's_last_day_small.jpg</image:loc>
+            <image:title>Dad's Last Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dad's_last_day_small.jpg</image:loc>
+            <image:title>Dad's Last Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_10.18_small.jpg</image:loc>
+            <image:title>Reuben 10.18</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_10.18_small.jpg</image:loc>
+            <image:title>Reuben 10.18</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/fallen_small.jpg</image:loc>
+            <image:title>Fallen</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/fallen_small.jpg</image:loc>
+            <image:title>Fallen</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dictionary_words_small.jpg</image:loc>
+            <image:title>Dictionary Words</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dictionary_words_small.jpg</image:loc>
+            <image:title>Dictionary Words</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/another_quiet_day_small.jpg</image:loc>
+            <image:title>Another Quiet Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/another_quiet_day_small.jpg</image:loc>
+            <image:title>Another Quiet Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/red_man_small.jpg</image:loc>
+            <image:title>Red Man</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/red_man_small.jpg</image:loc>
+            <image:title>Red Man</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/fish_memory_small.jpg</image:loc>
+            <image:title>Fish Memory</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/fish_memory_small.jpg</image:loc>
+            <image:title>Fish Memory</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/sunday_morning_small.jpg</image:loc>
+            <image:title>Sunday Morning</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/sunday_morning_small.jpg</image:loc>
+            <image:title>Sunday Morning</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/casualty_small.jpg</image:loc>
+            <image:title>Casualty</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/casualty_small.jpg</image:loc>
+            <image:title>Casualty</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/coast_road_small.jpg</image:loc>
+            <image:title>Coast Road</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/coast_road_small.jpg</image:loc>
+            <image:title>Coast Road</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/stan_3_small.jpg</image:loc>
+            <image:title>Stan 3</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/stan_3_small.jpg</image:loc>
+            <image:title>Stan 3</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/painted_small.jpg</image:loc>
+            <image:title>Painted</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/painted_small.jpg</image:loc>
+            <image:title>Painted</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/patch_small.jpg</image:loc>
+            <image:title>Patch</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/patch_small.jpg</image:loc>
+            <image:title>Patch</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_9.15_small.jpg</image:loc>
+            <image:title>Reuben 9.15</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_9.15_small.jpg</image:loc>
+            <image:title>Reuben 9.15</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/monsters_of_remorse_small.jpg</image:loc>
+            <image:title>Monsters of Remorse</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/monsters_of_remorse_small.jpg</image:loc>
+            <image:title>Monsters of Remorse</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/cormack_3_small.jpg</image:loc>
+            <image:title>Cormack 3</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/cormack_3_small.jpg</image:loc>
+            <image:title>Cormack 3</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/bedroom_window_small.jpg</image:loc>
+            <image:title>Bedroom Window</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/bedroom_window_small.jpg</image:loc>
+            <image:title>Bedroom Window</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_10.14_small.jpg</image:loc>
+            <image:title>Reuben 10.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_10.14_small.jpg</image:loc>
+            <image:title>Reuben 10.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/salvage_1_small.jpg</image:loc>
+            <image:title>Salvage 1</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/salvage_1_small.jpg</image:loc>
+            <image:title>Salvage 1</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/boo_1_small.jpg</image:loc>
+            <image:title>Boo 1</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/boo_1_small.jpg</image:loc>
+            <image:title>Boo 1</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pox_small.jpg</image:loc>
+            <image:title>Pox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pox_small.jpg</image:loc>
+            <image:title>Pox</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_7.20_small.jpg</image:loc>
+            <image:title>Reuben 7.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_7.20_small.jpg</image:loc>
+            <image:title>Reuben 7.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flock_v_small.jpg</image:loc>
+            <image:title>Flock V</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flock_v_small.jpg</image:loc>
+            <image:title>Flock V</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_entertainer_small.jpg</image:loc>
+            <image:title>The Entertainer</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_entertainer_small.jpg</image:loc>
+            <image:title>The Entertainer</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/old_romantic_small.jpg</image:loc>
+            <image:title>Old Romantic</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/old_romantic_small.jpg</image:loc>
+            <image:title>Old Romantic</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/spring_20.4_small.jpg</image:loc>
+            <image:title>Spring 20.4</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/spring_20.4_small.jpg</image:loc>
+            <image:title>Spring 20.4</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/sunny_inside_small.jpg</image:loc>
+            <image:title>Sunny Inside</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/sunny_inside_small.jpg</image:loc>
+            <image:title>Sunny Inside</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/self_9.20_small.jpg</image:loc>
+            <image:title>Self 9.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/self_9.20_small.jpg</image:loc>
+            <image:title>Self 9.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/alien_small.jpg</image:loc>
+            <image:title>Alien</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/alien_small.jpg</image:loc>
+            <image:title>Alien</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/love_triangle_small.jpg</image:loc>
+            <image:title>Love Triangle</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/love_triangle_small.jpg</image:loc>
+            <image:title>Love Triangle</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/snail_race_small.jpg</image:loc>
+            <image:title>Snail Race</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/snail_race_small.jpg</image:loc>
+            <image:title>Snail Race</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/monument_1_small.jpg</image:loc>
+            <image:title>Monument 1</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/monument_1_small.jpg</image:loc>
+            <image:title>Monument 1</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/message_board_small.jpg</image:loc>
+            <image:title>Message Board</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/message_board_small.jpg</image:loc>
+            <image:title>Message Board</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/salvage_3_small.jpg</image:loc>
+            <image:title>Salvage 3</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/salvage_3_small.jpg</image:loc>
+            <image:title>Salvage 3</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dad's_garage_small.jpg</image:loc>
+            <image:title>Dad's Garage</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dad's_garage_small.jpg</image:loc>
+            <image:title>Dad's Garage</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dad_small.jpg</image:loc>
+            <image:title>Dad</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/dad_small.jpg</image:loc>
+            <image:title>Dad</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_children_small.jpg</image:loc>
+            <image:title>The Children</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/the_children_small.jpg</image:loc>
+            <image:title>The Children</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/sludge_small.jpg</image:loc>
+            <image:title>Sludge</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/sludge_small.jpg</image:loc>
+            <image:title>Sludge</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_10.16_small.jpg</image:loc>
+            <image:title>Reuben 10.16</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_10.16_small.jpg</image:loc>
+            <image:title>Reuben 10.16</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/race_small.jpg</image:loc>
+            <image:title>Race</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/race_small.jpg</image:loc>
+            <image:title>Race</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/rose-marie_small.jpg</image:loc>
+            <image:title>Rose-Marie</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/rose-marie_small.jpg</image:loc>
+            <image:title>Rose-Marie</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/chapel_road_small.jpg</image:loc>
+            <image:title>Chapel Road</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/chapel_road_small.jpg</image:loc>
+            <image:title>Chapel Road</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/life_after_still_life_small.jpg</image:loc>
+            <image:title>Life After Still Life</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/life_after_still_life_small.jpg</image:loc>
+            <image:title>Life After Still Life</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/la_familia_small.jpg</image:loc>
+            <image:title>La Familia</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/la_familia_small.jpg</image:loc>
+            <image:title>La Familia</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/faded_smile_small.jpg</image:loc>
+            <image:title>Faded Smile</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/faded_smile_small.jpg</image:loc>
+            <image:title>Faded Smile</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pricetown_small.jpg</image:loc>
+            <image:title>Pricetown</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pricetown_small.jpg</image:loc>
+            <image:title>Pricetown</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/moment_small.jpg</image:loc>
+            <image:title>Moment</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/moment_small.jpg</image:loc>
+            <image:title>Moment</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/quiet_day_small.jpg</image:loc>
+            <image:title>Quiet Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/quiet_day_small.jpg</image:loc>
+            <image:title>Quiet Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/noto_small.jpg</image:loc>
+            <image:title>Noto</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/noto_small.jpg</image:loc>
+            <image:title>Noto</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/self_1.21_small.jpg</image:loc>
+            <image:title>Self 1.21</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/self_1.21_small.jpg</image:loc>
+            <image:title>Self 1.21</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/east_place_small.jpg</image:loc>
+            <image:title>East Place</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/east_place_small.jpg</image:loc>
+            <image:title>East Place</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/anna_2.21_small.jpg</image:loc>
+            <image:title>Anna 2.21</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/anna_2.21_small.jpg</image:loc>
+            <image:title>Anna 2.21</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/crossing_2_small.jpg</image:loc>
+            <image:title>Crossing 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/crossing_2_small.jpg</image:loc>
+            <image:title>Crossing 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_5.18_small.jpg</image:loc>
+            <image:title>Joachim 5.18</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_5.18_small.jpg</image:loc>
+            <image:title>Joachim 5.18</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/last_light_small.jpg</image:loc>
+            <image:title>Last Light</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/last_light_small.jpg</image:loc>
+            <image:title>Last Light</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/anita_small.jpg</image:loc>
+            <image:title>Anita</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/anita_small.jpg</image:loc>
+            <image:title>Anita</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/la_scena_small.jpg</image:loc>
+            <image:title>La Scena</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/la_scena_small.jpg</image:loc>
+            <image:title>La Scena</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_9.18_small.jpg</image:loc>
+            <image:title>Joachim 9.18</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_9.18_small.jpg</image:loc>
+            <image:title>Joachim 9.18</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/platform_small.jpg</image:loc>
+            <image:title>Platform</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/platform_small.jpg</image:loc>
+            <image:title>Platform</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_11.15_small.jpg</image:loc>
+            <image:title>Reuben 11.15</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_11.15_small.jpg</image:loc>
+            <image:title>Reuben 11.15</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/town_small.jpg</image:loc>
+            <image:title>Town</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/town_small.jpg</image:loc>
+            <image:title>Town</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/mum_small.jpg</image:loc>
+            <image:title>Mum</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/mum_small.jpg</image:loc>
+            <image:title>Mum</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pickle_and_boo_small.jpg</image:loc>
+            <image:title>Pickle and Boo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pickle_and_boo_small.jpg</image:loc>
+            <image:title>Pickle and Boo</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/uncle_philip_small.jpg</image:loc>
+            <image:title>Uncle Philip</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/uncle_philip_small.jpg</image:loc>
+            <image:title>Uncle Philip</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pocket_small.jpg</image:loc>
+            <image:title>Pocket</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pocket_small.jpg</image:loc>
+            <image:title>Pocket</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_8.16_small.jpg</image:loc>
+            <image:title>Joachim 8.16</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_8.16_small.jpg</image:loc>
+            <image:title>Joachim 8.16</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/nebula_2_small.jpg</image:loc>
+            <image:title>Nebula 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/nebula_2_small.jpg</image:loc>
+            <image:title>Nebula 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/stanhope_small.jpg</image:loc>
+            <image:title>Stanhope</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/stanhope_small.jpg</image:loc>
+            <image:title>Stanhope</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/short_lived_small.jpg</image:loc>
+            <image:title>Short Lived</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/short_lived_small.jpg</image:loc>
+            <image:title>Short Lived</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_10.14_small.jpg</image:loc>
+            <image:title>Joachim 10.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_10.14_small.jpg</image:loc>
+            <image:title>Joachim 10.14</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/monster_small.jpg</image:loc>
+            <image:title>Monster</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/monster_small.jpg</image:loc>
+            <image:title>Monster</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/blob_small.jpg</image:loc>
+            <image:title>Blob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/blob_small.jpg</image:loc>
+            <image:title>Blob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pyrex_2_small.jpg</image:loc>
+            <image:title>Pyrex 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/pyrex_2_small.jpg</image:loc>
+            <image:title>Pyrex 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_small.jpg</image:loc>
+            <image:title>Joachim</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/joachim_small.jpg</image:loc>
+            <image:title>Joachim</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/quinn_2_small.jpg</image:loc>
+            <image:title>Quinn 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/quinn_2_small.jpg</image:loc>
+            <image:title>Quinn 2</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_grey_small.jpg</image:loc>
+            <image:title>Reuben Grey</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/reuben_grey_small.jpg</image:loc>
+            <image:title>Reuben Grey</image:title>
         </image:image>
     </url>
 </urlset>
