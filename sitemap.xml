@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<urlset xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image = "http://www.google.com/schemas/sitemap-image/1.1">
+    <url><loc>https://nathanford.co.uk/works.html</loc></url>
+    <url><loc>https://nathanford.co.uk/projects.html</loc></url>
+    <url><loc>https://nathanford.co.uk/about.html</loc></url>
+    <url><loc>https://nathanford.co.uk/lockdown.html</loc></url>
+    <url><loc>https://nathanford.co.uk/essay_1.html</loc></url>
+    <url><loc>https://nathanford.co.uk/essay_2.html</loc></url>
+    <url><loc>https://nathanford.co.uk/essay_3.html</loc></url>
+    <url><loc>https://nathanford.co.uk/essay_4.html</loc></url>
+    <url><loc>https://nathanford.co.uk/essay_5.html</loc></url>
+    <url><loc>https://nathanford.co.uk/essay_6.html</loc></url>
+    <url><loc>https://nathanford.co.uk/essay_7.html</loc></url>
+
+    <url>
+        <loc>https://nathanford.co.uk/index.html</loc>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/slider_1.png</image:loc>
+            <image:title>Self 9.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/sider_2.png</image:loc>
+            <image:title>Anna 2.21</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/sider_3.png</image:loc>
+            <image:title>Joachim 7.20</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/sider_4.png</image:loc>
+            <image:title>Reuben 7.20</image:title>
+        </image:image>
+    </url>
+</urlset>
