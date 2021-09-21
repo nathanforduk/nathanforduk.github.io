@@ -1,7 +1,6 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
 <urlset xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image = "http://www.google.com/schemas/sitemap-image/1.1">
-    <url><loc>https://nathanford.co.uk/projects.html</loc></url>
     <url><loc>https://nathanford.co.uk/about.html</loc></url>
     <url><loc>https://nathanford.co.uk/essay_1.html</loc></url>
     <url><loc>https://nathanford.co.uk/essay_2.html</loc></url>
@@ -1612,6 +1611,162 @@
         <image:image>
             <image:loc>https://nathanford.co.uk/images/90_large.jpg</image:loc>
             <image:title>90/90</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://nathanford.co.uk/projects.html</loc>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/wash_day_1.jpg</image:loc>
+            <image:title>Wash Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/wash_day_2.jpg</image:loc>
+            <image:title>Wash Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/wash_day_3.jpg</image:loc>
+            <image:title>Wash Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/wash_day_4.jpg</image:loc>
+            <image:title>Wash Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/wash_day_5.jpg</image:loc>
+            <image:title>Wash Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/wash_day_6.jpg</image:loc>
+            <image:title>Wash Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/wash_day_7.jpg</image:loc>
+            <image:title>Wash Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/wash_day_8.jpg</image:loc>
+            <image:title>Wash Day</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/smoking_fags_at_the_exit_1.jpg</image:loc>
+            <image:title>Smoking Fags at the Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/smoking_fags_at_the_exit_2.jpg</image:loc>
+            <image:title>Smoking Fags at the Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/smoking_fags_at_the_exit_3.jpg</image:loc>
+            <image:title>Smoking Fags at the Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/smoking_fags_at_the_exit_4.jpg</image:loc>
+            <image:title>Smoking Fags at the Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/smoking_fags_at_the_exit_5.jpg</image:loc>
+            <image:title>Smoking Fags at the Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/smoking_fags_at_the_exit_6.jpg</image:loc>
+            <image:title>Smoking Fags at the Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/smoking_fags_at_the_exit_7.jpg</image:loc>
+            <image:title>Smoking Fags at the Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/smoking_fags_at_the_exit_8.jpg</image:loc>
+            <image:title>Smoking Fags at the Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/smoking_fags_at_the_exit_9.jpg</image:loc>
+            <image:title>Smoking Fags at the Exit</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/five_plus_1.jpg</image:loc>
+            <image:title>Five Plus</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/five_plus_2.jpg</image:loc>
+            <image:title>Five Plus</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/five_plus_3.jpg</image:loc>
+            <image:title>Five Plus</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/five_plus_4.jpg</image:loc>
+            <image:title>Five Plus</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/five_plus_5.jpg</image:loc>
+            <image:title>Five Plus</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/five_plus_6.jpg</image:loc>
+            <image:title>Five Plus</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/five_plus_7.jpg</image:loc>
+            <image:title>Five Plus</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/five_plus_8.jpg</image:loc>
+            <image:title>Five Plus</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/five_plus_9.jpg</image:loc>
+            <image:title>Five Plus</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flash_mob_1.jpg</image:loc>
+            <image:title>Flash Mob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flash_mob_2.jpg</image:loc>
+            <image:title>Flash Mob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flash_mob_3.jpg</image:loc>
+            <image:title>Flash Mob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flash_mob_4.jpg</image:loc>
+            <image:title>Flash Mob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flash_mob_5.jpg</image:loc>
+            <image:title>Flash Mob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flash_mob_6.jpg</image:loc>
+            <image:title>Flash Mob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flash_mob_7.jpg</image:loc>
+            <image:title>Flash Mob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flash_mob_8.jpg</image:loc>
+            <image:title>Flash Mob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/flash_mob_9.jpg</image:loc>
+            <image:title>Flash Mob</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/carnival_1.jpg</image:loc>
+            <image:title>Carnival</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/point_one_1.jpg</image:loc>
+            <image:title>Point One</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://nathanford.co.uk/images/bugs_1.jpg</image:loc>
+            <image:title>Bugs</image:title>
         </image:image>
     </url>
 </urlset>
