@@ -160,6 +160,7 @@
 				link.className = "chocolat-image"
 				link.href = `images/${item.title.toLowerCase().replace(/\s/g, "_")}_large.jpg`
 				link.title = `${item.title} ~ oil on ${item.surface} ~ ${item.width}cm \u00d7 ${item.height}cm ~ ${item.year}`
+				image.alt = item.title
 
 				item.tags && item.tags.forEach(tag => link.title += ` ~ ${tag}`)
 
