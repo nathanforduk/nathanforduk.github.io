@@ -8,67 +8,66 @@
     src: url(../font/nunito.ttf)
 }
 
+:root {
+    --transition: 0.2s;
+    --radius: 0.3em;
+    --large: 50px
+}
+
 body {
     margin: 0;
     font-family: nunito;
     color: #555;
     background-color: #eee;
+    font-size: var(--font)
 }
 
 a {
     text-decoration: none;
-    color: #07d;
+    color: #07d
 }
 
-a:hover {
-    color: #aaa;
-}
+a:hover {color: #aaa}
+ul {line-height: 2}
 
 footer {
-    font-size: 0.8rem;
+    font-size: 0.8em;
     float: left;
     color: #444;
-    margin-top: 2rem;
-}
-
-ul {
-    line-height: 2;
+    margin-top: 2em
 }
 
 .blurb {
     background-color: #ddd;
-    border-radius: 0.4rem;
-    transition: 0.2s ease;
+    border-radius: var(--radius);
+    transition-duration: var(--transition);
     color: #555;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 1em;
+    margin-bottom: 1em
 }
 
 .blurb span {
     color: #000;
-    font-weight: bold;
+    font-weight: bold
 }
 
-.blurb:hover {
-    background-color: #ccc;
-}
+.blurb:hover {background-color: #ccc}
 
 .email {
     display: block;
-    font-family: elite;
-    font-size: 1.2rem;
+    font-family: elite
 }
 
 .tag {
     position: fixed;
     font-family: elite;
-    font-size: 3rem;
+    font-size: var(--large);
     background-color: #fff8;
-    border-top-right-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
-    top: 3rem;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    top: 1em;
     left: 0;
-    padding: 2rem;
+    padding: 0.8em;
     color: #000;
 }
 
@@ -79,105 +78,87 @@ ul {
 
 .top a {
     float: left;
-    padding-right: 2rem;
+    padding-right: 2em
 }
 
-.top a:not(:first-child) {
-    padding-top: 0.8rem;
-}
+.top a:not(:first-child) {padding-top: 0.8em}
 
 .top a:not(:first-child) img {
-    height: 1.2rem;
+    height: 1.2em;
     filter: opacity(80%);
+    transition-duration: var(--transition)
 }
 
 .top a:not(:first-child) img:hover {
-    height: 1.2rem;
-    filter: opacity(20%);
+    height: 1.2em;
+    filter: opacity(50%)
 }
 
-.top .this {
-    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
-}
-
-.top a:first-child img {
-    height: 2rem;
-}
-
-.top .icon {
-    display: none;
-}
+.top .this {filter: sepia(100%) hue-rotate(190deg) saturate(500%)}
+.top a:first-child img {height: 2em}
+.top .icon {display: none}
 
 .main {
     font-family: nunito;
-    line-height: 1.5;
+    line-height: 1.5
 }
 
 .main h1, .main h2, .main h3 {
     font-family: elite;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5em 0
 }
 
-.display {
-    color: #555;
-}
+.display {color: #555}
 
 .display div div {
     position: relative;
-    margin-top: 4rem;
+    margin-top: 4em
 }
 
-.display div div div img{
-    width: 100%;
-}
+.display div div div img {width: 100%}
 
 .previous, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    padding: 1rem;
+    bottom: 50%;
+    padding: 1em;
     transition: 0.4s ease;
     background-color: #fff0;
-    transform: translateY(-50%);
-    filter: invert(100%);
+    transform: translateY(50%);
+    filter: invert(100%)
 }
 
 .previous {
     left: 0;
-    border-radius: 0 0.4rem 0.4rem 0;
+    border-radius: 0 0.4em 0.4em 0
 }
   
 .next {
     right: 0;
-    border-radius: 0.4rem 0 0 0.4rem;
+    border-radius: 0.4em 0 0 0.4em
 }
   
 .previous:hover, .next:hover {
     background-color: #fff;
-    filter: invert(20%);
+    filter: invert(20%)
 }
 
-.nft {
-    color: #4a0;
-}
-
-.display {
-    text-align: center;
-}
+.nft {color: #4a0}
+.display {text-align: center}
 
 .display div div div div {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    bottom: 1em;
+    left: 1em
 }
 
 .gallery {
     line-height: 2.5;
-    -webkit-column-gap: 1rem;    
-    -moz-column-gap: 1rem;
-    column-gap: 1rem;
+    -webkit-column-gap: 1em;    
+    -moz-column-gap: 1em;
+    column-gap: 1em;
     margin-right: auto;    
     margin-left: auto
 }
@@ -185,36 +166,33 @@ ul {
 .gallery img {
     width: 100%;
     height: auto;
+    border-radius: 0.3em;
+    transition-duration: var(--transition)
 }
 
-@media screen and (min-width: 90rem) {
-    .main {max-width: 90rem; padding: 1rem 6rem; margin: 0 auto; font-size: 1.1rem}
-    .top {max-width: 90rem; padding: 2rem 6rem; margin: 0 auto}
+.gallery img:hover {transform: scale(1.02)}
+
+@media screen and (min-width: 80em) {
+    :root {--font: 20px}
+    .main {max-width: 80em; padding: 1em 6em; margin: 0 auto}
+    .top {max-width: 80em; padding: 2em 6em; margin: 0 auto}
 }
 
-@media screen and (min-width: 64rem) and (max-width: 90rem) {
-    .main {padding: 1rem 4rem; font-size: 1.1rem}
-    .top {padding: 2rem 4rem}
+@media screen and (min-width: 56em) and (max-width: 80em) {
+    :root {--font: 18px}
+    .main {padding: 1em 4em}
+    .top {padding: 2em 4em}
 }
 
-@media screen and (max-width: 64rem) {
-    .main {padding: 1rem 1rem; font-size: 1rem}
-    .top {padding: 2rem 1rem}
+@media screen and (max-width: 56em) {
+    :root {--font: 16px}
+    .main {padding: 1em 1em}
+    .top {padding: 2em 1em}
 }
 
-@media screen and (max-width: 55rem) {
-    .top a {
-        display: none;
-    }
-
-    .top a.icon {
-        float: left;
-        display: block;
-    }
-
-    .top.responsive {
-        position: relative;
-    }
+@media screen and (max-width: 48em) {
+    .top a {display: none}
+    .top.responsive {position: relative}
 
     .top.responsive.icon {
         position: absolute;
@@ -223,29 +201,20 @@ ul {
     }
 
     .top.responsive a {
-        padding-bottom: 1rem;
+        padding-bottom: 1em;
         float: none;
         display: block;
         text-align: left;
     }
+
+    .top a.icon {
+        float: left;
+        display: block;
+    }
 }
 
-@media screen and (min-width: 75rem) {
-    .gallery {-moz-column-count: 4; -webkit-column-count: 4; column-count: 4}
-}
-
-@media screen and (min-width: 53rem) and (max-width: 75rem) {
-    .gallery {-moz-column-count: 3; -webkit-column-count: 3; column-count: 3}
-}
-
-@media screen and (min-width: 31rem) and (max-width: 53rem) {
-    .gallery {-moz-column-count: 2; -webkit-column-count: 2; column-count: 2}
-}
-
-@media screen and (max-width: 31rem) {
-    .gallery {-moz-column-count: 1; -webkit-column-count: 1; column-count: 1}
-}
-
-* {
-    box-sizing: border-box;
-}
+@media screen and (min-width: 70em) {.gallery {-moz-column-count: 4; -webkit-column-count: 4; column-count: 4}}
+@media screen and (min-width: 48em) and (max-width: 70em) {.gallery {-moz-column-count: 3; -webkit-column-count: 3; column-count: 3}}
+@media screen and (min-width: 32em) and (max-width: 48em) {.gallery {-moz-column-count: 2; -webkit-column-count: 2; column-count: 2}}
+@media screen and (max-width: 32em) {.gallery {-moz-column-count: 1; -webkit-column-count: 1; column-count: 1}}
+* {box-sizing: border-box}

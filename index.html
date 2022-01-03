@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src = "https://www.googletagmanager.com/gtag/js?id=G-LD4L8FCK6D"></script>
@@ -10,6 +11,13 @@
 
 		<link rel = stylesheet href = css/main.css>
 		<title>Nathan Ford</title>
+
+		<style>
+			body {
+				overflow: hidden;
+				background-color: #999
+			}
+		</style>
 	</head>
 
 	<body>
@@ -19,8 +27,8 @@
 		</a>
 		
 		<script>
-			const AMOUNT_OF_TIME_EACH_IMAGE_STAYS_ON_THE_SCREEN_IN_SECONDS = 1
-			const AMOUNT_OF_TIME_IT_TAKES_FOR_ONE_IMAGE_TO_FADE_INTO_ANOTHER_IN_SECONDS = 8
+			const AMOUNT_OF_TIME_EACH_IMAGE_STAYS_ON_THE_SCREEN_IN_SECONDS = 8
+			const AMOUNT_OF_TIME_IT_TAKES_FOR_ONE_IMAGE_TO_FADE_INTO_ANOTHER_IN_SECONDS = 3
 			const TOTAL_NUMBER_OF_SLIDESHOW_IMAGES = 4
 
 			const resize = () => {
@@ -29,11 +37,9 @@
 			}
 
 			const start = () => {
-				document.body.style.overflow = "hidden"
-
 				for (let i = 1; i <= TOTAL_NUMBER_OF_SLIDESHOW_IMAGES; i ++) {
 					const image = new Image()
-					image.src = "images/slider_" + i + ".jpg"
+					image.src = `images/slider_${i}.jpg`
 					images.push(image)
 				}
 

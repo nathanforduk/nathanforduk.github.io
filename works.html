@@ -24,7 +24,13 @@
             <a href = works.html class = this><img src = images/works.png></a>
             <a href = projects.html><img src = images/projects.png></a>
             <a href = about.html><img src = images/about.png></a>
-            <a href = lockdown.html><img src = images/lockdown.png></a>
+
+			<a class = "grid--cell fc-black-300 ml12 sm:d-none" title = YouTube href = https://youtu.be/aJqjSGwKxBc target = _blank>
+				<svg aria-hidden = true class = youtube width = 23 height = 23 viewBox = "0 0 24 24">
+					<path d = "M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" fill = #a77></path>
+				</svg>
+			</a>
+
 			<a class = icon onclick = bar(this)><img src = images/bars.png></a>
 		</section>
 
@@ -39,10 +45,16 @@
 
 		<script>
 			const LIST_OF_GALLERY_IMAGES = [
+				{title: "Reuben 8.21", width: 58, height: 74, year: 2021, surface: "board"},
+				{title: "Another Sunday Morning", width: 20, height: 28, year: 2021, surface: "canvas"},
+				{title: "Self 10.21", width: 20, height: 28, year: 2021, surface: "canvas"},
+				{title: "31.3.21", width: 28, height: 20, year: 2021, surface: "canvas"},
 				{title: "Joachim 7.20", width: 20, height: 28, year: 2020, surface: "canvas", tags: ["sold"]},
 				{title: "The Dump", width: 170, height: 122, year: 2020, surface: "board"},
 				{title: "Salvage 2.20", width: 28, height: 44, year: 2020, surface: "canvas", tags: ["sold"]},
+				{title: "Lockdown 17/90", width: 20, height: 14, year: 2020, surface: "canvas", tags: ["sold"]},
 				{title: "Staying", width: 63, height: 48, year: 2016, surface: "canvas", tags: ["sold"]},
+				{title: "Lockdown 53/90", width: 20, height: 14, year: 2020, surface: "canvas"},
 				{title: "The Race", width: 175, height: 130, year: 2010, surface: "canvas", tags: ["sold"]},
 				{title: "Salvage 12.19", width: 28, height: 40, year: 2019, surface: "canvas", tags: ["sold"]},
 				{title: "Joachim 12.19", width: 20, height: 28, year: 2019, surface: "canvas"},
@@ -65,20 +77,30 @@
 				{title: "Cormack 2", width: 20, height: 28, year: 2014, surface: "canvas", tags: ["sold"]},
 				{title: "Boundary 2", width: 212, height: 120, year: 2012, surface: "canvas", tags: ["sold"]},
 				{title: "Joachim 1.12", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "At The Exit", width: 170, height: 122, year: 2020, surface: "board"},
+				
+				
+				
+				{title: "3.7.21", width: 28, height: 20, year: 2021, surface: "canvas"},
+				{title: "Joachim 8.21", width: 58, height: 74, year: 2021, surface: "board"},
+				{title: "Fallen 2", width: 15, height: 11, year: 2021, surface: "canvas"},
+				{title: "X", width: 28, height: 20, year: 2021, surface: "canvas"},
 				{title: "Monument", width: 122, height: 170, year: 2021, surface: "board"},
+				{title: "At The Exit", width: 170, height: 122, year: 2020, surface: "board"},
+				{title: "2.6.21", width: 28, height: 20, year: 2021, surface: "canvas"},
+				{title: "Transit", width: 80, height: 109, year: 2020, surface: "board"},
+				{title: "Lockdown 5/90", width: 20, height: 14, year: 2020, surface: "canvas", tags: ["sold"]},
 				{title: "Epic", width: 200, height: 122, year: 2019, surface: "board", tags: ["sold"]},
 				{title: "Self 11.20", width: 20, height: 28, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "Transit", width: 80, height: 109, year: 2020, surface: "board"},
 				{title: "Dad's Last Day", width: 28, height: 20, year: 2017, surface: "canvas", tags: ["nfs"]},
+				{title: "Anna 7.20", width: 20, height: 28, year: 2020, surface: "canvas"},
+				{title: "Lockdown 45/90", width: 20, height: 14, year: 2020, surface: "canvas"},
 				{title: "Reuben 10.18", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Fallen", width: 15, height: 11, year: 2016, surface: "canvas", tags: ["sold"]},
 				{title: "Dictionary Words", width: 44, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
 				{title: "Another Quiet Day", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
 				{title: "Red Man", width: 121, height: 37, year: 2018, surface: "board", tags: ["sold"]},
 				{title: "Fish Memory", width: 63, height: 48, year: 2018, surface: "canvas", tags: ["sold"]},
 				{title: "Sunday Morning", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Casualty", width: 20, height: 14, year: 2012, surface: "canvas", tags: ["sold"]},
+				{title: "Fallen", width: 15, height: 11, year: 2016, surface: "canvas", tags: ["sold"]},
 				{title: "Coast Road", width: 122, height: 61, year: 2018, surface: "board", tags: ["sold"]},
 				{title: "Stan 3", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
 				{title: "Painted", width: 115, height: 130, year: 2008, surface: "canvas", tags: ["sold"]},
@@ -88,17 +110,25 @@
 				{title: "Cormack 3", width: 20, height: 28, year: 2015, surface: "canvas", tags: ["nfs"]},
 				{title: "Bedroom Window", width: 28, height: 20, year: 2014, surface: "canvas", tags: ["sold"]},
 				{title: "Reuben 10.14", width: 20, height: 28, year: 2014, surface: "canvas", tags: ["sold"]},
+				{title: "Casualty", width: 20, height: 14, year: 2012, surface: "canvas", tags: ["sold"]},
 				{title: "Salvage 1", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
 				{title: "Boo 1", width: 20, height: 28, year: 2010, surface: "canvas", tags: ["sold"]},
-				{title: "Pox", width: 20, height: 28, year: 2010, surface: "canvas", tags: ["sold"]},
+				
+
+				
+				{title: "Anna 8.21", width: 58, height: 74, year: 2021, surface: "board"},
+				{title: "19.5.21", width: 28, height: 20, year: 2021, surface: "canvas"},
+				{title: "Self 7.20", width: 20, height: 28, year: 2020, surface: "canvas"},
+				{title: "9.4.21", width: 28, height: 20, year: 2021, surface: "canvas"},
+				{title: "The Entertainer", width: 28, height: 20, year: 2016, surface: "canvas", tags: ["sold"]},
 				{title: "Reuben 7.20", width: 20, height: 28, year: 2020, surface: "canvas", tags: ["sold"]},
 				{title: "Flock V", width: 170, height: 122, year: 2020, surface: "board", tags: ["sold"]},
-				{title: "The Entertainer", width: 28, height: 20, year: 2016, surface: "canvas", tags: ["sold"]},
+				{title: "Lockdown 46/90", width: 20, height: 14, year: 2020, surface: "canvas"},
 				{title: "Old Romantic", width: 170, height: 122, year: 2020, surface: "board"},
 				{title: "Spring 20.4", width: 20, height: 28, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "Sunny Inside", width: 121, height: 80, year: 2021, surface: "board"},
+				{title: "Lockdown 49/90", width: 20, height: 14, year: 2020, surface: "canvas"},
 				{title: "Self 9.20", width: 20, height: 28, year: 2020, surface: "canvas"},
-				{title: "Alien", width: 44, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
+				{title: "Lockdown 89/90", width: 20, height: 14, year: 2020, surface: "canvas", tags: ["sold"]},
 				{title: "Love Triangle", width: 20, height: 28, year: 2013, surface: "canvas", tags: ["sold"]},
 				{title: "Snail Race", width: 180, height: 122, year: 2019, surface: "board", tags: ["sold"]},
 				{title: "Monument 1", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
@@ -117,8 +147,17 @@
 				{title: "Faded Smile", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
 				{title: "Pricetown", width: 135, height: 100, year: 2010, surface: "canvas", tags: ["sold"]},
 				{title: "Moment", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
+				{title: "Pox", width: 20, height: 28, year: 2010, surface: "canvas", tags: ["sold"]},
 				{title: "Quiet Day", width: 20, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
+			
+
+
+				{title: "30.3.20", width: 20, height: 28, year: 2020, surface: "canvas"},
+				{title: "Self 8.21", width: 58, height: 74, year: 2021, surface: "board"},
+				{title: "24.3.21", width: 28, height: 20, year: 2021, surface: "canvas"},
 				{title: "Noto", width: 160, height: 122, year: 2019, surface: "board", tags: ["sold"]},
+				{title: "26.3.21", width: 28, height: 20, year: 2021, surface: "canvas"},
+				{title: "Alien", width: 44, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
 				{title: "Self 1.21", width: 20, height: 28, year: 2021, surface: "canvas", tags: ["sold"]},
 				{title: "East Place", width: 170, height: 120, year: 2019, surface: "linen"},
 				{title: "Anna 2.21", width: 20, height: 28, year: 2021, surface: "canvas"},
@@ -127,6 +166,7 @@
 				{title: "Last Light", width: 170, height: 120, year: 2016, surface: "linen", tags: ["sold"]},
 				{title: "Anita", width: 20, height: 28, year: 2015, surface: "canvas", tags: ["sold"]},
 				{title: "La Scena", width: 200, height: 122, year: 2020, surface: "board", tags: ["sold"]},
+				{title: "Lockdown 42/90", width: 20, height: 14, year: 2020, surface: "canvas"},
 				{title: "Joachim 9.18", width: 20, height: 28, year: 2018, surface: "board", tags: ["sold"]},
 				{title: "Platform", width: 220, height: 36, year: 2018, surface: "board", tags: ["sold"]},
 				{title: "Reuben 11.15", width: 180, height: 97, year: 2015, surface: "linen", tags: ["sold"]},
@@ -149,19 +189,20 @@
 			]
 
 			const gallery = document.querySelector(".gallery")
+			const convert = name => name.toLowerCase().replace(/(\s|\/)/g, "_")
 
 			LIST_OF_GALLERY_IMAGES.forEach(item => {
 				const link = document.createElement("a")
 				const image = document.createElement("img")
 
 				link.className = "chocolat-image"
-				link.href = `images/${item.title.toLowerCase().replace(/\s/g, "_")}_large.jpg`
+				link.href = `images/${convert(item.title)}_large.jpg`
 				link.title = `${item.title} ~ oil on ${item.surface} ~ ${item.width}cm \u00d7 ${item.height}cm ~ ${item.year}`
 				image.alt = item.title
 
 				item.tags && item.tags.forEach(tag => link.title += ` ~ ${tag}`)
 
-				image.src = "images/" + item.title.toLowerCase().replace(/\s/g, "_") + "_small.jpg"
+				image.src = `images/${convert(item.title)}_small.jpg`
 				link.appendChild(image)
 				gallery.appendChild(link)
 			})
