@@ -60,10 +60,10 @@
 
 					context.drawImage(
 						images[index],
-						canvas.width / 2 - images[index].width * scale / 2,
-						canvas.height / 2 - images[index].height * scale / 2,
-						images[index].width * scale,
-						images[index].height * scale
+						~~(canvas.width / 2 - images[index].width * scale / 2),
+						~~(canvas.height / 2 - images[index].height * scale / 2),
+						~~(images[index].width * scale),
+						~~(images[index].height * scale)
 					)
 				}
 
