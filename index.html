@@ -39,8 +39,6 @@
 			const TOTAL_NUMBER_OF_SLIDESHOW_IMAGES = 4
 
 			const resize = () => {
-				const ratio = 1//devicePixelRatio || 2
-
 				canvas.width = innerWidth * ratio
 				canvas.height = innerHeight * ratio
 				context.scale(ratio, ratio)
@@ -59,19 +57,19 @@
 			}
 
 			const loop = () => {
-				context.clearRect(0, 0, canvas.width, canvas.height)
+				context.clearRect(0, 0, canvas.width / ratio, canvas.height / ratio)
 
 				const draw = (index, fade) => {
-					const width = canvas.width / images[index].width
-					const height = canvas.height / images[index].height
+					const width = canvas.width / ratio / images[index].width
+					const height = canvas.height / ratio / images[index].height
 					const scale = width > height ? width : height
 
 					context.globalAlpha = fade
 
 					context.drawImage(
 						images[index],
-						~~(canvas.width / 2 - images[index].width * scale / 2),
-						~~(canvas.height / 2 - images[index].height * scale / 2),
+						~~(canvas.width / ratio / 2 - images[index].width * scale / 2),
+						~~(canvas.height / ratio / 2 - images[index].height * scale / 2),
 						~~(images[index].width * scale),
 						~~(images[index].height * scale)
 					)
@@ -117,6 +115,7 @@
 			const context = canvas.getContext("2d")
 			const images = []
 			const slider = {start: true, index: 0, timer: b / 2 *- 60}
+			const ratio = devicePixelRatio || 1
 
 			start()
 		</script>
