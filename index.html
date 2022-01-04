@@ -32,8 +32,14 @@
 			const TOTAL_NUMBER_OF_SLIDESHOW_IMAGES = 4
 
 			const resize = () => {
-				canvas.width = innerWidth
-				canvas.height = innerHeight
+				const ratio = devicePixelRatio || 1
+
+				canvas.width = innerWidth * ratio
+				canvas.height = innerHeight * ratio
+
+				canvas.style.width = canvas.width + "px"
+				canvas.style.height = canvas.height + "px"
+				context.scale(ratio, ratio)
 			}
 
 			const start = () => {
@@ -42,9 +48,6 @@
 					image.src = `images/slider_${i}.jpg`
 					images.push(image)
 				}
-
-				const ratio = devicePixelRatio || 1
-				context.scale(ratio, ratio)
 
 				addEventListener("resize", resize)
 				resize()
