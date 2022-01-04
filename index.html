@@ -43,6 +43,9 @@
 					images.push(image)
 				}
 
+				const ratio = devicePixelRatio || 1
+				context.scale(ratio, ratio)
+
 				addEventListener("resize", resize)
 				resize()
 				loop()
