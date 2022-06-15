@@ -51,8 +51,7 @@
                     surface: "board",
                     sold: true,
                     slides: 8,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714216421674713089"
+                    current: 1
                 }, {
                     title: "Smoking Fags at the Exit",
                     width: 121,
@@ -62,8 +61,7 @@
                     surface: "board",
                     sold: true,
                     slides: 9,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714217521186340865"
+                    current: 1
                 }, {
                     title: "Five Plus",
                     width: 121,
@@ -73,8 +71,7 @@
                     surface: "board",
                     sold: true,
                     slides: 9,
-                    current: 7,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714218620697968641"
+                    current: 7
                 }, {
                     title: "Flash Mob",
                     width: 210,
@@ -84,8 +81,7 @@
                     surface: "board",
                     sold: true,
                     slides: 9,
-                    current: 9,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714219720209596417"
+                    current: 9
                 }, {
                     title: "Carnival",
                     width: 112,
@@ -95,8 +91,7 @@
                     surface: "canvas",
                     sold: true,
                     slides: 1,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714220819721224193"
+                    current: 1
                 }, {
                     title: "Point One",
                     width: 91,
@@ -106,8 +101,7 @@
                     surface: "canvas",
                     sold: true,
                     slides: 1,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714221919232851969"
+                    current: 1
                 }, {
                     title: "Bugs",
                     width: 100,
@@ -117,8 +111,7 @@
                     surface: "board",
                     sold: true,
                     slides: 1,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714223018744479745"
+                    current: 1
                 }
             ]
 
@@ -163,9 +156,7 @@
                 main.innerHTML += (
                     "<h2>" + item.title + "</h2>" + item.paint + " on " +
                     item.surface + " ~ " + item.width + "cm \u00d7 " +
-                    item.height + "cm ~ " + item.year + (item.sold ? " ~ sold" : "") +
-                    " ~ <a class = nft href = " + item.nft + " target = _blank>nft available</a>"
-                )
+                    item.height + "cm ~ " + item.year + (item.sold ? " ~ sold" : ""))
 
                 display.appendChild(main)
 			})
