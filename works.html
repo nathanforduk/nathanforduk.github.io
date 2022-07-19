@@ -1,211 +1,231 @@
 <!DOCTYPE html>
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src = "https://www.googletagmanager.com/gtag/js?id=G-LD4L8FCK6D"></script>
-		<script src = js/main.js></script>
+    <head>
+        <meta name = viewport content = "width=device-width,initial-scale=1">
+        <meta name = description content = "Paintings by Nathan Ford">
 
-		<meta charset = utf-8>
-        <meta name = viewport content = "width = device-width, initial-scale = 1">
-		<meta name = description content = "Paintings by Nathan Ford">
+        <script async src = "//www.googletagmanager.com/gtag/js?id=G-LD4L8FCK6D"></script>
+        <script src = js/chocolat.js></script>
+        <script src = js/main.js></script>
 
-		<link rel = stylesheet href = css/main.css>
-		<link rel = stylesheet href = css/chocolat.css>
+        <link rel = stylesheet href = css/main.css>
+        <link rel = stylesheet href = css/chocolat.css>
 
-		<script src = https://code.jquery.com/jquery-3.3.1.min.js></script>
-		<script src = js/jquery.chocolat.min.js></script>
-		<script>$(() => $("#gallery").Chocolat({imageSize: "contain"}))</script>
+        <style>
+            section > div {
+                line-height: 2.5;
+                -webkit-column-gap: 1em;
+                -moz-column-gap: 1em;
+                column-gap: 1em;
+                margin-right: auto;
+                margin-left: auto
+            }
 
-		<title>Nathan Ford | Works</title>
-	</head>
+            section > div img {
+                width: 100%;
+                height: auto;
+                border-radius: .3em
+            }
 
-	<body>
-		<section class = top>
-			<a href = index.html><img src = images/title.png></a>
-            <a href = works.html class = this><img src = images/works.png></a>
-            <a href = projects.html><img src = images/projects.png></a>
-            <a href = about.html><img src = images/about.png></a>
+            section > div img:hover {
+                transform: scale(1.02);
+                border-radius: .1em
+            }
 
-			<a class = "grid--cell fc-black-300 ml12 sm:d-none" title = YouTube href = https://youtu.be/aJqjSGwKxBc target = _blank>
-				<svg aria-hidden = true class = youtube width = 23 height = 23 viewBox = "0 0 24 24">
-					<path d = "M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" fill = #a77></path>
-				</svg>
-			</a>
+            @media screen and (min-width: 70em) {
+                section > div {
+                    -moz-column-count: 4;
+                    -webkit-column-count: 4;
+                    column-count: 4
+                }
+            }
 
-			<a class = icon onclick = bar(this)><img src = images/bars.png></a>
-		</section>
+            @media screen and (min-width: 48em) and (max-width: 70em) {
+                section > div {
+                    -moz-column-count: 3;
+                    -webkit-column-count: 3;
+                    column-count: 3
+                }
+            }
 
-		<section class = main>
-			<div class = gallery id = gallery></div>
+            @media screen and (min-width: 32em) and (max-width: 48em) {
+                section > div {
+                    -moz-column-count: 2;
+                    -webkit-column-count: 2;
+                    column-count: 2
+                }
+            }
 
-			<footer>
-				<a class = email href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
-				&copy; Copyright Nathan Ford, <span id = year></span>. Website by <a href = https://greyhope.uk target = _blank>Reuben Ford</a>.
-			</footer>
-		</section>
+            @media screen and (max-width: 32em) {
+                section > div {
+                    -moz-column-count: 1;
+                    -webkit-column-count: 1;
+                    column-count: 1
+                }
+            }
+        </style>
 
-		<script>
-			const LIST_OF_GALLERY_IMAGES = [
-				{title: "Reuben 8.21", width: 58, height: 74, year: 2021, surface: "board"},
-				{title: "Another Sunday Morning", width: 20, height: 28, year: 2021, surface: "canvas"},
-				{title: "Self 10.21", width: 20, height: 28, year: 2021, surface: "canvas"},
-				{title: "31.3.21", width: 28, height: 20, year: 2021, surface: "canvas"},
-				{title: "Joachim 7.20", width: 20, height: 28, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "The Dump", width: 170, height: 122, year: 2020, surface: "board"},
-				{title: "Salvage 2.20", width: 28, height: 44, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "Lockdown 17/90", width: 20, height: 14, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "Staying", width: 63, height: 48, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Lockdown 53/90", width: 20, height: 14, year: 2020, surface: "canvas"},
-				{title: "The Race", width: 175, height: 130, year: 2010, surface: "canvas", tags: ["sold"]},
-				{title: "Salvage 12.19", width: 28, height: 40, year: 2019, surface: "canvas", tags: ["sold"]},
-				{title: "Self 4.20", width: 20, height: 28, year: 2020, surface: "canvas"},
-				{title: "SE27", width: 121, height: 80, year: 2018, surface: "board", tags: ["sold"]},
-				{title: "Reuben 7.18", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Apart", width: 244, height: 51, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Dad 11.14", width: 20, height: 28, year: 2014, surface: "canvas", tags: ["sold"]},
-				{title: "Half Term", width: 28, height: 20, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Vicenza", width: 122, height: 87, year: 2018, surface: "board", tags: ["sold"]},
-				{title: "Anna 11.14", width: 20, height: 28, year: 2014, surface: "canvas", tags: ["nfs"]},
-				{title: "Greyhope", width: 50, height: 70, year: 2015, surface: "canvas", tags: ["sold"]},
-				{title: "Self 10.14", width: 20, height: 28, year: 2014, surface: "canvas", tags: ["sold"]},
-				{title: "The Bees", width: 200, height: 120, year: 2014, surface: "linen", tags: ["sold"]},
-				{title: "Joachim 7.16", width: 20, height: 28, year: 2017, surface: "canvas", tags: ["sold"]},
-				{title: "The Crossing", width: 210, height: 120, year: 2015, surface: "board", tags: ["sold"]},
-				{title: "Joachim 2.15", width: 20, height: 28, year: 2015, surface: "canvas", tags: ["sold"]},
-				{title: "Going", width: 63, height: 48, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Greg", width: 20, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Alone", width: 44, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Cormack 2", width: 20, height: 28, year: 2014, surface: "canvas", tags: ["sold"]},
-				{title: "Boundary 2", width: 212, height: 120, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "Joachim 1.12", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
-				
-				
-				
-				{title: "3.7.21", width: 28, height: 20, year: 2021, surface: "canvas"},
-				{title: "Joachim 8.21", width: 58, height: 74, year: 2021, surface: "board"},
-				{title: "Fallen 2", width: 15, height: 11, year: 2021, surface: "canvas"},
-				{title: "X", width: 28, height: 20, year: 2021, surface: "canvas"},
-				{title: "Monument", width: 122, height: 170, year: 2021, surface: "board"},
-				{title: "At The Exit", width: 170, height: 122, year: 2020, surface: "board"},
-				{title: "2.6.21", width: 28, height: 20, year: 2021, surface: "canvas"},
-				{title: "Transit", width: 80, height: 109, year: 2020, surface: "board"},
-				{title: "Lockdown 5/90", width: 20, height: 14, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "Epic", width: 200, height: 122, year: 2019, surface: "board", tags: ["sold"]},
-				{title: "Self 11.20", width: 20, height: 28, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "Dad's Last Day", width: 28, height: 20, year: 2017, surface: "canvas", tags: ["nfs"]},
-				{title: "Self 9.20", width: 20, height: 28, year: 2020, surface: "canvas"},
-				{title: "Lockdown 45/90", width: 20, height: 14, year: 2020, surface: "canvas"},
-				{title: "Reuben 10.18", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Dictionary Words", width: 44, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Another Quiet Day", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Red Man", width: 121, height: 37, year: 2018, surface: "board", tags: ["sold"]},
-				{title: "Fish Memory", width: 63, height: 48, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Sunday Morning", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Fallen", width: 15, height: 11, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Coast Road", width: 122, height: 61, year: 2018, surface: "board", tags: ["sold"]},
-				{title: "Stan 3", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "Painted", width: 115, height: 130, year: 2008, surface: "canvas", tags: ["sold"]},
-				{title: "Patch", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "Reuben 9.15", width: 180, height: 97, year: 2015, surface: "linen", tags: ["sold"]},
-				{title: "Monsters of Remorse", width: 20, height: 28, year: 2013, surface: "canvas"},
-				{title: "Cormack 3", width: 20, height: 28, year: 2015, surface: "canvas", tags: ["nfs"]},
-				{title: "Bedroom Window", width: 28, height: 20, year: 2014, surface: "canvas", tags: ["sold"]},
-				{title: "Reuben 10.14", width: 20, height: 28, year: 2014, surface: "canvas", tags: ["sold"]},
-				{title: "Casualty", width: 20, height: 14, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "Salvage 1", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "Boo 1", width: 20, height: 28, year: 2010, surface: "canvas", tags: ["sold"]},
-				
+        <title>Nathan Ford · Works</title>
+    </head>
 
-				
-				{title: "Anna 8.21", width: 58, height: 74, year: 2021, surface: "board"},
-				{title: "19.5.21", width: 28, height: 20, year: 2021, surface: "canvas"},
-				{title: "Self 7.20", width: 20, height: 28, year: 2020, surface: "canvas"},
-				{title: "9.4.21", width: 28, height: 20, year: 2021, surface: "canvas"},
-				{title: "The Entertainer", width: 28, height: 20, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Reuben 7.20", width: 20, height: 28, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "Flock V", width: 170, height: 122, year: 2020, surface: "board", tags: ["sold"]},
-				{title: "Lockdown 2/90", width: 20, height: 14, year: 2020, surface: "canvas"},
-				{title: "Old Romantic", width: 170, height: 122, year: 2020, surface: "board"},
-				{title: "Spring 20.4", width: 20, height: 28, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "Lockdown 49/90", width: 20, height: 14, year: 2020, surface: "canvas"},
-				{title: "Joachim 12.19", width: 20, height: 28, year: 2019, surface: "canvas"},
-				{title: "Lockdown 89/90", width: 20, height: 14, year: 2020, surface: "canvas", tags: ["sold"]},
-				{title: "Love Triangle", width: 20, height: 28, year: 2013, surface: "canvas", tags: ["sold"]},
-				{title: "Snail Race", width: 180, height: 122, year: 2019, surface: "board", tags: ["sold"]},
-				{title: "Monument 1", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Message Board", width: 200, height: 110, year: 2016, surface: "board", tags: ["sold"]},
-				{title: "Salvage 3", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Dad's Garage", width: 28, height: 20, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Dad", width: 20, height: 28, year: 2015, surface: "canvas", tags: ["nfs"]},
-				{title: "The Children", width: 44, height: 28, year: 2020, surface: "canvas"},
-				{title: "Sludge", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "Reuben 10.16", width: 20, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Race", width: 180, height: 97, year: 2016, surface: "linen", tags: ["sold"]},
-				{title: "Rose-Marie", width: 20, height: 28, year: 2014, surface: "canvas", tags: ["sold"]},
-				{title: "Chapel Road", width: 200, height: 110, year: 2011, surface: "canvas", tags: ["sold"]},
-				{title: "Life After Still Life", width: 20, height: 28, year: 2015, surface: "canvas", tags: ["sold"]},
-				{title: "La Familia", width: 150, height: 135, year: 2011, surface: "canvas", tags: ["sold"]},
-				{title: "Faded Smile", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Pricetown", width: 135, height: 100, year: 2010, surface: "canvas", tags: ["sold"]},
-				{title: "Moment", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "Pox", width: 20, height: 28, year: 2010, surface: "canvas", tags: ["sold"]},
-				{title: "Quiet Day", width: 20, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
-			
+    <body>
+        <section class = top>
+            <a href = "/"><img src = assets/images/icons/title.png></a>
+            <img onclick = bars(this) src = assets/images/icons/bars.png>
+            <a href = works class = this><img src = assets/images/icons/works.png></a>
+            <a href = projects><img src = assets/images/icons/projects.png></a>
+            <a href = about><img src = assets/images/icons/about.png></a>
+            <a href = //youtu.be/aJqjSGwKxBc target = _blank><img src = assets/images/icons/youtube.svg></a>
+        </section>
 
+        <section class = main>
+            <div>
+                <a href = assets/images/reuben_8.21_large.jpg title = "Reuben 8.21 ~ oil on board ~ 58cm × 58cm ~ 2021"><img src = assets/images/reuben_8.21_small.jpg alt = "Reuben 8.21"></a>
+                <a href = assets/images/another_sunday_morning_large.jpg title = "Another Sunday Morning ~ oil on canvas ~ 20cm × 20cm ~ 2021"><img src = assets/images/another_sunday_morning_small.jpg alt = "Another Sunday Morning"></a>
+                <a href = assets/images/self_10.21_large.jpg title = "Self 10.21 ~ oil on canvas ~ 20cm × 20cm ~ 2021"><img src = assets/images/self_10.21_small.jpg alt = "Self 10.21"></a>
+                <a href = assets/images/31.3.21_large.jpg title = "31.3.21 ~ oil on canvas ~ 28cm × 28cm ~ 2021"><img src = assets/images/31.3.21_small.jpg alt = "31.3.21"></a>
+                <a href = assets/images/joachim_7.20_large.jpg title = "Joachim 7.20 ~ oil on canvas ~ 20cm × 20cm ~ 2020 ~ sold"><img src = assets/images/joachim_7.20_small.jpg alt = "Joachim 7.20"></a>
+                <a href = assets/images/the_dump_large.jpg title = "The Dump ~ oil on board ~ 170cm × 170cm ~ 2020"><img src = assets/images/the_dump_small.jpg alt = "The Dump"></a>
+                <a href = assets/images/salvage_2.20_large.jpg title = "Salvage 2.20 ~ oil on canvas ~ 28cm × 28cm ~ 2020 ~ sold"><img src = assets/images/salvage_2.20_small.jpg alt = "Salvage 2.20"></a>
+                <a href = assets/images/lockdown_17_90_large.jpg title = "Lockdown 17/90 ~ oil on canvas ~ 20cm × 20cm ~ 2020 ~ sold"><img src = assets/images/lockdown_17_90_small.jpg alt = "Lockdown 17/90"></a>
+                <a href = assets/images/staying_large.jpg title = "Staying ~ oil on canvas ~ 63cm × 63cm ~ 2016 ~ sold"><img src = assets/images/staying_small.jpg alt = "Staying"></a>
+                <a href = assets/images/lockdown_53_90_large.jpg title = "Lockdown 53/90 ~ oil on canvas ~ 20cm × 20cm ~ 2020"><img src = assets/images/lockdown_53_90_small.jpg alt = "Lockdown 53/90"></a>
+                <a href = assets/images/the_race_large.jpg title = "The Race ~ oil on canvas ~ 175cm × 175cm ~ 2010 ~ sold"><img src = assets/images/the_race_small.jpg alt = "The Race"></a>
+                <a href = assets/images/salvage_12.19_large.jpg title = "Salvage 12.19 ~ oil on canvas ~ 28cm × 28cm ~ 2019 ~ sold"><img src = assets/images/salvage_12.19_small.jpg alt = "Salvage 12.19"></a>
+                <a href = assets/images/self_4.20_large.jpg title = "Self 4.20 ~ oil on canvas ~ 20cm × 20cm ~ 2020"><img src = assets/images/self_4.20_small.jpg alt = "Self 4.20"></a>
+                <a href = assets/images/se27_large.jpg title = "SE27 ~ oil on board ~ 121cm × 121cm ~ 2018 ~ sold"><img src = assets/images/se27_small.jpg alt = "SE27"></a>
+                <a href = assets/images/reuben_7.18_large.jpg title = "Reuben 7.18 ~ oil on canvas ~ 20cm × 20cm ~ 2018 ~ sold"><img src = assets/images/reuben_7.18_small.jpg alt = "Reuben 7.18"></a>
+                <a href = assets/images/apart_large.jpg title = "Apart ~ oil on canvas ~ 244cm × 244cm ~ 2016 ~ sold"><img src = assets/images/apart_small.jpg alt = "Apart"></a>
+                <a href = assets/images/dad_11.14_large.jpg title = "Dad 11.14 ~ oil on canvas ~ 20cm × 20cm ~ 2014 ~ sold"><img src = assets/images/dad_11.14_small.jpg alt = "Dad 11.14"></a>
+                <a href = assets/images/half_term_large.jpg title = "Half Term ~ oil on canvas ~ 28cm × 28cm ~ 2018 ~ sold"><img src = assets/images/half_term_small.jpg alt = "Half Term"></a>
+                <a href = assets/images/vicenza_large.jpg title = "Vicenza ~ oil on board ~ 122cm × 122cm ~ 2018 ~ sold"><img src = assets/images/vicenza_small.jpg alt = "Vicenza"></a>
+                <a href = assets/images/anna_11.14_large.jpg title = "Anna 11.14 ~ oil on canvas ~ 20cm × 20cm ~ 2014 ~ sold"><img src = assets/images/anna_11.14_small.jpg alt = "Anna 11.14"></a>
+                <a href = assets/images/greyhope_large.jpg title = "Greyhope ~ oil on canvas ~ 50cm × 50cm ~ 2015 ~ sold"><img src = assets/images/greyhope_small.jpg alt = "Greyhope"></a>
+                <a href = assets/images/self_10.14_large.jpg title = "Self 10.14 ~ oil on canvas ~ 20cm × 20cm ~ 2014 ~ sold"><img src = assets/images/self_10.14_small.jpg alt = "Self 10.14"></a>
+                <a href = assets/images/the_bees_large.jpg title = "The Bees ~ oil on linen ~ 200cm × 200cm ~ 2014 ~ sold"><img src = assets/images/the_bees_small.jpg alt = "The Bees"></a>
+                <a href = assets/images/joachim_7.16_large.jpg title = "Joachim 7.16 ~ oil on canvas ~ 20cm × 20cm ~ 2017 ~ sold"><img src = assets/images/joachim_7.16_small.jpg alt = "Joachim 7.16"></a>
+                <a href = assets/images/the_crossing_large.jpg title = "The Crossing ~ oil on board ~ 210cm × 210cm ~ 2015 ~ sold"><img src = assets/images/the_crossing_small.jpg alt = "The Crossing"></a>
+                <a href = assets/images/joachim_2.15_large.jpg title = "Joachim 2.15 ~ oil on canvas ~ 20cm × 20cm ~ 2015 ~ sold"><img src = assets/images/joachim_2.15_small.jpg alt = "Joachim 2.15"></a>
+                <a href = assets/images/going_large.jpg title = "Going ~ oil on canvas ~ 63cm × 63cm ~ 2016 ~ sold"><img src = assets/images/going_small.jpg alt = "Going"></a>
+                <a href = assets/images/greg_large.jpg title = "Greg ~ oil on canvas ~ 20cm × 20cm ~ 2016 ~ sold"><img src = assets/images/greg_small.jpg alt = "Greg"></a>
+                <a href = assets/images/alone_large.jpg title = "Alone ~ oil on canvas ~ 44cm × 44cm ~ 2016 ~ sold"><img src = assets/images/alone_small.jpg alt = "Alone"></a>
+                <a href = assets/images/cormack_2_large.jpg title = "Cormack 2 ~ oil on canvas ~ 20cm × 20cm ~ 2014 ~ sold"><img src = assets/images/cormack_2_small.jpg alt = "Cormack 2"></a>
+                <a href = assets/images/boundary_2_large.jpg title = "Boundary 2 ~ oil on canvas ~ 212cm × 212cm ~ 2012 ~ sold"><img src = assets/images/boundary_2_small.jpg alt = "Boundary 2"></a>
+                <a href = assets/images/joachim_1.12_large.jpg title = "Joachim 1.12 ~ oil on canvas ~ 20cm × 20cm ~ 2012 ~ sold"><img src = assets/images/joachim_1.12_small.jpg alt = "Joachim 1.12"></a>
 
-				{title: "30.3.20", width: 20, height: 28, year: 2020, surface: "canvas"},
-				{title: "Self 8.21", width: 58, height: 74, year: 2021, surface: "board"},
-				{title: "24.3.21", width: 28, height: 20, year: 2021, surface: "canvas"},
-				{title: "Noto", width: 160, height: 122, year: 2019, surface: "board", tags: ["sold"]},
-				{title: "26.3.21", width: 28, height: 20, year: 2021, surface: "canvas"},
-				{title: "Alien", width: 44, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Self 1.21", width: 20, height: 28, year: 2021, surface: "canvas", tags: ["sold"]},
-				{title: "East Place", width: 170, height: 120, year: 2019, surface: "linen"},
-				{title: "Anna 2.21", width: 20, height: 28, year: 2021, surface: "canvas"},
-				{title: "Crossing 2", width: 121, height: 55, year: 2018, surface: "board", tags: ["sold"]},
-				{title: "Joachim 5.18", width: 20, height: 28, year: 2018, surface: "canvas", tags: ["sold"]},
-				{title: "Last Light", width: 170, height: 120, year: 2016, surface: "linen", tags: ["sold"]},
-				{title: "Anita", width: 20, height: 28, year: 2015, surface: "canvas", tags: ["sold"]},
-				{title: "La Scena", width: 200, height: 122, year: 2020, surface: "board", tags: ["sold"]},
-				{title: "Lockdown 42/90", width: 20, height: 14, year: 2020, surface: "canvas"},
-				{title: "Joachim 9.18", width: 20, height: 28, year: 2018, surface: "board", tags: ["sold"]},
-				{title: "Platform", width: 220, height: 36, year: 2018, surface: "board", tags: ["sold"]},
-				{title: "Reuben 11.15", width: 180, height: 97, year: 2015, surface: "linen", tags: ["sold"]},
-				{title: "Town", width: 44, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Mum", width: 20, height: 28, year: 2015, surface: "canvas", tags: ["nfs"]},
-				{title: "Pickle and Boo", width: 20, height: 28, year: 2013, surface: "canvas", tags: ["sold"]},
-				{title: "Uncle Philip", width: 20, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Pocket", width: 244, height: 71, year: 2014, surface: "canvas", tags: ["sold"]},
-				{title: "Joachim 8.16", width: 20, height: 28, year: 2016, surface: "canvas", tags: ["sold"]},
-				{title: "Nebula 2", width: 200, height: 110, year: 2013, surface: "linen", tags: ["sold"]},
-				{title: "Stanhope", width: 20, height: 28, year: 2013, surface: "canvas", tags: ["sold"]},
-				{title: "Short Lived", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "Joachim 10.14", width: 20, height: 28, year: 2014, surface: "canvas", tags: ["sold"]},
-				{title: "Monster", width: 20, height: 28, year: 2010, surface: "canvas", tags: ["sold"]},
-				{title: "Blob", width: 20, height: 28, year: 2009, surface: "canvas", tags: ["sold"]},
-				{title: "Pyrex 2", width: 20, height: 28, year: 2012, surface: "canvas", tags: ["sold"]},
-				{title: "Joachim", width: 20, height: 28, year: 2010, surface: "canvas", tags: ["nfs"]},
-				{title: "Quinn 2", width: 200, height: 110, year: 2013, surface: "canvas", tags: ["sold"]},
-				{title: "Reuben Grey", width: 20, height: 28, year: 2008, surface: "canvas", tags: ["nfs"]},
-			]
+                <a href = assets/images/3.7.21_large.jpg title = "3.7.21 ~ oil on canvas ~ 28cm × 28cm ~ 2021"><img src = assets/images/3.7.21_small.jpg alt = "3.7.21"></a>
+                <a href = assets/images/joachim_8.21_large.jpg title = "Joachim 8.21 ~ oil on board ~ 58cm × 58cm ~ 2021"><img src = assets/images/joachim_8.21_small.jpg alt = "Joachim 8.21"></a>
+                <a href = assets/images/fallen_2_large.jpg title = "Fallen 2 ~ oil on canvas ~ 15cm × 15cm ~ 2021"><img src = assets/images/fallen_2_small.jpg alt = "Fallen 2"></a>
+                <a href = assets/images/x_large.jpg title = "X ~ oil on canvas ~ 28cm × 28cm ~ 2021"><img src = assets/images/x_small.jpg alt = "X"></a>
+                <a href = assets/images/monument_large.jpg title = "Monument ~ oil on board ~ 122cm × 122cm ~ 2021 ~ sold"><img src = assets/images/monument_small.jpg alt = "Monument"></a>
+                <a href = assets/images/at_the_exit_large.jpg title = "At The Exit ~ oil on board ~ 170cm × 170cm ~ 2020"><img src = assets/images/at_the_exit_small.jpg alt = "At The Exit"></a>
+                <a href = assets/images/2.6.21_large.jpg title = "2.6.21 ~ oil on canvas ~ 28cm × 28cm ~ 2021"><img src = assets/images/2.6.21_small.jpg alt = "2.6.21"></a>
+                <a href = assets/images/transit_large.jpg title = "Transit ~ oil on board ~ 80cm × 80cm ~ 2020"><img src = assets/images/transit_small.jpg alt = "Transit"></a>
+                <a href = assets/images/lockdown_5_90_large.jpg title = "Lockdown 5/90 ~ oil on canvas ~ 20cm × 20cm ~ 2020 ~ sold"><img src = assets/images/lockdown_5_90_small.jpg alt = "Lockdown 5/90"></a>
+                <a href = assets/images/epic_large.jpg title = "Epic ~ oil on board ~ 200cm × 200cm ~ 2019 ~ sold"><img src = assets/images/epic_small.jpg alt = "Epic"></a>
+                <a href = assets/images/self_11.20_large.jpg title = "Self 11.20 ~ oil on canvas ~ 20cm × 20cm ~ 2020 ~ sold"><img src = assets/images/self_11.20_small.jpg alt = "Self 11.20"></a>
+                <a href = assets/images/dads_last_day_large.jpg title = "Dad's Last Day ~ oil on canvas ~ 28cm × 28cm ~ 2017 ~ nfs"><img src = assets/images/dads_last_day_small.jpg alt = "Dad's Last Day"></a>
+                <a href = assets/images/self_9.20_large.jpg title = "Self 9.20 ~ oil on canvas ~ 20cm × 20cm ~ 2020"><img src = assets/images/self_9.20_small.jpg alt = "Self 9.20"></a>
+                <a href = assets/images/lockdown_45_90_large.jpg title = "Lockdown 45/90 ~ oil on canvas ~ 20cm × 20cm ~ 2020"><img src = assets/images/lockdown_45_90_small.jpg alt = "Lockdown 45/90"></a>
+                <a href = assets/images/reuben_10.18_large.jpg title = "Reuben 10.18 ~ oil on canvas ~ 20cm × 20cm ~ 2018 ~ sold"><img src = assets/images/reuben_10.18_small.jpg alt = "Reuben 10.18"></a>
+                <a href = assets/images/dictionary_words_large.jpg title = "Dictionary Words ~ oil on canvas ~ 44cm × 44cm ~ 2016 ~ sold"><img src = assets/images/dictionary_words_small.jpg alt = "Dictionary Words"></a>
+                <a href = assets/images/another_quiet_day_large.jpg title = "Another Quiet Day ~ oil on canvas ~ 20cm × 20cm ~ 2018 ~ sold"><img src = assets/images/another_quiet_day_small.jpg alt = "Another Quiet Day"></a>
+                <a href = assets/images/red_man_large.jpg title = "Red Man ~ oil on board ~ 121cm × 121cm ~ 2018 ~ sold"><img src = assets/images/red_man_small.jpg alt = "Red Man"></a>
+                <a href = assets/images/fish_memory_large.jpg title = "Fish Memory ~ oil on canvas ~ 63cm × 63cm ~ 2018 ~ sold"><img src = assets/images/fish_memory_small.jpg alt = "Fish Memory"></a>
+                <a href = assets/images/sunday_morning_large.jpg title = "Sunday Morning ~ oil on canvas ~ 20cm × 20cm ~ 2018 ~ sold"><img src = assets/images/sunday_morning_small.jpg alt = "Sunday Morning"></a>
+                <a href = assets/images/fallen_large.jpg title = "Fallen ~ oil on canvas ~ 15cm × 15cm ~ 2016 ~ sold"><img src = assets/images/fallen_small.jpg alt = "Fallen"></a>
+                <a href = assets/images/coast_road_large.jpg title = "Coast Road ~ oil on board ~ 122cm × 122cm ~ 2018 ~ sold"><img src = assets/images/coast_road_small.jpg alt = "Coast Road"></a>
+                <a href = assets/images/stan_3_large.jpg title = "Stan 3 ~ oil on canvas ~ 20cm × 20cm ~ 2012 ~ sold"><img src = assets/images/stan_3_small.jpg alt = "Stan 3"></a>
+                <a href = assets/images/painted_large.jpg title = "Painted ~ oil on canvas ~ 115cm × 115cm ~ 2008 ~ sold"><img src = assets/images/painted_small.jpg alt = "Painted"></a>
+                <a href = assets/images/patch_large.jpg title = "Patch ~ oil on canvas ~ 20cm × 20cm ~ 2012 ~ sold"><img src = assets/images/patch_small.jpg alt = "Patch"></a>
+                <a href = assets/images/reuben_9.15_large.jpg title = "Reuben 9.15 ~ oil on linen ~ 180cm × 180cm ~ 2015 ~ sold"><img src = assets/images/reuben_9.15_small.jpg alt = "Reuben 9.15"></a>
+                <a href = assets/images/monsters_of_remorse_large.jpg title = "Monsters of Remorse ~ oil on canvas ~ 20cm × 20cm ~ 2013"><img src = assets/images/monsters_of_remorse_small.jpg alt = "Monsters of Remorse"></a>
+                <a href = assets/images/cormack_3_large.jpg title = "Cormack 3 ~ oil on canvas ~ 20cm × 20cm ~ 2015 ~ nfs"><img src = assets/images/cormack_3_small.jpg alt = "Cormack 3"></a>
+                <a href = assets/images/bedroom_window_large.jpg title = "Bedroom Window ~ oil on canvas ~ 28cm × 28cm ~ 2014 ~ sold"><img src = assets/images/bedroom_window_small.jpg alt = "Bedroom Window"></a>
+                <a href = assets/images/reuben_10.14_large.jpg title = "Reuben 10.14 ~ oil on canvas ~ 20cm × 20cm ~ 2014 ~ sold"><img src = assets/images/reuben_10.14_small.jpg alt = "Reuben 10.14"></a>
+                <a href = assets/images/casualty_large.jpg title = "Casualty ~ oil on canvas ~ 20cm × 20cm ~ 2012 ~ sold"><img src = assets/images/casualty_small.jpg alt = "Casualty"></a>
+                <a href = assets/images/salvage_1_large.jpg title = "Salvage 1 ~ oil on canvas ~ 20cm × 20cm ~ 2012 ~ sold"><img src = assets/images/salvage_1_small.jpg alt = "Salvage 1"></a>
+                <a href = assets/images/boo_1_large.jpg title = "Boo 1 ~ oil on canvas ~ 20cm × 20cm ~ 2010 ~ sold"><img src = assets/images/boo_1_small.jpg alt = "Boo 1"></a>
 
-			const gallery = document.querySelector(".gallery")
-			const convert = name => name.toLowerCase().replace(/(\s|\/)/g, "_")
+                <a href = assets/images/anna_8.21_large.jpg title = "Anna 8.21 ~ oil on board ~ 58cm × 58cm ~ 2021"><img src = assets/images/anna_8.21_small.jpg alt = "Anna 8.21"></a>
+                <a href = assets/images/19.5.21_large.jpg title = "19.5.21 ~ oil on canvas ~ 28cm × 28cm ~ 2021"><img src = assets/images/19.5.21_small.jpg alt = "19.5.21"></a>
+                <a href = assets/images/self_7.20_large.jpg title = "Self 7.20 ~ oil on canvas ~ 20cm × 20cm ~ 2020"><img src = assets/images/self_7.20_small.jpg alt = "Self 7.20"></a>
+                <a href = assets/images/9.4.21_large.jpg title = "9.4.21 ~ oil on canvas ~ 28cm × 28cm ~ 2021"><img src = assets/images/9.4.21_small.jpg alt = "9.4.21"></a>
+                <a href = assets/images/the_entertainer_large.jpg title = "The Entertainer ~ oil on canvas ~ 28cm × 28cm ~ 2016 ~ sold"><img src = assets/images/the_entertainer_small.jpg alt = "The Entertainer"></a>
+                <a href = assets/images/reuben_7.20_large.jpg title = "Reuben 7.20 ~ oil on canvas ~ 20cm × 20cm ~ 2020 ~ sold"><img src = assets/images/reuben_7.20_small.jpg alt = "Reuben 7.20"></a>
+                <a href = assets/images/flock_v_large.jpg title = "Flock V ~ oil on board ~ 170cm × 170cm ~ 2020 ~ sold"><img src = assets/images/flock_v_small.jpg alt = "Flock V"></a>
+                <a href = assets/images/lockdown_2_90_large.jpg title = "Lockdown 2/90 ~ oil on canvas ~ 20cm × 20cm ~ 2020"><img src = assets/images/lockdown_2_90_small.jpg alt = "Lockdown 2/90"></a>
+                <a href = assets/images/old_romantic_large.jpg title = "Old Romantic ~ oil on board ~ 170cm × 170cm ~ 2020"><img src = assets/images/old_romantic_small.jpg alt = "Old Romantic"></a>
+                <a href = assets/images/spring_20.4_large.jpg title = "Spring 20.4 ~ oil on canvas ~ 20cm × 20cm ~ 2020 ~ sold"><img src = assets/images/spring_20.4_small.jpg alt = "Spring 20.4"></a>
+                <a href = assets/images/lockdown_49_90_large.jpg title = "Lockdown 49/90 ~ oil on canvas ~ 20cm × 20cm ~ 2020"><img src = assets/images/lockdown_49_90_small.jpg alt = "Lockdown 49/90"></a>
+                <a href = assets/images/joachim_12.19_large.jpg title = "Joachim 12.19 ~ oil on canvas ~ 20cm × 20cm ~ 2019"><img src = assets/images/joachim_12.19_small.jpg alt = "Joachim 12.19"></a>
+                <a href = assets/images/lockdown_89_90_large.jpg title = "Lockdown 89/90 ~ oil on canvas ~ 20cm × 20cm ~ 2020 ~ sold"><img src = assets/images/lockdown_89_90_small.jpg alt = "Lockdown 89/90"></a>
+                <a href = assets/images/love_triangle_large.jpg title = "Love Triangle ~ oil on canvas ~ 20cm × 20cm ~ 2013 ~ sold"><img src = assets/images/love_triangle_small.jpg alt = "Love Triangle"></a>
+                <a href = assets/images/snail_race_large.jpg title = "Snail Race ~ oil on board ~ 180cm × 180cm ~ 2019 ~ sold"><img src = assets/images/snail_race_small.jpg alt = "Snail Race"></a>
+                <a href = assets/images/monument_1_large.jpg title = "Monument 1 ~ oil on canvas ~ 20cm × 20cm ~ 2018 ~ sold"><img src = assets/images/monument_1_small.jpg alt = "Monument 1"></a>
+                <a href = assets/images/message_board_large.jpg title = "Message Board ~ oil on board ~ 200cm × 200cm ~ 2016 ~ sold"><img src = assets/images/message_board_small.jpg alt = "Message Board"></a>
+                <a href = assets/images/salvage_3_large.jpg title = "Salvage 3 ~ oil on canvas ~ 20cm × 20cm ~ 2018 ~ sold"><img src = assets/images/salvage_3_small.jpg alt = "Salvage 3"></a>
+                <a href = assets/images/dads_garage_large.jpg title = "Dad's Garage ~ oil on canvas ~ 28cm × 28cm ~ 2016 ~ sold"><img src = assets/images/dads_garage_small.jpg alt = "Dad's Garage"></a>
+                <a href = assets/images/dad_large.jpg title = "Dad ~ oil on canvas ~ 20cm × 20cm ~ 2015 ~ nfs"><img src = assets/images/dad_small.jpg alt = "Dad"></a>
+                <a href = assets/images/the_children_large.jpg title = "The Children ~ oil on canvas ~ 44cm × 44cm ~ 2020"><img src = assets/images/the_children_small.jpg alt = "The Children"></a>
+                <a href = assets/images/sludge_large.jpg title = "Sludge ~ oil on canvas ~ 20cm × 20cm ~ 2012 ~ sold"><img src = assets/images/sludge_small.jpg alt = "Sludge"></a>
+                <a href = assets/images/reuben_10.16_large.jpg title = "Reuben 10.16 ~ oil on canvas ~ 20cm × 20cm ~ 2016 ~ sold"><img src = assets/images/reuben_10.16_small.jpg alt = "Reuben 10.16"></a>
+                <a href = assets/images/race_large.jpg title = "Race ~ oil on linen ~ 180cm × 180cm ~ 2016 ~ sold"><img src = assets/images/race_small.jpg alt = "Race"></a>
+                <a href = assets/images/rose-marie_large.jpg title = "Rose-Marie ~ oil on canvas ~ 20cm × 20cm ~ 2014 ~ sold"><img src = assets/images/rose-marie_small.jpg alt = "Rose-Marie"></a>
+                <a href = assets/images/chapel_road_large.jpg title = "Chapel Road ~ oil on canvas ~ 200cm × 200cm ~ 2011 ~ sold"><img src = assets/images/chapel_road_small.jpg alt = "Chapel Road"></a>
+                <a href = assets/images/life_after_still_life_large.jpg title = "Life After Still Life ~ oil on canvas ~ 20cm × 20cm ~ 2015 ~ sold"><img src = assets/images/life_after_still_life_small.jpg alt = "Life After Still Life"></a>
+                <a href = assets/images/la_familia_large.jpg title = "La Familia ~ oil on canvas ~ 150cm × 150cm ~ 2011 ~ sold"><img src = assets/images/la_familia_small.jpg alt = "La Familia"></a>
+                <a href = assets/images/faded_smile_large.jpg title = "Faded Smile ~ oil on canvas ~ 20cm × 20cm ~ 2018 ~ sold"><img src = assets/images/faded_smile_small.jpg alt = "Faded Smile"></a>
+                <a href = assets/images/pricetown_large.jpg title = "Pricetown ~ oil on canvas ~ 135cm × 135cm ~ 2010 ~ sold"><img src = assets/images/pricetown_small.jpg alt = "Pricetown"></a>
+                <a href = assets/images/moment_large.jpg title = "Moment ~ oil on canvas ~ 20cm × 20cm ~ 2012 ~ sold"><img src = assets/images/moment_small.jpg alt = "Moment"></a>
+                <a href = assets/images/pox_large.jpg title = "Pox ~ oil on canvas ~ 20cm × 20cm ~ 2010 ~ sold"><img src = assets/images/pox_small.jpg alt = "Pox"></a>
+                <a href = assets/images/quiet_day_large.jpg title = "Quiet Day ~ oil on canvas ~ 20cm × 20cm ~ 2016 ~ sold"><img src = assets/images/quiet_day_small.jpg alt = "Quiet Day"></a>
 
-			LIST_OF_GALLERY_IMAGES.forEach(item => {
-				const link = document.createElement("a")
-				const image = document.createElement("img")
+                <a href = assets/images/30.3.20_large.jpg title = "30.3.20 ~ oil on canvas ~ 20cm × 20cm ~ 2020"><img src = assets/images/30.3.20_small.jpg alt = "30.3.20"></a>
+                <a href = assets/images/self_8.21_large.jpg title = "Self 8.21 ~ oil on board ~ 58cm × 58cm ~ 2021"><img src = assets/images/self_8.21_small.jpg alt = "Self 8.21"></a>
+                <a href = assets/images/24.3.21_large.jpg title = "24.3.21 ~ oil on canvas ~ 28cm × 28cm ~ 2021"><img src = assets/images/24.3.21_small.jpg alt = "24.3.21"></a>
+                <a href = assets/images/noto_large.jpg title = "Noto ~ oil on board ~ 160cm × 160cm ~ 2019 ~ sold"><img src = assets/images/noto_small.jpg alt = "Noto"></a>
+                <a href = assets/images/26.3.21_large.jpg title = "26.3.21 ~ oil on canvas ~ 28cm × 28cm ~ 2021"><img src = assets/images/26.3.21_small.jpg alt = "26.3.21"></a>
+                <a href = assets/images/alien_large.jpg title = "Alien ~ oil on canvas ~ 44cm × 44cm ~ 2016 ~ sold"><img src = assets/images/alien_small.jpg alt = "Alien"></a>
+                <a href = assets/images/self_1.21_large.jpg title = "Self 1.21 ~ oil on canvas ~ 20cm × 20cm ~ 2021 ~ sold"><img src = assets/images/self_1.21_small.jpg alt = "Self 1.21"></a>
+                <a href = assets/images/east_place_large.jpg title = "East Place ~ oil on linen ~ 170cm × 170cm ~ 2019"><img src = assets/images/east_place_small.jpg alt = "East Place"></a>
+                <a href = assets/images/anna_2.21_large.jpg title = "Anna 2.21 ~ oil on canvas ~ 20cm × 20cm ~ 2021"><img src = assets/images/anna_2.21_small.jpg alt = "Anna 2.21"></a>
+                <a href = assets/images/crossing_2_large.jpg title = "Crossing 2 ~ oil on board ~ 121cm × 121cm ~ 2018 ~ sold"><img src = assets/images/crossing_2_small.jpg alt = "Crossing 2"></a>
+                <a href = assets/images/joachim_5.18_large.jpg title = "Joachim 5.18 ~ oil on canvas ~ 20cm × 20cm ~ 2018 ~ sold"><img src = assets/images/joachim_5.18_small.jpg alt = "Joachim 5.18"></a>
+                <a href = assets/images/last_light_large.jpg title = "Last Light ~ oil on linen ~ 170cm × 170cm ~ 2016 ~ sold"><img src = assets/images/last_light_small.jpg alt = "Last Light"></a>
+                <a href = assets/images/anita_large.jpg title = "Anita ~ oil on canvas ~ 20cm × 20cm ~ 2015 ~ sold"><img src = assets/images/anita_small.jpg alt = "Anita"></a>
+                <a href = assets/images/la_scena_large.jpg title = "La Scena ~ oil on board ~ 200cm × 200cm ~ 2020 ~ sold"><img src = assets/images/la_scena_small.jpg alt = "La Scena"></a>
+                <a href = assets/images/lockdown_42_90_large.jpg title = "Lockdown 42/90 ~ oil on canvas ~ 20cm × 20cm ~ 2020"><img src = assets/images/lockdown_42_90_small.jpg alt = "Lockdown 42/90"></a>
+                <a href = assets/images/joachim_9.18_large.jpg title = "Joachim 9.18 ~ oil on board ~ 20cm × 20cm ~ 2018 ~ sold"><img src = assets/images/joachim_9.18_small.jpg alt = "Joachim 9.18"></a>
+                <a href = assets/images/platform_large.jpg title = "Platform ~ oil on board ~ 220cm × 220cm ~ 2018 ~ sold"><img src = assets/images/platform_small.jpg alt = "Platform"></a>
+                <a href = assets/images/reuben_11.15_large.jpg title = "Reuben 11.15 ~ oil on linen ~ 180cm × 180cm ~ 2015 ~ sold"><img src = assets/images/reuben_11.15_small.jpg alt = "Reuben 11.15"></a>
+                <a href = assets/images/town_large.jpg title = "Town ~ oil on canvas ~ 44cm × 44cm ~ 2016 ~ sold"><img src = assets/images/town_small.jpg alt = "Town"></a>
+                <a href = assets/images/mum_large.jpg title = "Mum ~ oil on canvas ~ 20cm × 20cm ~ 2015 ~ nfs"><img src = assets/images/mum_small.jpg alt = "Mum"></a>
+                <a href = assets/images/pickle_and_boo_large.jpg title = "Pickle and Boo ~ oil on canvas ~ 20cm × 20cm ~ 2013 ~ sold"><img src = assets/images/pickle_and_boo_small.jpg alt = "Pickle and Boo"></a>
+                <a href = assets/images/uncle_philip_large.jpg title = "Uncle Philip ~ oil on canvas ~ 20cm × 20cm ~ 2016 ~ sold"><img src = assets/images/uncle_philip_small.jpg alt = "Uncle Philip"></a>
+                <a href = assets/images/pocket_large.jpg title = "Pocket ~ oil on canvas ~ 244cm × 244cm ~ 2014 ~ sold"><img src = assets/images/pocket_small.jpg alt = "Pocket"></a>
+                <a href = assets/images/joachim_8.16_large.jpg title = "Joachim 8.16 ~ oil on canvas ~ 20cm × 20cm ~ 2016 ~ sold"><img src = assets/images/joachim_8.16_small.jpg alt = "Joachim 8.16"></a>
+                <a href = assets/images/nebula_2_large.jpg title = "Nebula 2 ~ oil on linen ~ 200cm × 200cm ~ 2013 ~ sold"><img src = assets/images/nebula_2_small.jpg alt = "Nebula 2"></a>
+                <a href = assets/images/stanhope_large.jpg title = "Stanhope ~ oil on canvas ~ 20cm × 20cm ~ 2013 ~ sold"><img src = assets/images/stanhope_small.jpg alt = "Stanhope"></a>
+                <a href = assets/images/short_lived_large.jpg title = "Short Lived ~ oil on canvas ~ 20cm × 20cm ~ 2012 ~ sold"><img src = assets/images/short_lived_small.jpg alt = "Short Lived"></a>
+                <a href = assets/images/joachim_10.14_large.jpg title = "Joachim 10.14 ~ oil on canvas ~ 20cm × 20cm ~ 2014 ~ sold"><img src = assets/images/joachim_10.14_small.jpg alt = "Joachim 10.14"></a>
+                <a href = assets/images/monster_large.jpg title = "Monster ~ oil on canvas ~ 20cm × 20cm ~ 2010 ~ sold"><img src = assets/images/monster_small.jpg alt = "Monster"></a>
+                <a href = assets/images/blob_large.jpg title = "Blob ~ oil on canvas ~ 20cm × 20cm ~ 2009 ~ sold"><img src = assets/images/blob_small.jpg alt = "Blob"></a>
+                <a href = assets/images/pyrex_2_large.jpg title = "Pyrex 2 ~ oil on canvas ~ 20cm × 20cm ~ 2012 ~ sold"><img src = assets/images/pyrex_2_small.jpg alt = "Pyrex 2"></a>
+                <a href = assets/images/joachim_large.jpg title = "Joachim ~ oil on canvas ~ 20cm × 20cm ~ 2010 ~ nfs"><img src = assets/images/joachim_small.jpg alt = "Joachim"></a>
+                <a href = assets/images/quinn_2_large.jpg title = "Quinn 2 ~ oil on canvas ~ 200cm × 200cm ~ 2013 ~ sold"><img src = assets/images/quinn_2_small.jpg alt = "Quinn 2"></a>
+                <a href = assets/images/reuben_grey_large.jpg title = "Reuben Grey ~ oil on canvas ~ 20cm × 20cm ~ 2008 ~ nfs"><img src = assets/images/reuben_grey_small.jpg alt = "Reuben Grey"></a>
+            </div>
 
-				link.className = "chocolat-image"
-				link.href = `images/${convert(item.title)}_large.jpg`
-				link.title = `${item.title} ~ oil on ${item.surface} ~ ${item.width}cm \u00d7 ${item.height}cm ~ ${item.year}`
-				image.alt = item.title
+            <footer>
+                <a href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
+                © Copyright Nathan Ford, <span year></span>. Website by <a href = //greyhope.uk target = _blank>Reuben Ford</a>.
+            </footer>
+        </section>
 
-				item.tags && item.tags.forEach(tag => link.title += ` ~ ${tag}`)
-
-				image.src = `images/${convert(item.title)}_small.jpg`
-				link.appendChild(image)
-				gallery.appendChild(link)
-			})
-		</script>
-	</body>
+        <script>
+            Chocolat(
+                document.querySelectorAll("div a"),
+                {imageSize: "contain"})
+        </script>
+    </body>
 </html>

@@ -1,101 +1,131 @@
 ﻿<!DOCTYPE html>
 <html>
-	<head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src = "https://www.googletagmanager.com/gtag/js?id=G-LD4L8FCK6D"></script>
-        <script src = js/main.js></script>
-
-        <meta charset = utf-8>
-        <meta name = viewport content = "width = device-width, initial-scale = 1">
+    <head>
+        <meta name = viewport content = "width=device-width,initial-scale=1">
         <meta name = description content = "Essays and exhibitions">
 
+        <script async src = "//www.googletagmanager.com/gtag/js?id=G-LD4L8FCK6D"></script>
+        <script src = js/main.js></script>
+
         <link rel = stylesheet href = css/main.css>
-        <title>Nathan Ford | About</title>
-	</head>
+
+        <style>
+            div {
+                background-color: #ddd;
+                border-radius: .3em;
+                color: #555;
+                padding: 1em;
+                margin-bottom: 1em
+            }
+
+            div span {
+                color: #000;
+                font-weight: bold;
+                display: block
+            }
+
+            div:hover {
+                background-color: #ccc
+            }
+
+            ul {
+                line-height: 2
+            }
+        </style>
+
+        <title>Nathan Ford · About</title>
+    </head>
 
     <body>
         <section class = top>
-            <a href = index.html><img src = images/title.png></a>
-            <a href = works.html><img src = images/works.png></a>
-            <a href = projects.html><img src = images/projects.png></a>
-            <a href = about.html class = this><img src = images/about.png></a>
-
-            <a class = "grid--cell fc-black-300 ml12 sm:d-none" title = YouTube href = https://youtu.be/aJqjSGwKxBc target = _blank>
-				<svg aria-hidden = true class = youtube width = 23 height = 23 viewBox = "0 0 24 24">
-					<path d = "M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" fill = #a77></path>
-				</svg>
-			</a>
-
-            <a class = icon onclick = bar(this)><img src = images/bars.png></a>
+            <a href = "/"><img src = assets/images/icons/crossed.png></a>
+            <img onclick = bars(this) src = assets/images/icons/bars.png>
+            <a href = works><img src = assets/images/icons/works.png></a>
+            <a href = projects><img src = assets/images/icons/projects.png></a>
+            <a href = about class = this><img src = assets/images/icons/about.png></a>
+            <a href = //youtu.be/aJqjSGwKxBc target = _blank><img src = assets/images/icons/youtube.svg></a>
         </section>
 
         <section class = main>
             <h2>Essays</h2>
 
-            <a href = essay_7.html>
-                <div class = blurb>
+            <a href = essay_7>
+                <div>
                     <span>Catalogue essay 2021 ~ Aidan Quinn</span>
-                    <br>
-                    <i>Keep me away from the wisdom which does not cry, the philosophy which does not laugh and the greatness which does not bow before children.</i>
-                    ~ Kahlil Gibran
+
+                    <i>
+                        Keep me away from the wisdom which does not cry, the
+                        philosophy which does not laugh and the greatness which
+                        does not bow before children.
+                    </i> ~ Kahlil Gibran
                 </div>
             </a>
 
-            <a href = essay_6.html>
-                <div class = blurb>
+            <a href = essay_6>
+                <div>
                     <span>Catalogue essay 2019 ~ Aidan Quinn</span>
-                    <br>
-                    <i>Anybody who preserves the ability to recognize beauty will never get old.</i>
-                    ~ Franz Kafka
+
+                    <i>
+                        Anybody who preserves the ability to recognize beauty
+                        will never get old.
+                    </i> ~ Franz Kafka
                 </div>
             </a>
 
-            <a href = essay_5.html>
-                <div class = blurb>
+            <a href = essay_5>
+                <div>
                     <span>Catalogue essay 2017 ~ Aidan Quinn</span>
-                    <br>
-                    <i>Sometimes I wonder how all those who do not write, compose, or paint can manage to escape the madness, melancholia, the panic and fear which is inherent in a human situation.</i>
-                    ~ Graham Greene
+
+                    <i>
+                        Sometimes I wonder how all those who do not write,
+                        compose, or paint can manage to escape the madness,
+                        melancholia, the panic and fear which is inherent in a
+                        human situation.
+                    </i> ~ Graham Greene
                 </div>
             </a>
 
-            <a href = essay_4.html>
-                <div class = blurb>
+            <a href = essay_4>
+                <div>
                     <span>Catalogue essay 2015 ~ Aidan Quinn</span>
-                    <br>
-                    <i>What will survive of us is love.</i>
-                    ~ Philip Larkin
+
+                    <i>
+                        What will survive of us is love.
+                    </i> ~ Philip Larkin
                 </div>
             </a>
 
-            <a href = essay_3.html>
-                <div class = blurb>
+            <a href = essay_3>
+                <div>
                     <span>Catalogue essay 2013 ~ Aidan Quinn</span>
-                    <br>
-                    <i>My child could do that.</i>
-                    ~ [anonymous]
+
+                    <i>
+                        My child could do that.
+                    </i> ~ [anonymous]
                 </div>
             </a>
 
-            <a href = essay_2.html>
-                <div class = blurb>
+            <a href = essay_2>
+                <div>
                     <span>Catalogue essay 2011 ~ Aidan Quinn</span>
-                    <br>
-                    <i>If you dig deep enough, all of our dreams are the same.</i>
-                    ~ Amos Oz
+
+                    <i>
+                        If you dig deep enough, all of our dreams are the same.
+                    </i> ~ Amos Oz
                 </div>
             </a>
 
-            <a href = essay_1.html>
-                <div class = blurb>
+            <a href = essay_1>
+                <div>
                     <span>Catalogue essay 2009 ~ Aidan Quinn</span>
-                    <br>
-                    <i>It’s hard being black. You ever been black? I was black once, when I was poor.</i>
-                    ~ Larry Holmes
+
+                    <i>
+                        It's hard being black. You ever been black? I was black
+                        once, when I was poor.
+                    </i> ~ Larry Holmes
                 </div>
             </a>
 
-            <p><br></p>
             <h2>Exhibitions</h2>
 
             <ul>
@@ -134,7 +164,6 @@
                 <li>St David's Studio Gallery, Pembrokeshire. 1997 - 2013</li>
             </ul>
     
-            <p><br></p>
             <h2>Awards</h2>
 
             <ul>
@@ -148,15 +177,15 @@
                 <li>Arts Council of Wales Project Grant. 2008</li>
                 <li>Royal Society of British Artists, Gordon Hulson Memorial Prize, Mall Galleries, London. 2001</li>
                 <li>Royal West of England Academy, Commendation. 2001</li>
-                <li>Young Artists’ Britain, The Prince of Wales’s Young Artists’ Award, Hampton Court Palace, London. 1999</li>
+                <li>Young Artists' Britain, The Prince of Wales's Young Artists' Award, Hampton Court Palace, London. 1999</li>
                 <li>The Worshipful Company of Painter - Stainers bursary in painting, London. 1998</li>
                 <li>Full scholarship to study at Byam Shaw School of Art, London. 1997 - 2000</li>
             </ul>
 
             <footer>
-				<a class = email href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
-				&copy; Copyright Nathan Ford, <span id = year></span>. Website by <a href = https://greyhope.uk target = _blank>Reuben Ford</a>.
-			</footer>
+                <a href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
+                © Copyright Nathan Ford, <span year></span>. Website by <a href = //greyhope.uk target = _blank>Reuben Ford</a>.
+            </footer>
         </section>
     </body>
 </html>

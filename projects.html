@@ -1,187 +1,211 @@
 <!DOCTYPE html>
 <html>
-	<head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src = "https://www.googletagmanager.com/gtag/js?id=G-LD4L8FCK6D"></script>
+    <head>
+        <meta name = viewport content = "width=device-width,initial-scale=1">
+
+        <script async src = "//www.googletagmanager.com/gtag/js?id=G-LD4L8FCK6D"></script>
         <script src = js/main.js></script>
 
-        <meta charset = utf-8>
-        <meta name = viewport content = "width = device-width, initial-scale = 1">
-        <meta name = description content = "Project GreyHope">
-
         <link rel = stylesheet href = css/main.css>
-        <title>Project GreyHope</title>
-	</head>
+
+        <style>
+            section > div {
+                color: #555;
+                text-align: center;
+                margin-top: 2em
+            }
+
+            section > div > div {
+                margin-bottom: 4em
+            }
+
+            .container {
+                position: relative;
+            }
+
+            .container div {
+                display: none
+            }
+
+            .container div img {
+                border-radius: .3em;
+                width: 100%
+            }
+
+            .previous, .next {
+                cursor: pointer;
+                position: absolute;
+                bottom: 50%;
+                padding: 1em;
+                transition: 0.4s ease;
+                background-color: #fff0;
+                transform: translateY(50%);
+                filter: invert(100%)
+            }
+
+            .previous {
+                left: 0;
+                border-radius: 0 .4em .4em 0
+            }
+            
+            .next {
+                right: 0;
+                border-radius: .4em 0 0 .4em
+            }
+            
+            .previous:hover, .next:hover {
+                background-color: #fff;
+                filter: invert(20%)
+            }
+
+            .container span {
+                color: #fff;
+                font-size: .8em;
+                position: absolute;
+                bottom: 1em;
+                left: 1em
+            }
+        </style>
+
+        <title>Nathan Ford · Project GreyHope</title>
+    </head>
 
     <body>
         <section class = top>
-            <a href = index.html><img src = images/crossed.png></a>
-            <a href = works.html><img src = images/works.png></a>
-            <a href = projects.html class = this><img src = images/projects.png></a>
-            <a href = about.html><img src = images/about.png></a>
-
-            <a class = "grid--cell fc-black-300 ml12 sm:d-none" title = YouTube href = https://youtu.be/aJqjSGwKxBc target = _blank>
-				<svg aria-hidden = true class = youtube width = 23 height = 23 viewBox = "0 0 24 24">
-					<path d = "M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" fill = #a77></path>
-				</svg>
-			</a>
-            
-            <a class = icon onclick = bar(this)><img src = images/bars.png></a>
+            <a href = "/"><img src = assets/images/icons/crossed.png></a>
+            <img onclick = bars(this) src = assets/images/icons/bars.png>
+            <a href = works><img src = assets/images/icons/works.png></a>
+            <a href = projects class = this><img src = assets/images/icons/projects.png></a>
+            <a href = about><img src = assets/images/icons/about.png></a>
+            <a href = //youtu.be/aJqjSGwKxBc target = _blank><img src = assets/images/icons/youtube.svg></a>
         </section>
 
         <section class = main>
             <h1>Project GreyHope</h1>
 
-            <div class = display></div>
+            <div>
+                <div>
+                    <div class = container>
+                        <div style = display:block><img src = assets/images/wash_day_1.jpg><span>1 / 8</span></div>
+                        <div><img src = assets/images/wash_day_2.jpg><span>2 / 8</span></div>
+                        <div><img src = assets/images/wash_day_3.jpg><span>3 / 8</span></div>
+                        <div><img src = assets/images/wash_day_4.jpg><span>4 / 8</span></div>
+                        <div><img src = assets/images/wash_day_5.jpg><span>5 / 8</span></div>
+                        <div><img src = assets/images/wash_day_6.jpg><span>6 / 8</span></div>
+                        <div><img src = assets/images/wash_day_7.jpg><span>7 / 8</span></div>
+                        <div><img src = assets/images/wash_day_8.jpg><span>8 / 8</span></div>
 
-			<footer>
-				<a class = email href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
-				&copy; Copyright Nathan Ford, <span id = year></span>. Website by <a href = https://greyhope.uk target = _blank>Reuben Ford</a>.
-			</footer>
-		</section>
+                        <img class = previous src = assets/images/icons/left.png onclick = shuffle(this)>
+                        <img class = next src = assets/images/icons/right.png onclick = shuffle(this)>
+                    </div>
+
+                    <h2>Wash Day</h2>
+                    Mixed media on board ~ 107cm × 69cm ~ 2018 ~ Sold
+                </div>
+
+                <div>
+                    <div class = container>
+                        <div style = display:block><img src = assets/images/smoking_fags_at_the_exit_1.jpg><span>1 / 9</span></div>
+                        <div><img src = assets/images/smoking_fags_at_the_exit_2.jpg><span>2 / 9</span></div>
+                        <div><img src = assets/images/smoking_fags_at_the_exit_3.jpg><span>3 / 9</span></div>
+                        <div><img src = assets/images/smoking_fags_at_the_exit_4.jpg><span>4 / 9</span></div>
+                        <div><img src = assets/images/smoking_fags_at_the_exit_5.jpg><span>5 / 9</span></div>
+                        <div><img src = assets/images/smoking_fags_at_the_exit_6.jpg><span>6 / 9</span></div>
+                        <div><img src = assets/images/smoking_fags_at_the_exit_7.jpg><span>7 / 9</span></div>
+                        <div><img src = assets/images/smoking_fags_at_the_exit_8.jpg><span>8 / 9</span></div>
+                        <div><img src = assets/images/smoking_fags_at_the_exit_9.jpg><span>9 / 9</span></div>
+
+                        <img class = previous src = assets/images/icons/left.png onclick = shuffle(this)>
+                        <img class = next src = assets/images/icons/right.png onclick = shuffle(this)>
+                    </div>
+
+                    <h2>Smoking Fags at the Exit</h2>
+                    Mixed media on board ~ 121cm × 80cm ~ 2018 ~ Sold
+                </div>
+
+                <div>
+                    <div class = container>
+                        <div><img src = assets/images/five_plus_1.jpg><span>1 / 9</span></div>
+                        <div><img src = assets/images/five_plus_2.jpg><span>2 / 9</span></div>
+                        <div><img src = assets/images/five_plus_3.jpg><span>3 / 9</span></div>
+                        <div><img src = assets/images/five_plus_4.jpg><span>4 / 9</span></div>
+                        <div><img src = assets/images/five_plus_5.jpg><span>5 / 9</span></div>
+                        <div><img src = assets/images/five_plus_6.jpg><span>6 / 9</span></div>
+                        <div style = display:block><img src = assets/images/five_plus_7.jpg><span>7 / 9</span></div>
+                        <div><img src = assets/images/five_plus_8.jpg><span>8 / 9</span></div>
+                        <div><img src = assets/images/five_plus_9.jpg><span>9 / 9</span></div>
+
+                        <img class = previous src = assets/images/icons/left.png onclick = shuffle(this)>
+                        <img class = next src = assets/images/icons/right.png onclick = shuffle(this)>
+                    </div>
+
+                    <h2>Five Plus</h2>
+                    Mixed media on board ~ 121cm × 80cm ~ 2018 ~ Sold
+                </div>
+
+                <div>
+                    <div class = container>
+                        <div><img src = assets/images/flash_mob_1.jpg><span>1 / 9</span></div>
+                        <div><img src = assets/images/flash_mob_2.jpg><span>2 / 9</span></div>
+                        <div><img src = assets/images/flash_mob_3.jpg><span>3 / 9</span></div>
+                        <div><img src = assets/images/flash_mob_4.jpg><span>4 / 9</span></div>
+                        <div><img src = assets/images/flash_mob_5.jpg><span>5 / 9</span></div>
+                        <div><img src = assets/images/flash_mob_6.jpg><span>6 / 9</span></div>
+                        <div><img src = assets/images/flash_mob_7.jpg><span>7 / 9</span></div>
+                        <div><img src = assets/images/flash_mob_8.jpg><span>8 / 9</span></div>
+                        <div style = display:block><img src = assets/images/flash_mob_9.jpg><span>9 / 9</span></div>
+
+                        <img class = previous src = assets/images/icons/left.png onclick = shuffle(this)>
+                        <img class = next src = assets/images/icons/right.png onclick = shuffle(this)>
+                    </div>
+
+                    <h2>Flash Mob</h2>
+                    Mixed media on board ~ 210cm × 120cm ~ 2015 ~ Sold
+                </div>
+
+                <div>
+                    <div class = container>
+                        <div style = display:block><img src = assets/images/carnival_1.jpg></div>
+                    </div>
+
+                    <h2>Carnival</h2>
+                    Mixed media on canvas ~ 112cm × 54cm ~ 2014 ~ Sold
+                </div>
+
+                <div>
+                    <div class = container>
+                        <div style = display:block><img src = assets/images/point_one_1.jpg></div>
+                    </div>
+
+                    <h2>Point One</h2>
+                    Mixed media on canvas ~ 91cm × 38cm ~ 2014 ~ Sold
+                </div>
+
+                <div>
+                    <div class = container>
+                        <div style = display:block><img src = assets/images/bugs_1.jpg></div>
+                    </div>
+
+                    <h2>Bugs</h2>
+                    Mixed media on board ~ 100cm × 70cm ~ 2013 ~ Sold
+                </div>
+            </div>
+
+            <footer>
+                <a href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
+                © Copyright Nathan Ford, <span year></span>. Website by <a href = //greyhope.uk target = _blank>Reuben Ford</a>.
+            </footer>
+        </section>
 
         <script>
-            const SLIDESHOW_CONTAINERS = [
-                {
-                    title: "Wash Day",
-                    width: 107,
-                    height: 69,
-                    year: 2018,
-                    paint: "mixed media",
-                    surface: "board",
-                    sold: true,
-                    slides: 8,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714216421674713089"
-                }, {
-                    title: "Smoking Fags at the Exit",
-                    width: 121,
-                    height: 80,
-                    year: 2018,
-                    paint: "mixed media",
-                    surface: "board",
-                    sold: true,
-                    slides: 9,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714217521186340865"
-                }, {
-                    title: "Five Plus",
-                    width: 121,
-                    height: 80,
-                    year: 2018,
-                    paint: "mixed media",
-                    surface: "board",
-                    sold: true,
-                    slides: 9,
-                    current: 7,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714218620697968641"
-                }, {
-                    title: "Flash Mob",
-                    width: 210,
-                    height: 120,
-                    year: 2015,
-                    paint: "mixed media",
-                    surface: "board",
-                    sold: true,
-                    slides: 9,
-                    current: 9,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714219720209596417"
-                }, {
-                    title: "Carnival",
-                    width: 112,
-                    height: 54,
-                    year: 2014,
-                    paint: "mixed media",
-                    surface: "canvas",
-                    sold: true,
-                    slides: 1,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714220819721224193"
-                }, {
-                    title: "Point One",
-                    width: 91,
-                    height: 38,
-                    year: 2014,
-                    paint: "mixed media",
-                    surface: "canvas",
-                    sold: true,
-                    slides: 1,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714221919232851969"
-                }, {
-                    title: "Bugs",
-                    width: 100,
-                    height: 70,
-                    year: 2013,
-                    paint: "mixed media",
-                    surface: "board",
-                    sold: true,
-                    slides: 1,
-                    current: 1,
-                    nft: "https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/28694029570385871658711482342958265504547397947527695916509714223018744479745"
-                }
-            ]
+            function shuffle(item) {
+                const items = Array.from(item.parentElement.querySelectorAll("div"))
+                const index = items.findIndex(e => e.style.display == "block")
+                const next = index + (item.className == "next" ? 1 : -1)
+                const selector = next < 0 ? items.length - 1 : next == items.length ? 0 : next
 
-            const display = document.querySelector(".display")
-
-			SLIDESHOW_CONTAINERS.forEach((item, index) => {
-                const main = document.createElement("div")
-				const container = document.createElement("div")
-
-                for (let i = 1; i <= item.slides; i ++) {
-                    const slide = document.createElement("div")
-                    const number = document.createElement("div")
-                    const image = document.createElement("img")
-
-                    number.innerText = i + " / " + item.slides
-                    image.src = "images/" + item.title.toLowerCase().replace(/\s/g, "_") + "_" + i + ".jpg"
-                    if (i != item.current) slide.style.display = "none"
-
-                    slide.appendChild(number)
-                    slide.appendChild(image)
-                    container.appendChild(slide)
-                }
-
-                if (item.slides > 1) {
-                    const next = document.createElement("img")
-                    const previous = document.createElement("img")
-
-                    previous.className = "previous"
-                    previous.setAttribute("onclick", "shuffle(" + index + ", -1)")
-                    previous.src = "images/left.png"
-
-                    next.className = "next"
-                    next.setAttribute("onclick", "shuffle(" + index + ", 1)")
-                    next.src = "images/right.png"
-
-                    container.appendChild(previous)
-                    container.appendChild(next)
-                }
-                
-				main.appendChild(container)
-
-                main.innerHTML += (
-                    "<h2>" + item.title + "</h2>" + item.paint + " on " +
-                    item.surface + " ~ " + item.width + "cm \u00d7 " +
-                    item.height + "cm ~ " + item.year + (item.sold ? " ~ sold" : "") +
-                    " ~ <a class = nft href = " + item.nft + " target = _blank>nft available</a>"
-                )
-
-                display.appendChild(main)
-			})
-
-            const shuffle = (index, direction) => {
-                const display = document.querySelector(".display")                
-                const children = display.children[index].firstChild.children
-                const data = SLIDESHOW_CONTAINERS[index]
-
-                children[data.current - 1].style.display = "none"
-
-                data.current += direction
-                if (data.current > data.slides) data.current = 1
-                else if (data.current < 1) data.current = data.slides
-
-                children[data.current - 1].style.display = "block"
+                items[index].style.display = "none"
+                items[selector].style.display = "block"
             }
         </script>
     </body>

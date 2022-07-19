@@ -1,17 +1,11 @@
 @font-face {
     font-family: elite;
-    src: url(../font/elite.ttf)
+    src: url(/assets/font/elite.ttf)
 }
 
 @font-face {
     font-family: nunito;
-    src: url(../font/nunito.ttf)
-}
-
-:root {
-    --transition: 0.2s;
-    --radius: 0.3em;
-    --large: 40px
+    src: url(/assets/font/nunito.ttf)
 }
 
 body {
@@ -27,48 +21,20 @@ a {
     color: #07d
 }
 
-a:hover {color: #aaa}
-ul {line-height: 2}
+a:hover {
+    color: #aaa
+}
 
 footer {
-    font-size: 0.8em;
+    font-size: .8em;
     float: left;
     color: #444;
     margin-top: 2em
 }
 
-.blurb {
-    background-color: #ddd;
-    border-radius: var(--radius);
-    transition-duration: var(--transition);
-    color: #555;
-    padding: 1em;
-    margin-bottom: 1em
-}
-
-.blurb span {
-    color: #000;
-    font-weight: bold
-}
-
-.blurb:hover {background-color: #ccc}
-
-.email {
+footer a:first-child {
     display: block;
     font-family: elite
-}
-
-.tag {
-    position: fixed;
-    font-family: elite;
-    font-size: var(--large);
-    background-color: #fff8;
-    border-top-right-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
-    top: 1em;
-    left: 0;
-    padding: 0.8em;
-    color: #000;
 }
 
 .top {
@@ -81,12 +47,13 @@ footer {
     padding-right: 2em
 }
 
-.top a:not(:first-child) {padding-top: 0.8em}
+.top a:not(:first-child) {
+    padding-top: .8em
+}
 
 .top a:not(:first-child) img {
     height: 1.2em;
-    filter: opacity(80%);
-    transition-duration: var(--transition)
+    filter: opacity(80%)
 }
 
 .top a:not(:first-child) img:hover {
@@ -94,9 +61,19 @@ footer {
     filter: opacity(50%)
 }
 
-.top .this {filter: sepia(100%) hue-rotate(190deg) saturate(500%)}
-.top a:first-child img {height: 2em}
-.top .icon {display: none}
+.top .this {
+    filter: sepia(100%) hue-rotate(190deg) saturate(500%)
+}
+
+.top a:first-child img {
+    height: 2em
+}
+
+.top > img {
+    cursor: pointer;
+    display: none;
+    width: 32px
+}
 
 .main {
     font-family: nunito;
@@ -105,116 +82,73 @@ footer {
 
 .main h1, .main h2, .main h3 {
     font-family: elite;
-    margin: 0 0 0.5em 0
+    margin: .5em 0 .5em 0
 }
-
-.display {color: #555}
-
-.display div div {
-    position: relative;
-    margin-top: 4em
-}
-
-.display div div div img {width: 100%}
-
-.previous, .next {
-    cursor: pointer;
-    position: absolute;
-    bottom: 50%;
-    padding: 1em;
-    transition: 0.4s ease;
-    background-color: #fff0;
-    transform: translateY(50%);
-    filter: invert(100%)
-}
-
-.previous {
-    left: 0;
-    border-radius: 0 0.4em 0.4em 0
-}
-  
-.next {
-    right: 0;
-    border-radius: 0.4em 0 0 0.4em
-}
-  
-.previous:hover, .next:hover {
-    background-color: #fff;
-    filter: invert(20%)
-}
-
-.nft {color: #4a0}
-.display {text-align: center}
-
-.display div div div div {
-    color: #fff;
-    font-size: 0.8em;
-    position: absolute;
-    bottom: 1em;
-    left: 1em
-}
-
-.gallery {
-    line-height: 2.5;
-    -webkit-column-gap: 1em;    
-    -moz-column-gap: 1em;
-    column-gap: 1em;
-    margin-right: auto;    
-    margin-left: auto
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.3em;
-    transition-duration: var(--transition)
-}
-
-.gallery img:hover {transform: scale(1.02)}
 
 @media screen and (min-width: 80em) {
-    :root {--font: 20px}
-    .main {max-width: 80em; padding: 1em 6em; margin: 0 auto}
-    .top {max-width: 80em; padding: 2em 6em; margin: 0 auto}
+    :root {
+        --font: 20px
+    }
+
+    .main {
+        max-width: 80em;
+        padding: 1em 6em;
+        margin: 0 auto
+    }
+
+    .top {
+        max-width: 80em;
+        padding: 2em 6em;
+        margin: 0 auto
+    }
 }
 
 @media screen and (min-width: 56em) and (max-width: 80em) {
-    :root {--font: 18px}
-    .main {padding: 1em 4em}
-    .top {padding: 2em 4em}
+    :root {
+        --font: 18px
+    }
+
+    .main {
+        padding: 1em 4em
+    }
+
+    .top {
+        padding: 2em 4em
+    }
 }
 
 @media screen and (max-width: 56em) {
-    :root {--font: 16px}
-    .main {padding: 1em 1em}
-    .top {padding: 2em 1em}
+    :root {
+        --font: 16px
+    }
+
+    .main {
+        padding: 1em 1em
+    }
+
+    .top {
+        padding: 2em 1em
+    }
 }
 
 @media screen and (max-width: 48em) {
-    .top a {display: none}
-    .top.responsive {position: relative}
-
-    .top.responsive.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
+    .top a {
+        display: none
     }
 
-    .top.responsive a {
-        padding-bottom: 1em;
-        float: none;
+    .top.active a:not(:first-child) {
+        padding-top: 1em;
         display: block;
         text-align: left;
+        float: none
     }
 
-    .top a.icon {
-        float: left;
+    .top > img {
         display: block;
     }
 }
 
-@media screen and (min-width: 70em) {.gallery {-moz-column-count: 4; -webkit-column-count: 4; column-count: 4}}
-@media screen and (min-width: 48em) and (max-width: 70em) {.gallery {-moz-column-count: 3; -webkit-column-count: 3; column-count: 3}}
-@media screen and (min-width: 32em) and (max-width: 48em) {.gallery {-moz-column-count: 2; -webkit-column-count: 2; column-count: 2}}
-@media screen and (max-width: 32em) {.gallery {-moz-column-count: 1; -webkit-column-count: 1; column-count: 1}}
-* {box-sizing: border-box}
+* {
+    box-sizing: border-box;
+    transition-duration: .2s
+}

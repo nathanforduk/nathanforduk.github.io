@@ -1,16 +1,19 @@
-window.dataLayer = window.dataLayer || [];
-function gtag() {dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-LD4L8FCK6D");
+window.dataLayer = window.dataLayer || []
+function gtag() {dataLayer.push(arguments)}
 
-onload = () => {
-    if (typeof year != "undefined")
-        year.innerText = new Date().getFullYear()
+gtag("js", new Date())
+gtag("config", "G-LD4L8FCK6D", {cookie_flags: "SameSite=None;Secure"})
+
+function bars(item) {
+    const top = item.parentNode
+
+    if (top.className == "top")
+        top.className += " active"
+
+    else top.className = "top"
 }
 
-const bar = item => {
-    const parent = item.parentElement
-    
-    if (parent.className === "top") parent.className += " responsive"    
-    else parent.className = "top"
+onload = () => {
+    const year = document.querySelector("span[year]")
+    if (year) year.textContent = new Date().getFullYear()
 }
