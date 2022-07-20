@@ -66,12 +66,14 @@
 
                     const width = canvas.width / images[index].width
                     const height = canvas.height / images[index].height
-                    const scale = (width > height ? width : height) / 2 / devicePixelRatio
+                    const ratio = width > height ? width : height
+                    const scale = 2 * devicePixelRatio
 
                     ctx.drawImage(
-                        images[index], ~~(canvas.width - images[index].width * scale),
-                        ~~(canvas.height - images[index].height * scale),
-                        ~~(images[index].width * scale), ~~(images[index].height * scale))
+                        images[index], ~~((canvas.width - images[index].width * ratio) / scale),
+                        ~~((canvas.height - images[index].height * ratio) / scale),
+                        ~~(images[index].width * ratio / scale),
+                        ~~(images[index].height * ratio / scale))
                 }
 
                 slider.timer ++
