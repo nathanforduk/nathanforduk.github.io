@@ -66,11 +66,11 @@
 
                     const width = canvas.width / images[index].width
                     const height = canvas.height / images[index].height
-                    const scale = width > height ? width : height
+                    const scale = (width > height ? width : height) / 2 / devicePixelRatio
 
                     ctx.drawImage(
-                        images[index], ~~(canvas.width / 2 - images[index].width * scale / 2),
-                        ~~(canvas.height / 2 - images[index].height * scale / 2),
+                        images[index], ~~(canvas.width - images[index].width * scale),
+                        ~~(canvas.height - images[index].height * scale),
                         ~~(images[index].width * scale), ~~(images[index].height * scale))
                 }
 
