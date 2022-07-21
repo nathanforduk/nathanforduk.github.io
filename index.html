@@ -42,8 +42,11 @@
             const FRAME = 480
             const FADE = 180
 
+            devicePixelRatio = 2
+
             const canvas = document.querySelector("canvas")
             const ctx = canvas.getContext("2d")
+            const pixel = devicePixelRatio
 
             const images = ["slider_1.jpg", "slider_2.jpg", "slider_3.jpg", "slider_4.jpg"]
             const slider = {start: true, index: 0, timer: -FADE / 2}
@@ -59,18 +62,19 @@
             }
 
             function loop() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height)
+                ctx.clearRect(0, 0, canvas.width / pixel, canvas.height / pixel)
 
                 const draw = (index, fade) => {
                     ctx.globalAlpha = fade
 
-                    const width = canvas.width / images[index].width
-                    const height = canvas.height / images[index].height
+                    const width = canvas.width / pixel / images[index].width
+                    const height = canvas.height / pixel / images[index].height
                     const scale = width > height ? width : height
 
                     ctx.drawImage(
-                        images[index], ~~(canvas.width / 2 - images[index].width * scale / 2),
-                        ~~(canvas.height / 2 - images[index].height * scale / 2),
+                        images[index],
+                        ~~(canvas.width / pixel / 2 - images[index].width * scale / 2),
+                        ~~(canvas.height / pixel / 2 - images[index].height * scale / 2),
                         ~~(images[index].width * scale), ~~(images[index].height * scale))
                 }
 
@@ -105,8 +109,10 @@
             }
 
             onresize = () => {
-                canvas.width = innerWidth * devicePixelRatio
-                canvas.height = innerHeight * devicePixelRatio
+                canvas.width = innerWidth * pixel
+                canvas.height = innerHeight * pixel
+
+                ctx.scale(pixel, pixel)
             }
 
             start()
