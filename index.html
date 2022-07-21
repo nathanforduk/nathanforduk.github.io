@@ -27,6 +27,11 @@
                 top: 1em;
                 left: 0
             }
+
+            canvas {
+                width: 100%;
+                height: 100%
+            }
         </style>
 
         <title>Nathan Ford</title>
@@ -41,8 +46,6 @@
         <script>
             const FRAME = 480
             const FADE = 180
-
-            devicePixelRatio = 2
 
             const canvas = document.querySelector("canvas")
             const ctx = canvas.getContext("2d")
@@ -62,19 +65,19 @@
             }
 
             function loop() {
-                ctx.clearRect(0, 0, canvas.width / pixel, canvas.height / pixel)
+                ctx.clearRect(0, 0, canvas.width, canvas.height)
 
                 const draw = (index, fade) => {
                     ctx.globalAlpha = fade
 
-                    const width = canvas.width / pixel / images[index].width
-                    const height = canvas.height / pixel / images[index].height
+                    const width = canvas.width / images[index].width
+                    const height = canvas.height / images[index].height
                     const scale = width > height ? width : height
 
                     ctx.drawImage(
                         images[index],
-                        ~~(canvas.width / pixel / 2 - images[index].width * scale / 2),
-                        ~~(canvas.height / pixel / 2 - images[index].height * scale / 2),
+                        ~~(canvas.width / 2 - images[index].width * scale / 2),
+                        ~~(canvas.height / 2 - images[index].height * scale / 2),
                         ~~(images[index].width * scale), ~~(images[index].height * scale))
                 }
 
@@ -111,8 +114,6 @@
             onresize = () => {
                 canvas.width = innerWidth * pixel
                 canvas.height = innerHeight * pixel
-
-                ctx.scale(pixel, pixel)
             }
 
             start()
