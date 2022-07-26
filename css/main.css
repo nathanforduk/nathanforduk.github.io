@@ -8,27 +8,52 @@
     src: url(/assets/font/nunito.ttf)
 }
 
+body[theme = light] {
+    --background: #ddd;
+    --title: invert(0);
+    --tag: invert(0) opacity(.8);
+    --hover: invert(0) opacity(.5);
+    --this: opacity(.8) sepia(1) hue-rotate(190deg) saturate(3);
+    --link: #47b;
+    --cursor: #999;
+    --text: #666;
+    --box: #ccc;
+    --blank: #bbb;
+}
+
+body[theme = dark] {
+    --background: #333;
+    --title: invert(1);
+    --tag: invert(1) opacity(.8);
+    --hover: invert(1) opacity(.5);
+    --this: opacity(.8) sepia(1) hue-rotate(190deg) saturate(3);
+    --link: #5af;
+    --cursor: #888;
+    --text: #aaa;
+    --box: #555;
+    --blank: #666;
+}
+
 body {
     margin: 0;
     font-family: nunito;
-    color: #555;
-    background-color: #eee;
+    color: var(--text);
+    background-color: var(--background);
     font-size: var(--font)
 }
 
 a {
     text-decoration: none;
-    color: #07d
+    color: var(--link)
 }
 
 a:hover {
-    color: #aaa
+    color: var(--cursor)
 }
 
 footer {
     font-size: .8em;
     float: left;
-    color: #444;
     margin-top: 2em
 }
 
@@ -43,36 +68,42 @@ footer a:first-child {
 }
 
 .top a {
-    float: left;
-    padding-right: 2em
-}
-
-.top a:not(:first-child) {
-    padding-top: .8em
+    float: left
 }
 
 .top a:not(:first-child) img {
-    height: 1.2em;
-    filter: opacity(80%)
+    margin-top: .8em;
+    height: 1em
 }
 
-.top a:not(:first-child) img:hover {
-    height: 1.2em;
-    filter: opacity(50%)
+.top a:not(:last-child) img {
+    margin-right: 2em;
+    filter: var(--tag)
+}
+
+.top a:not(:first-child):not(:last-child) img:hover, .top > img:hover {
+    filter: var(--hover)
 }
 
 .top .this {
-    filter: sepia(100%) hue-rotate(190deg) saturate(500%)
+    filter: var(--this)
 }
 
 .top a:first-child img {
-    height: 2em
+    filter: var(--title);
+    height: 1.8em
 }
 
 .top > img {
+    filter: var(--tag);
     cursor: pointer;
     display: none;
     width: 32px
+}
+
+.top .theme {
+    float: right;
+    display: inline
 }
 
 .main {
@@ -144,7 +175,7 @@ footer a:first-child {
     }
 
     .top > img {
-        display: block;
+        display: inline;
     }
 }
 

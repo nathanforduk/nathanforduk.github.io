@@ -11,21 +11,21 @@
 
         <style>
             div {
-                background-color: #ddd;
+                background-color: var(--box);
                 border-radius: .3em;
-                color: #555;
+                color: var(--cursor);
                 padding: 1em;
                 margin-bottom: 1em
             }
 
             div span {
-                color: #000;
+                color: var(--text);
                 font-weight: bold;
                 display: block
             }
 
             div:hover {
-                background-color: #ccc
+                background-color: var(--blank)
             }
 
             ul {
@@ -40,6 +40,7 @@
         <section class = top>
             <a href = "/"><img src = assets/images/icons/title.png></a>
             <img onclick = bars(this) src = assets/images/icons/bars.png>
+            <img onclick = theme(this) class = theme></i>
             <a href = works><img src = assets/images/icons/works.png></a>
             <a href = projects><img src = assets/images/icons/projects.png></a>
             <a href = about class = this><img src = assets/images/icons/about.png></a>
