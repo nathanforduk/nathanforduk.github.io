@@ -18,7 +18,7 @@ body[theme = light] {
     --cursor: #999;
     --text: #666;
     --box: #ccc;
-    --blank: #bbb;
+    --blank: #bbb
 }
 
 body[theme = dark] {
@@ -31,7 +31,7 @@ body[theme = dark] {
     --cursor: #888;
     --text: #aaa;
     --box: #555;
-    --blank: #666;
+    --blank: #666
 }
 
 body {
@@ -60,6 +60,21 @@ footer {
 footer a:first-child {
     display: block;
     font-family: elite
+}
+
+#spotlight {
+    background-color: var(--background);
+    font-family: monospace
+}
+
+.spl-title {
+    font-size: 10px;
+    margin: 0
+}
+
+.spl-footer {
+    font-size: 10px;
+    padding: .2em 1em
 }
 
 .top {
