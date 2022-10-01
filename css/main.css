@@ -133,7 +133,8 @@ footer a:first-child {
 
 @media screen and (min-width: 80em) {
     :root {
-        --font: 20px
+        --font: 20px;
+        --large: 40px
     }
 
     .main {
@@ -151,7 +152,8 @@ footer a:first-child {
 
 @media screen and (min-width: 56em) and (max-width: 80em) {
     :root {
-        --font: 18px
+        --font: 18px;
+        --large: 30px
     }
 
     .main {
@@ -165,7 +167,8 @@ footer a:first-child {
 
 @media screen and (max-width: 56em) {
     :root {
-        --font: 16px
+        --font: 16px;
+        --large: 20px
     }
 
     .main {
