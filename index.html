@@ -18,14 +18,29 @@
             div {
                 position: fixed;
                 font-family: elite;
-                font-size: var(--large);
-                background-color: #fff8;
                 border-top-right-radius: .3em;
                 border-bottom-right-radius: .3em;
                 padding: .8em;
                 color: #000;
-                top: 1em;
                 left: 0
+            }
+
+            div:first-child {
+                background-color: #fff8;
+                font-size: var(--large);
+                top: 1em
+            }
+
+            div:last-of-type {
+                background-color: #eee8;
+                font-size: var(--font);
+                top: 9em
+            }
+
+            span {
+                padding-top: .5em;
+                display: block;
+                font-size: 14px
             }
 
             canvas {
@@ -40,16 +55,21 @@
     <body>
         <a href = works>
             <div>nathanford.co.uk</div>
+
+            <div>
+                Solo Exhibition at Beaux Arts Bath
+                <span>25th February - 25th March 2023</span>
+            </div>
+
             <canvas></canvas>
         </a>
-        
+
         <script>
             const FRAME = 480
             const FADE = 180
 
             const canvas = document.querySelector("canvas")
             const ctx = canvas.getContext("2d")
-            const pixel = devicePixelRatio
 
             const images = ["slider_5.jpg", "slider_2.jpg", "slider_4.jpg", "slider_3.jpg"]
             const slider = {start: true, index: 0, timer: -FADE / 2}
@@ -112,8 +132,8 @@
             }
 
             onresize = () => {
-                canvas.width = innerWidth * pixel
-                canvas.height = innerHeight * pixel
+                canvas.width = innerWidth * devicePixelRatio
+                canvas.height = innerHeight * devicePixelRatio
             }
 
             start()
