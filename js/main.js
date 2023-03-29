@@ -9,14 +9,6 @@ const mutation = new MutationObserver(() => {
 })
 
 mutation.observe(document.documentElement, {childList: true})
-window.dataLayer = window.dataLayer || []
-
-gtag("js", new Date())
-gtag("config", "G-LD4L8FCK6D", {cookie_flags: "SameSite=None;Secure"})
-
-function gtag() {
-    dataLayer.push(arguments)
-}
 
 function bars(item) {
     const top = item.parentNode
@@ -45,6 +37,6 @@ onload = () => {
     const year = document.querySelector("span[year]")
     const icon = document.querySelector(".theme")
 
-    if (year) year.textContent = new Date().getFullYear()
+    year && (year.textContent = new Date().getFullYear())
     icon.src = path(document.body.getAttribute("theme"))
 }

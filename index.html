@@ -3,10 +3,6 @@
     <head>
         <meta name = viewport content = "width=device-width,initial-scale=1">
         <meta name = description content = "Paintings by Nathan Ford">
-
-        <script async src = "//www.googletagmanager.com/gtag/js?id=G-LD4L8FCK6D"></script>
-        <script src = js/main.js></script>
-
         <link rel = stylesheet href = css/main.css>
 
         <style>
@@ -25,13 +21,13 @@
                 left: 0
             }
 
-            div:first-child {
+            .banner {
                 background-color: #fff8;
                 font-size: var(--large);
                 top: 1em
             }
 
-            div:last-of-type {
+            .banner + div {
                 background-color: #eee8;
                 font-size: var(--font);
                 top: 9em
@@ -54,12 +50,12 @@
 
     <body>
         <a href = works>
-            <div>nathanford.co.uk</div>
+            <div class = banner>nathanford.co.uk</div>
 
-            <div>
+            <!-- <div>
                 Solo Exhibition at Beaux Arts Bath
                 <span>25th February - 25th March 2023</span>
-            </div>
+            </div> -->
 
             <canvas></canvas>
         </a>
