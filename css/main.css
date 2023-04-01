@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: nunito;
-    src: url(/assets/font/nunito.ttf)
+    font-family: varela;
+    src: url(/assets/font/varela.ttf)
 }
 
 body[theme = light] {
@@ -18,7 +18,7 @@ body[theme = light] {
     --cursor: #999;
     --text: #666;
     --box: #ccc;
-    --blank: #bbb
+    --blank: #bbb;
 }
 
 body[theme = dark] {
@@ -31,12 +31,12 @@ body[theme = dark] {
     --cursor: #888;
     --text: #aaa;
     --box: #555;
-    --blank: #666
+    --blank: #666;
 }
 
 body {
     margin: 0;
-    font-family: nunito;
+    font-family: varela;
     color: var(--text);
     background-color: var(--background);
     font-size: var(--font)
@@ -92,11 +92,11 @@ footer a:first-child {
 }
 
 .top a:not(:last-child) img {
-    margin-right: 2em;
+    margin-right: 1.5em;
     filter: var(--tag)
 }
 
-.top a:not(:first-child):not(:last-child) img:hover, .top > img:hover {
+.top a:not(:first-child) img:hover, .top > img:hover {
     filter: var(--hover)
 }
 
@@ -105,6 +105,7 @@ footer a:first-child {
 }
 
 .top a:first-child img {
+    margin-right: 2em;
     filter: var(--title);
     height: 1.8em
 }
@@ -122,13 +123,19 @@ footer a:first-child {
 }
 
 .main {
-    font-family: nunito;
+    font-family: varela;
     line-height: 1.5
 }
 
 .main h1, .main h2, .main h3 {
     font-family: elite;
     margin: .5em 0 .5em 0
+}
+
+.flex {
+    display: flex;
+    margin-bottom: 1em;
+    gap: 2em
 }
 
 @media screen and (min-width: 80em) {
@@ -150,7 +157,7 @@ footer a:first-child {
     }
 }
 
-@media screen and (min-width: 56em) and (max-width: 80em) {
+@media screen and (min-width: 58em) and (max-width: 80em) {
     :root {
         --font: 18px;
         --large: 38px
@@ -165,7 +172,7 @@ footer a:first-child {
     }
 }
 
-@media screen and (max-width: 56em) {
+@media screen and (max-width: 58em) {
     :root {
         --font: 16px;
         --large: 32px
@@ -178,9 +185,11 @@ footer a:first-child {
     .top {
         padding: 2em 1em
     }
-}
 
-@media screen and (max-width: 48em) {
+    .flex {
+        flex-direction: column
+    }
+
     .top a {
         display: none
     }

@@ -67,13 +67,13 @@
             const canvas = document.querySelector("canvas")
             const ctx = canvas.getContext("2d")
 
-            const images = ["slider_5.jpg", "slider_2.jpg", "slider_4.jpg", "slider_3.jpg"]
+            const images = ["Reuben-4.22.jpg", "Joachim-8.21.jpg", "Anna-4.22.jpg", "Self-8.21.jpg"]
             const slider = {start: true, index: 0, timer: -FADE / 2}
 
             function start() {
                 images.forEach((name, i) => {
                     images[i] = new Image()
-                    images[i].src = "assets/images/" + name
+                    images[i].src = "assets/images/home/" + name
                 })
 
                 onresize()
