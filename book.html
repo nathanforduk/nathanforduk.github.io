@@ -8,20 +8,40 @@
         <link rel = stylesheet href = css/main.css>
 
         <style>
-            .box {
+            body {
+                overflow-x: hidden
+            }
+
+            .flex {
                 position: relative;
-                transition-duration: 1s;
-                display: inline-block;
-                width: 33%;
-                padding: 21% 0 21% 0
+                display: flex;
+                margin-bottom: 1em;
+                flex-direction: column;
+                gap: 2em
+            }
+
+            .box {
+                aspect-ratio: 44 / 28;
+                width: 100%
             }
 
             .box > div {
-                position: absolute;
-                right: 0;
-                top: 0;
+                transition-duration: 1s;
+                height: 100%
+            }
+
+            .box > div > div {
                 height: 100%;
+                float: right;
                 aspect-ratio: 44 / 28
+            }
+
+            .open {
+                aspect-ratio: 44 / 28
+            }
+
+            .closed {
+                aspect-ratio: 22 / 28
             }
 
             .book * {
@@ -29,7 +49,7 @@
             }
 
             .text {
-                flex: 0 1 calc(34% - 2em)
+                flex: 0 1 30%
             }
 
             .--left {
@@ -61,6 +81,17 @@
             .banner a:hover {
                 color: var(--link)
             }
+
+            @media screen and (min-width: 70em) {
+                .flex {
+                    aspect-ratio: 70 / 28;
+                    flex-direction: row
+                }
+
+                .box {
+                    display: contents
+                }
+            }
         </style>
 
         <title>Nathan Ford · Book</title>
@@ -81,56 +112,58 @@
         <section class = main>
             <div class = flex>
                 <div class = box>
-                    <div>
-                        <div class = book>
-                            <img src = assets/images/book/Front.jpg>
-                            <img src = assets/images/book/Inside-1.jpg>
-                            <img src = assets/images/book/Inside-2.jpg>
-                            <img src = assets/images/book/Page-1.jpg>
-                            <img src = assets/images/book/Page-2.jpg>
-                            <img src = assets/images/book/Page-3.jpg>
-                            <img src = assets/images/book/Page-4.jpg>
-                            <img src = assets/images/book/Page-5.jpg>
-                            <img src = assets/images/book/Page-6.jpg>
-                            <img src = assets/images/book/Page-7.jpg>
-                            <img src = assets/images/book/Page-8.jpg>
-                            <img src = assets/images/book/Page-9.jpg>
-                            <img src = assets/images/book/Page-10.jpg>
-                            <img src = assets/images/book/Page-11.jpg>
-                            <img src = assets/images/book/Page-12.jpg>
-                            <img src = assets/images/book/Page-13.jpg>
-                            <img src = assets/images/book/Page-14.jpg>
-                            <img src = assets/images/book/Page-15.jpg>
-                            <img src = assets/images/book/Page-16.jpg>
-                            <img src = assets/images/book/Page-17.jpg>
-                            <img src = assets/images/book/Page-18.jpg>
-                            <img src = assets/images/book/Page-19.jpg>
-                            <img src = assets/images/book/Page-20.jpg>
-                            <img src = assets/images/book/Page-21.jpg>
-                            <img src = assets/images/book/Page-22.jpg>
-                            <img src = assets/images/book/Page-23.jpg>
-                            <img src = assets/images/book/Page-24.jpg>
-                            <img src = assets/images/book/Page-25.jpg>
-                            <img src = assets/images/book/Page-26.jpg>
-                            <img src = assets/images/book/Page-27.jpg>
-                            <img src = assets/images/book/Page-28.jpg>
-                            <img src = assets/images/book/Page-29.jpg>
-                            <img src = assets/images/book/Page-30.jpg>
-                            <img src = assets/images/book/Page-31.jpg>
-                            <img src = assets/images/book/Page-32.jpg>
-                            <img src = assets/images/book/Page-33.jpg>
-                            <img src = assets/images/book/Page-34.jpg>
-                            <img src = assets/images/book/Page-35.jpg>
-                            <img src = assets/images/book/Page-36.jpg>
-                            <img src = assets/images/book/Page-37.jpg>
-                            <img src = assets/images/book/Page-38.jpg>
-                            <img src = assets/images/book/Page-39.jpg>
-                            <img src = assets/images/book/Page-40.jpg>
-                            <img src = assets/images/book/Page-41.jpg>
-                            <img src = assets/images/book/Page-42.jpg>
-                            <img src = assets/images/book/Inside-1.jpg>
-                            <img src = assets/images/book/Inside-2.jpg>
-                            <img src = assets/images/book/Back.jpg>
+                    <div class = closed>
+                        <div>
+                            <div class = book>
+                                <img src = assets/images/book/Front.jpg>
+                                <img src = assets/images/book/Inside-1.jpg>
+                                <img src = assets/images/book/Inside-2.jpg>
+                                <img src = assets/images/book/Page-1.jpg>
+                                <img src = assets/images/book/Page-2.jpg>
+                                <img src = assets/images/book/Page-3.jpg>
+                                <img src = assets/images/book/Page-4.jpg>
+                                <img src = assets/images/book/Page-5.jpg>
+                                <img src = assets/images/book/Page-6.jpg>
+                                <img src = assets/images/book/Page-7.jpg>
+                                <img src = assets/images/book/Page-8.jpg>
+                                <img src = assets/images/book/Page-9.jpg>
+                                <img src = assets/images/book/Page-10.jpg>
+                                <img src = assets/images/book/Page-11.jpg>
+                                <img src = assets/images/book/Page-12.jpg>
+                                <img src = assets/images/book/Page-13.jpg>
+                                <img src = assets/images/book/Page-14.jpg>
+                                <img src = assets/images/book/Page-15.jpg>
+                                <img src = assets/images/book/Page-16.jpg>
+                                <img src = assets/images/book/Page-17.jpg>
+                                <img src = assets/images/book/Page-18.jpg>
+                                <img src = assets/images/book/Page-19.jpg>
+                                <img src = assets/images/book/Page-20.jpg>
+                                <img src = assets/images/book/Page-21.jpg>
+                                <img src = assets/images/book/Page-22.jpg>
+                                <img src = assets/images/book/Page-23.jpg>
+                                <img src = assets/images/book/Page-24.jpg>
+                                <img src = assets/images/book/Page-25.jpg>
+                                <img src = assets/images/book/Page-26.jpg>
+                                <img src = assets/images/book/Page-27.jpg>
+                                <img src = assets/images/book/Page-28.jpg>
+                                <img src = assets/images/book/Page-29.jpg>
+                                <img src = assets/images/book/Page-30.jpg>
+                                <img src = assets/images/book/Page-31.jpg>
+                                <img src = assets/images/book/Page-32.jpg>
+                                <img src = assets/images/book/Page-33.jpg>
+                                <img src = assets/images/book/Page-34.jpg>
+                                <img src = assets/images/book/Page-35.jpg>
+                                <img src = assets/images/book/Page-36.jpg>
+                                <img src = assets/images/book/Page-37.jpg>
+                                <img src = assets/images/book/Page-38.jpg>
+                                <img src = assets/images/book/Page-39.jpg>
+                                <img src = assets/images/book/Page-40.jpg>
+                                <img src = assets/images/book/Page-41.jpg>
+                                <img src = assets/images/book/Page-42.jpg>
+                                <img src = assets/images/book/Inside-1.jpg>
+                                <img src = assets/images/book/Inside-2.jpg>
+                                <img src = assets/images/book/Back.jpg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,18 +190,18 @@
             </div>
 
             <script>
-                const box = document.querySelector(".box")
-                const book = box.querySelector(".book")
+                const book = document.querySelector(".book")
+                const box = book.parentElement.parentElement
                 const flip = new St.PageFlip(book, {width: 22, height: 28, showCover: true, maxShadowOpacity: .5, size: "stretch"})
 
                 flip.loadFromHTML(book.querySelectorAll("img"))
-                flip.on("flip", e => box.style.width = e.data ? "66%" : "33%")
+                flip.on("flip", e => box.className = e.data ? "open" : "closed")
             </script>
 
-            <!-- <footer>
+            <footer>
                 <a href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
                 &copy; Copyright Nathan Ford, <span year></span>. Website by <a href = https://greyhope.uk target = _blank>Reuben Ford</a>.
-            </footer> -->
+            </footer>
         </section>
     </body>
 </html>
