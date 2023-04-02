@@ -26,13 +26,16 @@
             }
 
             .box > div {
+                position: relative;
                 transition-duration: 1s;
                 height: 100%
             }
 
             .box > div > div {
+                position: absolute;
                 height: 100%;
-                float: right;
+                right: 0;
+                top: 0;
                 aspect-ratio: 44 / 28
             }
 
@@ -82,7 +85,7 @@
                 color: var(--link)
             }
 
-            @media screen and (min-width: 70em) {
+            @media screen and (min-width: 48em) {
                 .flex {
                     aspect-ratio: 70 / 28;
                     flex-direction: row
