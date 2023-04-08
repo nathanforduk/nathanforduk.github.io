@@ -63,26 +63,23 @@
                 border-radius: 0 .2em .2em 0
             }
 
-            .banner {
-                display: inline-block;
-                background-color: var(--box);
-                border-radius: .3em;
-                margin: 1em 1em 0 0;
-                padding: 1em
-            }
-
-            .banner a {
-                color: var(--cursor);
-                display: block
-            }
-
-            .banner span {
+            .details span {
                 color: var(--text);
                 font-weight: bold
             }
 
-            .banner a:hover {
+            .details a {
+                color: var(--cursor)
+            }
+
+            .details a:hover {
                 color: var(--link)
+            }
+
+            .details {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1em
             }
 
             @media screen and (min-width: 48em) {
@@ -180,20 +177,16 @@
                 </div>
             </div>
 
-            <div>
-                <div class = banner>
-                    <span>Softback - £20</span>
-                    <a href = https://www.beauxartsbath.co.uk/artists/nathan-ford-2 target = _blank>www.beauxartsbath.co.uk</a>
-                    <a href = tel:07775941458>07775941458</a>
-                </div>
+            <div class = details>
+                <span>Softback - £20</span>
+                <a href = https://www.beauxartsbath.co.uk/artists/nathan-ford-2 target = _blank>www.beauxartsbath.co.uk</a>
+                <a href = tel:07775941458>07775941458</a>
             </div>
 
-            <div>
-                <div class = banner>
-                    <span>Signed Hardback - £120</span>
-                    <a href = https://www.anderidabooks.co.uk/product/2237/HOW-TO-MAKE-A-PROPER-ALIEN-Signed-First-Edition-Hardback target = _blank>www.anderidabooks.co.uk</a>
-                    <a href = tel:07940038586>07940038586</a>
-                </div>
+            <div class = details>
+                <span>Signed Hardback - £120</span>
+                <a href = https://www.anderidabooks.co.uk/product/2237/HOW-TO-MAKE-A-PROPER-ALIEN-Signed-First-Edition-Hardback target = _blank>www.anderidabooks.co.uk</a>
+                <a href = tel:07940038586>07940038586</a>
             </div>
 
             <script>
