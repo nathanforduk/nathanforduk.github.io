@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+    <head>
+        <meta name = viewport content = "width=device-width,initial-scale=1">
+        <meta name = description content = "Paintings by Nathan Ford">
+
+        <script src = js/main.js></script>
+        <script src = js/pageflip.js></script>
+        <link rel = stylesheet href = css/main.css>
+
+        <style>
+            body {
+                overflow-x: hidden
+            }
+
+            .flex {
+                position: relative;
+                display: flex;
+                margin-bottom: 1em;
+                flex-direction: column;
+                gap: 2em
+            }
+
+            .box {
+                aspect-ratio: 44 / 28;
+                width: 100%
+            }
+
+            .box > div {
+                position: relative;
+                transition-duration: 1s;
+                height: 100%
+            }
+
+            .box > div > div {
+                position: absolute;
+                height: 100%;
+                right: 0;
+                top: 0;
+                aspect-ratio: 44 / 28
+            }
+
+            .open {
+                aspect-ratio: 44 / 28
+            }
+
+            .closed {
+                aspect-ratio: 22 / 28
+            }
+
+            .book * {
+                transition-duration: 0s
+            }
+
+            .text {
+                flex: 0 1 30%
+            }
+
+            .--left {
+                border-radius: .2em 0 0 .2em
+            }
+
+            .--right {
+                border-radius: 0 .2em .2em 0
+            }
+
+            .details span {
+                color: var(--text);
+                font-weight: bold
+            }
+
+            .details a {
+                color: var(--cursor)
+            }
+
+            .details a:hover {
+                color: var(--link)
+            }
+
+            .details {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1em
+            }
+
+            @media screen and (min-width: 48em) {
+                .flex {
+                    aspect-ratio: 70 / 28;
+                    flex-direction: row
+                }
+
+                .box {
+                    display: contents
+                }
+            }
+        </style>
+
+        <title>Nathan Ford &middot; Book</title>
+    </head>
+
+    <body>
+        <section class = top>
+            <a href = "/"><img src = assets/images/icons/title.png></a>
+            <img onclick = bars(this) src = assets/images/icons/bars.png>
+            <img onclick = theme(this) class = theme></i>
+            <a href = works><img src = assets/images/icons/works.png></a>
+            <a href = projects><img src = assets/images/icons/projects.png></a>
+            <a href = about><img src = assets/images/icons/about.png></a>
+            <a href = book class = this><img src = assets/images/icons/book.png></a>
+            <a href = https://youtu.be/aJqjSGwKxBc target = _blank><img src = assets/images/icons/youtube.svg></a>
+        </section>
+
+        <section class = main>
+            <div class = flex>
+                <div class = box>
+                    <div class = closed>
+                        <div>
+                            <div class = book>
+                                <img src = assets/images/book/Front.jpg>
+                                <img src = assets/images/book/Inside-1.jpg>
+                                <img src = assets/images/book/Inside-2.jpg>
+                                <img src = assets/images/book/Page-1.jpg>
+                                <img src = assets/images/book/Page-2.jpg>
+                                <img src = assets/images/book/Page-3.jpg>
+                                <img src = assets/images/book/Page-4.jpg>
+                                <img src = assets/images/book/Page-5.jpg>
+                                <img src = assets/images/book/Page-6.jpg>
+                                <img src = assets/images/book/Page-7.jpg>
+                                <img src = assets/images/book/Page-8.jpg>
+                                <img src = assets/images/book/Page-9.jpg>
+                                <img src = assets/images/book/Page-10.jpg>
+                                <img src = assets/images/book/Page-11.jpg>
+                                <img src = assets/images/book/Page-12.jpg>
+                                <img src = assets/images/book/Page-13.jpg>
+                                <img src = assets/images/book/Page-14.jpg>
+                                <img src = assets/images/book/Page-15.jpg>
+                                <img src = assets/images/book/Page-16.jpg>
+                                <img src = assets/images/book/Page-17.jpg>
+                                <img src = assets/images/book/Page-18.jpg>
+                                <img src = assets/images/book/Page-19.jpg>
+                                <img src = assets/images/book/Page-20.jpg>
+                                <img src = assets/images/book/Page-21.jpg>
+                                <img src = assets/images/book/Page-22.jpg>
+                                <img src = assets/images/book/Page-23.jpg>
+                                <img src = assets/images/book/Page-24.jpg>
+                                <img src = assets/images/book/Page-25.jpg>
+                                <img src = assets/images/book/Page-26.jpg>
+                                <img src = assets/images/book/Page-27.jpg>
+                                <img src = assets/images/book/Page-28.jpg>
+                                <img src = assets/images/book/Page-29.jpg>
+                                <img src = assets/images/book/Page-30.jpg>
+                                <img src = assets/images/book/Page-31.jpg>
+                                <img src = assets/images/book/Page-32.jpg>
+                                <img src = assets/images/book/Page-33.jpg>
+                                <img src = assets/images/book/Page-34.jpg>
+                                <img src = assets/images/book/Page-35.jpg>
+                                <img src = assets/images/book/Page-36.jpg>
+                                <img src = assets/images/book/Page-37.jpg>
+                                <img src = assets/images/book/Page-38.jpg>
+                                <img src = assets/images/book/Page-39.jpg>
+                                <img src = assets/images/book/Page-40.jpg>
+                                <img src = assets/images/book/Page-41.jpg>
+                                <img src = assets/images/book/Page-42.jpg>
+                                <img src = assets/images/book/Inside-1.jpg>
+                                <img src = assets/images/book/Inside-2.jpg>
+                                <img src = assets/images/book/Back.jpg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = text>
+                    <h3>How to Make a Proper Alien</h3>
+    
+                    <p>
+                        This story is about Boo and his attempts to navigate a confusing world using a befuddled mind.
+                    </p>
+                </div>
+            </div>
+
+            <div class = details>
+                <span>Softback - £20</span>
+                <a href = https://www.beauxartsbath.co.uk/artists/nathan-ford-2 target = _blank>www.beauxartsbath.co.uk</a>
+                <a href = tel:07775941458>07775941458</a>
+            </div>
+
+            <div class = details>
+                <span>Signed Hardback - £120</span>
+                <a href = https://www.anderidabooks.co.uk/product/2237/HOW-TO-MAKE-A-PROPER-ALIEN-Signed-First-Edition-Hardback target = _blank>www.anderidabooks.co.uk</a>
+                <a href = tel:07940038586>07940038586</a>
+            </div>
+
+            <script>
+                const book = document.querySelector(".book")
+                const box = book.parentElement.parentElement
+                const flip = new St.PageFlip(book, {width: 22, height: 28, showCover: true, maxShadowOpacity: .5, size: "stretch"})
+
+                flip.loadFromHTML(book.querySelectorAll("img"))
+                flip.on("flip", e => box.className = e.data ? "open" : "closed")
+            </script>
+
+            <footer>
+                <a href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
+                &copy; Copyright Nathan Ford, <span year></span>. Website by <a href = https://greyhope.uk target = _blank>Reuben Ford</a>.
+            </footer>
+        </section>
+    </body>
+</html>
