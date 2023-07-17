@@ -153,7 +153,7 @@
                     <img src = assets/images/book/hard.jpg>
 
                     <div>
-                        <span></span>Hardback</span>
+                        <span>Hardback</span>
                         <a href = https://www.anderidabooks.co.uk/product/2237/HOW-TO-MAKE-A-PROPER-ALIEN-Signed-First-Edition-Hardback target = _blank>anderidabooks.co.uk</a>
                         <a href = tel:07940038586>07940038586</a>
                     </div>
@@ -162,9 +162,16 @@
 
             <script>
                 const book = document.querySelector(".book")
-                const flip = new St.PageFlip(book, {width: 22, height: 28, startPage: 3, showCover: true, maxShadowOpacity: .5, size: "stretch"})
 
-                flip.loadFromHTML(book.querySelectorAll("img"))
+                new St.PageFlip(book, {
+                    width: 22,
+                    height: 28,
+                    startPage: 3,
+                    showCover: true,
+                    maxShadowOpacity: .5,
+                    size: "stretch",
+                    mobileScrollSupport: false
+                }).loadFromHTML(book.querySelectorAll("img"))
             </script>
 
             <footer>
