@@ -11,6 +11,24 @@
                 overflow-x: hidden
             }
 
+            .banner {
+                position: relative;
+                aspect-ratio: 44 / 28
+            }
+
+            .book {
+                position: absolute;
+                right: 0
+            }
+
+            .book#wide {
+                transform: translateX(0)
+            }
+
+            .book#main {
+                transform: translateX(-25%)
+            }
+
             .book * {
                 transition-duration: 0s
             }
@@ -87,55 +105,57 @@
         </section>
 
         <section class = main>
-            <div class = book>
-                <img src = assets/images/book/Front.jpg>
-                <img src = assets/images/book/Inside-1.jpg>
-                <img src = assets/images/book/Inside-2.jpg>
-                <img src = assets/images/book/Page-1.jpg>
-                <img src = assets/images/book/Page-2.jpg>
-                <img src = assets/images/book/Page-3.jpg>
-                <img src = assets/images/book/Page-4.jpg>
-                <img src = assets/images/book/Page-5.jpg>
-                <img src = assets/images/book/Page-6.jpg>
-                <img src = assets/images/book/Page-7.jpg>
-                <img src = assets/images/book/Page-8.jpg>
-                <img src = assets/images/book/Page-9.jpg>
-                <img src = assets/images/book/Page-10.jpg>
-                <img src = assets/images/book/Page-11.jpg>
-                <img src = assets/images/book/Page-12.jpg>
-                <img src = assets/images/book/Page-13.jpg>
-                <img src = assets/images/book/Page-14.jpg>
-                <img src = assets/images/book/Page-15.jpg>
-                <img src = assets/images/book/Page-16.jpg>
-                <img src = assets/images/book/Page-17.jpg>
-                <img src = assets/images/book/Page-18.jpg>
-                <img src = assets/images/book/Page-19.jpg>
-                <img src = assets/images/book/Page-20.jpg>
-                <img src = assets/images/book/Page-21.jpg>
-                <img src = assets/images/book/Page-22.jpg>
-                <img src = assets/images/book/Page-23.jpg>
-                <img src = assets/images/book/Page-24.jpg>
-                <img src = assets/images/book/Page-25.jpg>
-                <img src = assets/images/book/Page-26.jpg>
-                <img src = assets/images/book/Page-27.jpg>
-                <img src = assets/images/book/Page-28.jpg>
-                <img src = assets/images/book/Page-29.jpg>
-                <img src = assets/images/book/Page-30.jpg>
-                <img src = assets/images/book/Page-31.jpg>
-                <img src = assets/images/book/Page-32.jpg>
-                <img src = assets/images/book/Page-33.jpg>
-                <img src = assets/images/book/Page-34.jpg>
-                <img src = assets/images/book/Page-35.jpg>
-                <img src = assets/images/book/Page-36.jpg>
-                <img src = assets/images/book/Page-37.jpg>
-                <img src = assets/images/book/Page-38.jpg>
-                <img src = assets/images/book/Page-39.jpg>
-                <img src = assets/images/book/Page-40.jpg>
-                <img src = assets/images/book/Page-41.jpg>
-                <img src = assets/images/book/Page-42.jpg>
-                <img src = assets/images/book/Inside-1.jpg>
-                <img src = assets/images/book/Inside-2.jpg>
-                <img src = assets/images/book/Back.jpg>
+            <div class = banner>
+                <div class = book id = main>
+                    <img src = assets/images/book/Front.jpg>
+                    <img src = assets/images/book/Inside-1.jpg>
+                    <img src = assets/images/book/Inside-2.jpg>
+                    <img src = assets/images/book/Page-1.jpg>
+                    <img src = assets/images/book/Page-2.jpg>
+                    <img src = assets/images/book/Page-3.jpg>
+                    <img src = assets/images/book/Page-4.jpg>
+                    <img src = assets/images/book/Page-5.jpg>
+                    <img src = assets/images/book/Page-6.jpg>
+                    <img src = assets/images/book/Page-7.jpg>
+                    <img src = assets/images/book/Page-8.jpg>
+                    <img src = assets/images/book/Page-9.jpg>
+                    <img src = assets/images/book/Page-10.jpg>
+                    <img src = assets/images/book/Page-11.jpg>
+                    <img src = assets/images/book/Page-12.jpg>
+                    <img src = assets/images/book/Page-13.jpg>
+                    <img src = assets/images/book/Page-14.jpg>
+                    <img src = assets/images/book/Page-15.jpg>
+                    <img src = assets/images/book/Page-16.jpg>
+                    <img src = assets/images/book/Page-17.jpg>
+                    <img src = assets/images/book/Page-18.jpg>
+                    <img src = assets/images/book/Page-19.jpg>
+                    <img src = assets/images/book/Page-20.jpg>
+                    <img src = assets/images/book/Page-21.jpg>
+                    <img src = assets/images/book/Page-22.jpg>
+                    <img src = assets/images/book/Page-23.jpg>
+                    <img src = assets/images/book/Page-24.jpg>
+                    <img src = assets/images/book/Page-25.jpg>
+                    <img src = assets/images/book/Page-26.jpg>
+                    <img src = assets/images/book/Page-27.jpg>
+                    <img src = assets/images/book/Page-28.jpg>
+                    <img src = assets/images/book/Page-29.jpg>
+                    <img src = assets/images/book/Page-30.jpg>
+                    <img src = assets/images/book/Page-31.jpg>
+                    <img src = assets/images/book/Page-32.jpg>
+                    <img src = assets/images/book/Page-33.jpg>
+                    <img src = assets/images/book/Page-34.jpg>
+                    <img src = assets/images/book/Page-35.jpg>
+                    <img src = assets/images/book/Page-36.jpg>
+                    <img src = assets/images/book/Page-37.jpg>
+                    <img src = assets/images/book/Page-38.jpg>
+                    <img src = assets/images/book/Page-39.jpg>
+                    <img src = assets/images/book/Page-40.jpg>
+                    <img src = assets/images/book/Page-41.jpg>
+                    <img src = assets/images/book/Page-42.jpg>
+                    <img src = assets/images/book/Inside-1.jpg>
+                    <img src = assets/images/book/Inside-2.jpg>
+                    <img src = assets/images/book/Back.jpg>
+                </div>
             </div>
 
             <div class = images>
@@ -162,15 +182,13 @@
 
             <script>
                 const book = document.querySelector(".book")
+                const flip = new St.PageFlip(book, {width: 22, height: 28, showCover: true, maxShadowOpacity: .5, size: "stretch"})
 
-                new St.PageFlip(book, {
-                    width: 22,
-                    height: 28,
-                    startPage: 3,
-                    showCover: true,
-                    maxShadowOpacity: .5,
-                    size: "stretch"
-                }).loadFromHTML(book.querySelectorAll("img"))
+                flip.loadFromHTML(book.querySelectorAll("img"))
+
+                flip.on("flip", event => {
+                    book.id = event.data ? "wide" : "main"
+                })
             </script>
 
             <footer>
