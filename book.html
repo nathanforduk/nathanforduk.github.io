@@ -25,8 +25,12 @@
                 transform: translateX(0)
             }
 
-            .book#main {
+            .book#start {
                 transform: translateX(-25%)
+            }
+
+            .book#end {
+                transform: translateX(25%)
             }
 
             .book * {
@@ -106,7 +110,7 @@
 
         <section class = main>
             <div class = banner>
-                <div class = book id = main>
+                <div class = book id = start>
                     <img src = assets/images/book/Front.jpg>
                     <img src = assets/images/book/Inside-1.jpg>
                     <img src = assets/images/book/Inside-2.jpg>
@@ -185,10 +189,7 @@
                 const flip = new St.PageFlip(book, {width: 22, height: 28, showCover: true, maxShadowOpacity: .5, size: "stretch"})
 
                 flip.loadFromHTML(book.querySelectorAll("img"))
-
-                flip.on("flip", event => {
-                    book.id = event.data ? "wide" : "main"
-                })
+                flip.on("flip", e => book.id = !e.data ? "start" : e.data == flip.getPageCount() - 1 ? "end" : "wide")
             </script>
 
             <footer>
