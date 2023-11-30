@@ -59,11 +59,11 @@
 
             <canvas>
                 <script>
-                    const TRANSITION = 10000 // time in milliseconds (1000:1)
-                    const PAUSE = 5000
+                    const TRANSITION = 8000 // time in milliseconds (1000:1)
+                    const PAUSE = 6000
                     const IMAGES = ["Joachim-12.23.jpg", "Self-10.22.jpg", "Reuben-12.23.jpg"]
-        
-                    const slide = {index: 0, fade: 0, pause: PAUSE, time: performance.now()}
+
+                    const slide = {index: -1, fade: 0, pause: 0, time: performance.now()}
                     const canvas = document.currentScript.parentNode
                     const ctx = canvas.getContext("2d")
         
@@ -97,34 +97,37 @@
                         const fade = Math.cos(slide.fade * Math.PI)
                         const current = slide.images[slide.index % IMAGES.length]
                         const next = slide.images[(slide.index + 1) % IMAGES.length]
-        
+
                         const draw = (image, alpha) => {
                             const x = canvas.width / image.width
                             const y = canvas.height / image.height
-        
+
                             const scale = x > y ? x : y
                             const width = image.width * scale
                             const height = image.height * scale
-        
+
                             ctx.globalAlpha = (alpha + 1) / 2
+                            console.log(ctx.globalAlpha)
                             ctx.drawImage(image, canvas.width / 2 - width / 2, canvas.height / 2 - height / 2, width, height)
                         }
-        
-                        draw(current, fade)
+
+                        ctx.clearRect(0, 0, canvas.width, canvas.height)
+                        slide.start && draw(current, fade)
                         draw(next, -fade)
-        
+
                         if (slide.pause) {
                             slide.pause -= dt
                             slide.pause = Math.max(slide.pause, 0)
                         }
-        
+
                         else {
                             slide.fade += dt / TRANSITION
-        
+
                             if (slide.fade > 1) {
                                 slide.index ++
                                 slide.fade = 0
                                 slide.pause = PAUSE
+                                slide.start = true
                             }
                         }
                     }
