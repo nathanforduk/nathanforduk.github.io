@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+    <head>
+        <meta name = viewport content = "width=device-width,initial-scale=1">
+        <meta name = description content = "Paintings by Nathan Ford">
+
+        <script src = js/spotlight.js></script>
+        <script src = js/main.js></script>
+
+        <link rel = stylesheet href = css/main.css>
+
+        <style>
+            section > div {
+                line-height: 2.5;
+                column-gap: 1em;
+                margin-right: auto;
+                margin-left: auto
+            }
+
+            section > div img {
+                width: 100%;
+                height: auto;
+                border-radius: .3em
+            }
+
+            section > div img:hover {
+                transform: scale(1.02)
+            }
+
+            @media screen and (min-width: 70em) {
+                section > div {
+                    column-count: 4
+                }
+            }
+
+            @media screen and (min-width: 48em) and (max-width: 70em) {
+                section > div {
+                    column-count: 3
+                }
+            }
+
+            @media screen and (min-width: 32em) and (max-width: 48em) {
+                section > div {
+                    column-count: 2
+                }
+            }
+
+            @media screen and (max-width: 32em) {
+                section > div {
+                    column-count: 1
+                }
+            }
+        </style>
+
+        <title>Nathan Ford &middot; Works</title>
+    </head>
+
+    <body>
+        <section class = top>
+            <a href = "/"><img src = assets/images/icons/title.png></a>
+            <img onclick = bars(this) src = assets/images/icons/bars.png>
+            <img onclick = theme(this) class = theme></i>
+            <a href = works class = this><img src = assets/images/icons/works.png></a>
+            <a href = projects><img src = assets/images/icons/projects.png></a>
+            <a href = about><img src = assets/images/icons/about.png></a>
+            <a href = book><img src = assets/images/icons/book.png></a>
+            <a href = https://youtu.be/aJqjSGwKxBc target = _blank><img src = assets/images/icons/youtube.svg></a>
+        </section>
+
+        <section class = main>
+            <div>
+                <a class = spotlight data-page = false data-src-800 = image-800.png data-src-1200 = image-1200.png data-src-2400 = image-2400.png data-src-3800 = image-3800.png>
+                    <img src = image-600.png title = "Sheep Painting #328">
+                </a>
+
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-12.23.jpg title = "Joachim 12.23 - oil on canvas - 28cm &times; 40cm - 2023"><img src = assets/images/works/Joachim-12.23_.jpg title = "Joachim 12.23"></a>
+                <a class = spotlight data-page = false href = assets/images/works/CAST-Test.jpg title = "CAST Test - oil on board - 170cm &times; 122cm - 2023 - sold"><img src = assets/images/works/CAST-Test_.jpg title = "CAST Test"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-2.22.jpg title = "Reuben 2.22 - oil on canvas - 20cm &times; 28cm - 2022 - sold"><img src = assets/images/works/Reuben-2.22_.jpg title = "Reuben 2.22"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Nebula-3.jpg title = "Nebula 3 - oil on board - 170cm &times; 122cm - 2022 - sold"><img src = assets/images/works/Nebula-3_.jpg title = "Nebula 3"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Winter-22.jpg title = "Winter 22 - oil on canvas - 28cm &times; 40cm - 2022 - sold"><img src = assets/images/works/Winter-22_.jpg title = "Winter 22"></a>
+                <a class = spotlight data-page = false href = assets/images/works/At-The-Exit.jpg title = "At The Exit - oil on board - 170cm &times; 122cm - 2020"><img src = assets/images/works/At-The-Exit_.jpg title = "At The Exit"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Self-10.22.jpg title = "Self 10.22 - oil on canvas - 28cm &times; 40cm - 2022 - sold"><img src = assets/images/works/Self-10.22_.jpg title = "Self 10.22"></a>
+                <a class = spotlight data-page = false href = assets/images/works/26.3.21.jpg title = "26.3.21 - oil on canvas - 28cm &times; 20cm - 2021"><img src = assets/images/works/26.3.21_.jpg title = "26.3.21"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Walled-Garden.jpg title = "Walled Garden - oil on board - 170cm &times; 90cm - 2022 - sold"><img src = assets/images/works/Walled-Garden_.jpg title = "Walled Garden"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Anna-8.21.jpg title = "Anna 8.21 - oil on board - 58cm &times; 74cm - 2021"><img src = assets/images/works/Anna-8.21_.jpg title = "Anna 8.21"></a>
+                <a class = spotlight data-page = false href = assets/images/works/3.7.21.jpg title = "3.7.21 - oil on canvas - 28cm &times; 20cm - 2021 - sold"><img src = assets/images/works/3.7.21_.jpg title = "3.7.21"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-11.22.jpg title = "Reuben 11.22 - oil on canvas - 28cm &times; 40cm - 2022 - sold"><img src = assets/images/works/Reuben-11.22_.jpg title = "Reuben 11.22"></a>
+                <a class = spotlight data-page = false href = assets/images/works/19.5.21.jpg title = "19.5.21 - oil on canvas - 28cm &times; 20cm - 2021 - nfs"><img src = assets/images/works/19.5.21_.jpg title = "19.5.21"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Se27.jpg title = "SE27 - oil on board - 121cm &times; 80cm - 2018 - sold"><img src = assets/images/works/Se27_.jpg title = "SE27"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Self-7.20.jpg title = "Self 7.20 - oil on canvas - 20cm &times; 28cm - 2020 - sold"><img src = assets/images/works/Self-7.20_.jpg title = "Self 7.20"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Crossing-2.jpg title = "Crossing 2 - oil on board - 121cm &times; 55cm - 2018 - sold"><img src = assets/images/works/Crossing-2_.jpg title = "Crossing 2"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Lockdown-17-90.jpg title = "Lockdown 17/90 - oil on canvas - 20cm &times; 14cm - 2020 - sold"><img src = assets/images/works/Lockdown-17-90_.jpg title = "Lockdown 17/90"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Staying.jpg title = "Staying - oil on canvas - 63cm &times; 48cm - 2016 - sold"><img src = assets/images/works/Staying_.jpg title = "Staying"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Red-Man.jpg title = "Red Man - oil on board - 121cm &times; 37cm - 2018 - sold"><img src = assets/images/works/Red-Man_.jpg title = "Red Man"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Lockdown-5-90.jpg title = "Lockdown 5/90 - oil on canvas - 20cm &times; 14cm - 2020 - sold"><img src = assets/images/works/Lockdown-5-90_.jpg title = "Lockdown 5/90"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Going.jpg title = "Going - oil on canvas - 63cm &times; 48cm - 2016 - sold"><img src = assets/images/works/Going_.jpg title = "Going"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-7.16.jpg title = "Joachim 7.16 - oil on canvas - 20cm &times; 28cm - 2017 - sold"><img src = assets/images/works/Joachim-7.16_.jpg title = "Joachim 7.16"></a>
+                <a class = spotlight data-page = false href = assets/images/works/The-Race.jpg title = "The Race - oil on canvas - 175cm &times; 130cm - 2010 - sold"><img src = assets/images/works/The-Race_.jpg title = "The Race"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Anna-11.14.jpg title = "Anna 11.14 - oil on canvas - 20cm &times; 28cm - 2014 - sold"><img src = assets/images/works/Anna-11.14_.jpg title = "Anna 11.14"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Greyhope.jpg title = "Greyhope - oil on canvas - 50cm &times; 70cm - 2015 - sold"><img src = assets/images/works/Greyhope_.jpg title = "Greyhope"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Self-10.14.jpg title = "Self 10.14 - oil on canvas - 20cm &times; 28cm - 2014 - sold"><img src = assets/images/works/Self-10.14_.jpg title = "Self 10.14"></a>
+                <a class = spotlight data-page = false href = assets/images/works/The-Bees.jpg title = "The Bees - oil on linen - 200cm &times; 120cm - 2014 - sold"><img src = assets/images/works/The-Bees_.jpg title = "The Bees"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Dad-11.14.jpg title = "Dad 11.14 - oil on canvas - 20cm &times; 28cm - 2014 - sold"><img src = assets/images/works/Dad-11.14_.jpg title = "Dad 11.14"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-2.15.jpg title = "Joachim 2.15 - oil on canvas - 20cm &times; 28cm - 2015 - sold"><img src = assets/images/works/Joachim-2.15_.jpg title = "Joachim 2.15"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Life-After-Still-Life.jpg title = "Life After Still Life - oil on canvas - 20cm &times; 28cm - 2015 - sold"><img src = assets/images/works/Life-After-Still-Life_.jpg title = "Life After Still Life"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-1.12.jpg title = "Joachim 1.12 - oil on canvas - 20cm &times; 28cm - 2012 - sold"><img src = assets/images/works/Joachim-1.12_.jpg title = "Joachim 1.12"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Quiet-Day.jpg title = "Quiet Day - oil on canvas - 20cm &times; 28cm - 2016 - sold"><img src = assets/images/works/Quiet-Day_.jpg title = "Quiet Day"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Greg.jpg title = "Greg - oil on canvas - 20cm &times; 28cm - 2016 - sold"><img src = assets/images/works/Greg_.jpg title = "Greg"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Alone.jpg title = "Alone - oil on canvas - 44cm &times; 28cm - 2016 - sold"><img src = assets/images/works/Alone_.jpg title = "Alone"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Boo-1.jpg title = "Boo 1 - oil on canvas - 20cm &times; 28cm - 2010 - sold"><img src = assets/images/works/Boo-1_.jpg title = "Boo 1"></a>
+
+                <a class = spotlight data-page = false href = assets/images/works/Nebula-4.jpg title = "Nebula 4 - oil on board - 170cm &times; 122cm - 2023"><img src = assets/images/works/Nebula-4_.jpg title = "Nebula 4"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Self-11.22.jpg title = "Self 11.22 - oil on canvas - 28cm &times; 40cm - 2022 - sold"><img src = assets/images/works/Self-11.22_.jpg title = "Self 11.22"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Recovery-Mode.jpg title = "Recovery Mode - oil on board - 170cm &times; 122cm - 2023 - sold"><img src = assets/images/works/Recovery-Mode_.jpg title = "Recovery Mode"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-8.21.jpg title = "Joachim 8.21 - oil on board - 58cm &times; 74cm - 2021 - sold"><img src = assets/images/works/Joachim-8.21_.jpg title = "Joachim 8.21"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Flock-10.jpg title = "Flock 10 - oil on board - 170cm &times; 122cm - 2023"><img src = assets/images/works/Flock-10_.jpg title = "Flock 10"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-4.22.jpg title = "Reuben 4.22 - oil on board - 58cm &times; 74cm - 2022 - sold"><img src = assets/images/works/Reuben-4.22_.jpg title = "Reuben 4.22"></a>
+                <a class = spotlight data-page = false href = assets/images/works/X.jpg title = "X - oil on canvas - 28cm &times; 20cm - 2022"><img src = assets/images/works/X_.jpg title = "X"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Flock-9.jpg title = "Flock 9 - oil on board - 170cm &times; 122cm - 2022 - sold"><img src = assets/images/works/Flock-9_.jpg title = "Flock 9"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Self-11.20.jpg title = "Self 11.20 - oil on canvas - 20cm &times; 28cm - 2020 - sold"><img src = assets/images/works/Self-11.20_.jpg title = "Self 11.20"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Epic.jpg title = "Epic - oil on board - 200cm &times; 122cm - 2019 - sold"><img src = assets/images/works/Epic_.jpg title = "Epic"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Self-9.20.jpg title = "Self 9.20 - oil on canvas - 20cm &times; 28cm - 2020"><img src = assets/images/works/Self-9.20_.jpg title = "Self 9.20"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Spring-20.4.jpg title = "Spring 20.4 - oil on canvas - 20cm &times; 28cm - 2020 - sold"><img src = assets/images/works/Spring-20.4_.jpg title = "Spring 20.4"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Flock-6.jpg title = "Flock 6 - oil on board - 170cm &times; 122cm - 2022"><img src = assets/images/works/Flock-6_.jpg title = "Flock 6"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-8.21.jpg title = "Reuben 8.21 - oil on board - 58cm &times; 74cm - 2021"><img src = assets/images/works/Reuben-8.21_.jpg title = "Reuben 8.21"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Snail-Race.jpg title = "Snail Race - oil on board - 180cm &times; 122cm - 2019 - sold"><img src = assets/images/works/Snail-Race_.jpg title = "Snail Race"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-10.16.jpg title = "Reuben 10.16 - oil on canvas - 20cm &times; 28cm - 2016 - sold"><img src = assets/images/works/Reuben-10.16_.jpg title = "Reuben 10.16"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Dictionary-Words.jpg title = "Dictionary Words - oil on canvas - 44cm &times; 28cm - 2016 - sold"><img src = assets/images/works/Dictionary-Words_.jpg title = "Dictionary Words"></a>
+                <a class = spotlight data-page = false href = assets/images/works/30.3.20.jpg title = "30.3.20 - oil on canvas - 20cm &times; 28cm - 2020"><img src = assets/images/works/30.3.20_.jpg title = "30.3.20"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Vicenza.jpg title = "Vicenza - oil on board - 122cm &times; 87cm - 2018 - sold"><img src = assets/images/works/Vicenza_.jpg title = "Vicenza"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Sunday-Morning.jpg title = "Sunday Morning - oil on canvas - 20cm &times; 28cm - 2018 - sold"><img src = assets/images/works/Sunday-Morning_.jpg title = "Sunday Morning"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Rose-Marie.jpg title = "Rose-Marie - oil on canvas - 20cm &times; 28cm - 2014 - sold"><img src = assets/images/works/Rose-Marie_.jpg title = "Rose-Marie"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-9.15.jpg title = "Reuben 9.15 - oil on linen - 180cm &times; 97cm - 2015 - sold"><img src = assets/images/works/Reuben-9.15_.jpg title = "Reuben 9.15"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Another-Quiet-Day.jpg title = "Another Quiet Day - oil on canvas - 20cm &times; 28cm - 2018 - sold"><img src = assets/images/works/Another-Quiet-Day_.jpg title = "Another Quiet Day"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-10.14.jpg title = "Reuben 10.14 - oil on canvas - 20cm &times; 28cm - 2014 - sold"><img src = assets/images/works/Reuben-10.14_.jpg title = "Reuben 10.14"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Pox.jpg title = "Pox - oil on canvas - 20cm &times; 28cm - 2010 - sold"><img src = assets/images/works/Pox_.jpg title = "Pox"></a>
+                <a class = spotlight data-page = false href = assets/images/works/La-Familia.jpg title = "La Familia - oil on canvas - 150cm &times; 135cm - 2011 - sold"><img src = assets/images/works/La-Familia_.jpg title = "La Familia"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Monsters-of-Remorse.jpg title = "Monsters of Remorse - oil on canvas - 20cm &times; 28cm - 2013 - sold"><img src = assets/images/works/Monsters-of-Remorse_.jpg title = "Monsters of Remorse"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-7.12.jpg title = "Joachim 7.12 - oil on canvas - 20cm &times; 28cm - 2012 - sold"><img src = assets/images/works/Joachim-7.12_.jpg title = "Joachim 7.12"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Pyrex-2.jpg title = "Pyrex 2 - oil on canvas - 20cm &times; 28cm - 2012 - sold"><img src = assets/images/works/Pyrex-2_.jpg title = "Pyrex 2"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Half-Term.jpg title = "Half Term - oil on canvas - 28cm &times; 20cm - 2018 - sold"><img src = assets/images/works/Half-Term_.jpg title = "Half Term"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Stan-3.jpg title = "Stan 3 - oil on canvas - 20cm &times; 28cm - 2012 - sold"><img src = assets/images/works/Stan-3_.jpg title = "Stan 3"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim.jpg title = "Joachim - oil on canvas - 20cm &times; 28cm - 2010 - nfs"><img src = assets/images/works/Joachim_.jpg title = "Joachim"></a>
+                
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-12.23.jpg title = "Reuben 12.23 - oil on canvas - 28cm &times; 40cm - 2023"><img src = assets/images/works/Reuben-12.23_.jpg title = "Reuben 12.23"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Nebula-5.jpg title = "Nebula 5 - oil on board - 170cm &times; 122cm - 2023"><img src = assets/images/works/Nebula-5_.jpg title = "Nebula 5"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-7.20.jpg title = "Joachim 7.20 - oil on canvas - 20cm &times; 28cm - 2020 - sold"><img src = assets/images/works/Joachim-7.20_.jpg title = "Joachim 7.20"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Transit.jpg title = "Transit - oil on board - 80cm &times; 109cm - 2020 - sold"><img src = assets/images/works/Transit_.jpg title = "Transit"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Self-2.22.jpg title = "Self 2.22 - oil on canvas - 20cm &times; 28cm - 2022 - sold"><img src = assets/images/works/Self-2.22_.jpg title = "Self 2.22"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Coast-Road-2.jpg title = "Coast Road 2 - oil on board - 170cm &times; 122cm - 2023"><img src = assets/images/works/Coast-Road-2_.jpg title = "Coast Road 2"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Salvage-2.20.jpg title = "Salvage 2.20 - oil on canvas - 28cm &times; 44cm - 2020 - sold"><img src = assets/images/works/Salvage-2.20_.jpg title = "Salvage 2.20"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Old-Romantic.jpg title = "Old Romantic - oil on board - 170cm &times; 122cm - 2020"><img src = assets/images/works/Old-Romantic_.jpg title = "Old Romantic"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-7.20.jpg title = "Reuben 7.20 - oil on canvas - 20cm &times; 28cm - 2020 - sold"><img src = assets/images/works/Reuben-7.20_.jpg title = "Reuben 7.20"></a>
+                <a class = spotlight data-page = false href = assets/images/works/The-Entertainer.jpg title = "The Entertainer - oil on canvas - 28cm &times; 20cm - 2016 - sold"><img src = assets/images/works/The-Entertainer_.jpg title = "The Entertainer"></a>
+                <a class = spotlight data-page = false href = assets/images/works/East-Place.jpg title = "East Place - oil on linen - 170cm &times; 120cm - 2019"><img src = assets/images/works/East-Place_.jpg title = "East Place"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Fish-Memory.jpg title = "Fish Memory - oil on canvas - 63cm &times; 48cm - 2018 - sold"><img src = assets/images/works/Fish-Memory_.jpg title = "Fish Memory"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Salvage-12.19.jpg title = "Salvage 12.19 - oil on canvas - 28cm &times; 40cm - 2019 - sold"><img src = assets/images/works/Salvage-12.19_.jpg title = "Salvage 12.19"></a>
+                <a class = spotlight data-page = false href = assets/images/works/The-Children.jpg title = "The Children - oil on canvas - 44cm &times; 28cm - 2020"><img src = assets/images/works/The-Children_.jpg title = "The Children"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Love-Triangle.jpg title = "Love Triangle - oil on canvas - 20cm &times; 28cm - 2013 - sold"><img src = assets/images/works/Love-Triangle_.jpg title = "Love Triangle"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Monument-1.jpg title = "Monument 1 - oil on canvas - 20cm &times; 28cm - 2018 - sold"><img src = assets/images/works/Monument-1_.jpg title = "Monument 1"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Town.jpg title = "Town - oil on canvas - 44cm &times; 28cm - 2016 - sold"><img src = assets/images/works/Town_.jpg title = "Town"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Self-4.20.jpg title = "Self 4.20 - oil on canvas - 20cm &times; 28cm - 2020"><img src = assets/images/works/Self-4.20_.jpg title = "Self 4.20"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Dads-Garage.jpg title = "Dad's Garage - oil on canvas - 28cm &times; 20cm - 2016 - sold"><img src = assets/images/works/Dads-Garage_.jpg title = "Dad's Garage"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Dad.jpg title = "Dad - oil on canvas - 20cm &times; 28cm - 2015 - nfs"><img src = assets/images/works/Dad_.jpg title = "Dad"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Lockdown-49-90.jpg title = "Lockdown 49/90 - oil on canvas - 20cm &times; 14cm - 2020"><img src = assets/images/works/Lockdown-49-90_.jpg title = "Lockdown 49/90"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-11.15.jpg title = "Reuben 11.15 - oil on linen - 180cm &times; 97cm - 2015 - sold"><img src = assets/images/works/Reuben-11.15_.jpg title = "Reuben 11.15"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Sludge.jpg title = "Sludge - oil on canvas - 20cm &times; 28cm - 2012 - sold"><img src = assets/images/works/Sludge_.jpg title = "Sludge"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Fallen.jpg title = "Fallen - oil on canvas - 15cm &times; 11cm - 2016 - sold"><img src = assets/images/works/Fallen_.jpg title = "Fallen"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Patch.jpg title = "Patch - oil on canvas - 20cm &times; 28cm - 2012 - sold"><img src = assets/images/works/Patch_.jpg title = "Patch"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Anger-Management.jpg title = "Anger Managemnet - oil on canvas - 20cm &times; 28cm - 2014 - sold"><img src = assets/images/works/Anger-Management_.jpg title = "Anger Management"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Chapel-Road.jpg title = "Chapel Road - oil on canvas - 200cm &times; 110cm - 2011 - sold"><img src = assets/images/works/Chapel-Road_.jpg title = "Chapel Road"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-11.12.jpg title = "Joachim 11.12 - oil on canvas - 20cm &times; 28cm - 2012 - sold"><img src = assets/images/works/Joachim-11.12_.jpg title = "Joachim 11.12"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Painted.jpg title = "Painted - oil on canvas - 115cm &times; 130cm - 2008 - sold"><img src = assets/images/works/Painted_.jpg title = "Painted"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Cormack-2.jpg title = "Cormack 2 - oil on canvas - 20cm &times; 28cm - 2014 - sold"><img src = assets/images/works/Cormack-2_.jpg title = "Cormack 2"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Moment.jpg title = "Moment - oil on canvas - 20cm &times; 28cm - 2012 - sold"><img src = assets/images/works/Moment_.jpg title = "Moment"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Pricetown.jpg title = "Pricetown - oil on canvas - 135cm &times; 100cm - 2010 - sold"><img src = assets/images/works/Pricetown_.jpg title = "Pricetown"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Faded-Smile.jpg title = "Faded Smile - oil on canvas - 20cm &times; 28cm - 2018 - sold"><img src = assets/images/works/Faded-Smile_.jpg title = "Faded Smile"></a>
+
+                <a class = spotlight data-page = false href = assets/images/works/Dump.jpg title = "Dump - oil on board - 170cm &times; 122cm - 2023"><img src = assets/images/works/Dump_.jpg title = "Dump"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Anna-4.22.jpg title = "Anna 4.22 - oil on board - 58cm &times; 74cm - 2022"><img src = assets/images/works/Anna-4.22_.jpg title = "Anna 4.22"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Nebula-6.jpg title = "Nebula 6 - oil on board - 170cm &times; 122cm - 2023"><img src = assets/images/works/Nebula-6_.jpg title = "Nebula 6"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Another-Sunday-Morning.jpg title = "Another Sunday Morning - oil on canvas - 20cm &times; 28cm - 2021 - sold"><img src = assets/images/works/Another-Sunday-Morning_.jpg title = "Another Sunday Morning"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Conversation.jpg title = "Conversation - oil on board - 170cm &times; 122cm - 2022 - sold"><img src = assets/images/works/Conversation_.jpg title = "Conversation"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Dads-Last-Day.jpg title = "Dad's Last Day - oil on canvas - 28cm &times; 20cm - 2017 - nfs"><img src = assets/images/works/Dads-Last-Day_.jpg title = "Dad's Last Day"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Noto.jpg title = "Noto - oil on board - 160cm &times; 122cm - 2019 - sold"><img src = assets/images/works/Noto_.jpg title = "Noto"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Self-10.21.jpg title = "Self 10.21 - oil on canvas - 20cm &times; 28cm - 2021 - sold"><img src = assets/images/works/Self-10.21_.jpg title = "Self 10.21"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Alien.jpg title = "Alien - oil on canvas - 44cm &times; 28cm - 2016 - sold"><img src = assets/images/works/Alien_.jpg title = "Alien"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Lockdown-45-90.jpg title = "Lockdown 45/90 - oil on canvas - 20cm &times; 14cm - 2020"><img src = assets/images/works/Lockdown-45-90_.jpg title = "Lockdown 45/90"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Commander-and-Chief.jpg title = "Commander and Chief - oil on board - 170cm &times; 122cm - 2022"><img src = assets/images/works/Commander-and-Chief_.jpg title = "Commander and Chief"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-10.18.jpg title = "Reuben 10.18 - oil on canvas - 20cm &times; 28cm - 2018 - sold"><img src = assets/images/works/Reuben-10.18_.jpg title = "Reuben 10.18"></a>
+                <a class = spotlight data-page = false href = assets/images/works/24.3.21.jpg title = "24.3.21 - oil on canvas - 28cm &times; 20cm - 2021"><img src = assets/images/works/24.3.21_.jpg title = "24.3.21"></a>
+                <a class = spotlight data-page = false href = assets/images/works/La-Scena.jpg title = "La Scena - oil on board - 200cm &times; 122cm - 2020 - sold"><img src = assets/images/works/La-Scena_.jpg title = "La Scena"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-5.18.jpg title = "Joachim 5.18 - oil on canvas - 20cm &times; 28cm - 2018 - sold"><img src = assets/images/works/Joachim-5.18_.jpg title = "Joachim 5.18"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Last-Light.jpg title = "Last Light - oil on linen - 170cm &times; 120cm - 2016 - sold"><img src = assets/images/works/Last-Light_.jpg title = "Last Light"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Anita.jpg title = "Anita - oil on canvas - 20cm &times; 28cm - 2015 - sold"><img src = assets/images/works/Anita_.jpg title = "Anita"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Lockdown-42-90.jpg title = "Lockdown 42/90 - oil on canvas - 20cm &times; 14cm - 2020"><img src = assets/images/works/Lockdown-42-90_.jpg title = "Lockdown 42/90"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-9.18.jpg title = "Joachim 9.18 - oil on board - 20cm &times; 28cm - 2018 - sold"><img src = assets/images/works/Joachim-9.18_.jpg title = "Joachim 9.18"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Platform.jpg title = "Platform - oil on board - 220cm &times; 36cm - 2018 - sold"><img src = assets/images/works/Platform_.jpg title = "Platform"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-7.18.jpg title = "Reuben 7.18 - oil on canvas - 20cm &times; 28cm - 2018 - sold"><img src = assets/images/works/Reuben-7.18_.jpg title = "Reuben 7.18"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Mum.jpg title = "Mum - oil on canvas - 20cm &times; 28cm - 2015 - nfs"><img src = assets/images/works/Mum_.jpg title = "Mum"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Pickle-and-Boo.jpg title = "Pickle and Boo - oil on canvas - 20cm &times; 28cm - 2013 - sold"><img src = assets/images/works/Pickle-and-Boo_.jpg title = "Pickle and Boo"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Uncle-Philip.jpg title = "Uncle Philip - oil on canvas - 20cm &times; 28cm - 2016 - sold"><img src = assets/images/works/Uncle-Philip_.jpg title = "Uncle Philip"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Apart.jpg title = "Apart - oil on canvas - 244cm &times; 51cm - 2016 - sold"><img src = assets/images/works/Apart_.jpg title = "Apart"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-8.16.jpg title = "Joachim 8.16 - oil on canvas - 20cm &times; 28cm - 2016 - sold"><img src = assets/images/works/Joachim-8.16_.jpg title = "Joachim 8.16"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Nebula-2.jpg title = "Nebula 2 - oil on linen - 200cm &times; 110cm - 2013 - sold"><img src = assets/images/works/Nebula-2_.jpg title = "Nebula 2"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Stanhope.jpg title = "Stanhope - oil on canvas - 20cm &times; 28cm - 2013 - sold"><img src = assets/images/works/Stanhope_.jpg title = "Stanhope"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Short-Lived.jpg title = "Short Lived - oil on canvas - 20cm &times; 28cm - 2012 - sold"><img src = assets/images/works/Short-Lived_.jpg title = "Short Lived"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Joachim-10.14.jpg title = "Joachim 10.14 - oil on canvas - 20cm &times; 28cm - 2014 - sold"><img src = assets/images/works/Joachim-10.14_.jpg title = "Joachim 10.14"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Monster.jpg title = "Monster - oil on canvas - 20cm &times; 28cm - 2010 - sold"><img src = assets/images/works/Monster_.jpg title = "Monster"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Blob.jpg title = "Blob - oil on canvas - 20cm &times; 28cm - 2009 - sold"><img src = assets/images/works/Blob_.jpg title = "Blob"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Cormack-3.jpg title = "Cormack 3 - oil on canvas - 20cm &times; 28cm - 2015 - nfs"><img src = assets/images/works/Cormack-3_.jpg title = "Cormack 3"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Bedroom-Window.jpg title = "Bedroom Window - oil on canvas - 28cm &times; 20cm - 2014 - sold"><img src = assets/images/works/Bedroom-Window_.jpg title = "Bedroom Window"></a>
+                <a class = spotlight data-page = false href = assets/images/works/Reuben-Grey.jpg title = "Reuben Grey - oil on canvas - 20cm &times; 28cm - 2008 - nfs"><img src = assets/images/works/Reuben-Grey_.jpg title = "Reuben Grey"></a>
+            </div>
+
+            <footer>
+                <a href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
+                &copy; Copyright Nathan Ford, <span year></span>. Website by <a href = https://greyhope.uk target = _blank>Reuben Ford</a>.
+            </footer>
+        </section>
+    </body>
+</html>
