@@ -9,29 +9,41 @@
 }
 
 body[theme = light] {
-    --background: #ddd;
-    --title: invert(0);
+    --background: #eee;
+    --title: invert(0) brightness(70%);
     --tag: invert(0) opacity(.8);
-    --hover: invert(0) opacity(.5);
-    --this: opacity(.8) sepia(1) hue-rotate(190deg) saturate(3);
+    --hover: invert(0) opacity(1);
+    --this: opacity(.8) sepia(1) hue-rotate(170deg) saturate(2);
     --link: #47b;
-    --cursor: #999;
-    --text: #666;
+    --cursor: #777;
+    --text: #333;
     --box: #ccc;
+    --essay: #ddd;
+    --bookcover: #ddd;
+    --essaytext: #111;
     --blank: #bbb;
+    --footerShade: #fffb;
 }
 
 body[theme = dark] {
-    --background: #333;
-    --title: invert(1);
+    --background: #222;
+    --title: invert(1) contrast(20%) brightness(140%);
     --tag: invert(1) opacity(.8);
-    --hover: invert(1) opacity(.5);
-    --this: opacity(.8) sepia(1) hue-rotate(190deg) saturate(3);
-    --link: #5af;
-    --cursor: #888;
+    --hover: invert(1) opacity(1);
+    --this: opacity(.8) sepia(1) hue-rotate(170deg) saturate(3);
+    --link: #8ac;
+    --cursor: #999;
     --text: #aaa;
     --box: #555;
+    --essay: #444;
+    --bookcover: #333;
+    --essaytext: #ccc;
     --blank: #666;
+    --footerShade: #000b;
+}
+
+:root {
+    --shadow: 1px 2px 4px #000b;
 }
 
 body {
@@ -39,7 +51,8 @@ body {
     font-family: varela;
     color: var(--text);
     background-color: var(--background);
-    font-size: var(--font)
+    font-size: var(--font);
+    width: 100%;
 }
 
 a {
@@ -52,13 +65,21 @@ a:hover {
 }
 
 footer {
-    font-size: .8em;
-    margin-top: 2em
+    font-size: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: .3em;
+    border-top-right-radius: .8em;
+    box-shadow: var(--shadow);
+    background-color: var(--footerShade);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2
 }
 
-footer a:first-child {
-    display: block;
-    font-family: elite
+footer > a {
+    font-family: elite;
 }
 
 #spotlight {
@@ -73,57 +94,65 @@ footer a:first-child {
 
 .spl-footer {
     font-size: 10px;
-    padding: .2em 1em
+    padding: .2em 1em;
 }
 
 .top {
+    z-index: 1;
+    position: fixed;
+    top: 0;
     overflow: hidden;
     font-family: elite;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+    font-size: var(--larger);
+    height: 80px;
+    background-color: var(--background);
+    border-bottom: 2px solid var(--box);
 }
 
 .top a {
-    float: left
+    color: var(--text);
 }
 
-.top a:not(:first-child) img {
-    margin-top: .8em;
-    height: 1em
+.top *:hover:not(:first-child) {
+    transform: scale(1.1) rotate(-4deg);
 }
 
-.top a:not(:last-child) img {
-    margin-right: 1.5em;
-    filter: var(--tag)
-}
-
-.top a:not(:first-child) img:hover, .top > img:hover {
-    filter: var(--hover)
-}
-
-.top .this {
-    filter: var(--this)
-}
-
-.top a:first-child img {
-    margin-right: 2em;
-    filter: var(--title);
-    height: 1.8em
+.top img:first-child {
+    width: auto;
+    height: 35px;
+    margin-right: 1em;
+    filter: var(--title)
 }
 
 .top > img {
-    filter: var(--tag);
+    width: 32px;
+    height: 32px;
     cursor: pointer;
-    display: none;
-    width: 32px
+    filter: var(--tag);
 }
 
-.top .theme {
-    float: right;
-    display: inline
+.top > img {
+    position: absolute;
+    left: 90%
+}
+
+.top > img:last-child {
+    display: none;
+}
+
+.youtube {
+    margin-top: .2em;
 }
 
 .main {
     font-family: varela;
-    line-height: 1.5
+    line-height: 1.5;
+    z-index: -1;
+    margin-bottom: 85px;
 }
 
 .main h1, .main h2, .main h3 {
@@ -131,71 +160,263 @@ footer a:first-child {
     margin: .5em 0 .5em 0
 }
 
+
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: .5em;
+    height: 100%;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.banner #l, .banner #r {
+    position: absolute;
+    top: 0;
+    background-color: #1118;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    color: #ccc;
+    user-select: none
+}
+
+.banner #l {
+    left: 0;
+}
+
+.banner #r {
+    right: 0
+}
+
+.banner #l:hover, .banner #r:hover {
+    background-color: #111;
+    cursor: pointer;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: max-content;
+    align-items: center;
+    height: 100%;
+    transform: var(--transformOffsetStart);
+}
+
+#scroll {
+    --transformOffsetStart: translateX(0);
+    --transformOffsetGoal: translateX(0);
+
+    animation-name: goBack;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.slider img {
+    width: auto;
+    height: 100%;
+}
+
+.images {
+    display: flex;
+    gap: 3em;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.images img {
+    border-radius: .3em;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.images > div {
+    position: relative
+}
+
+.images > div div {
+    position: absolute;
+    background-color: #666;
+    border-top-right-radius: .3em;
+    border-bottom-right-radius: .3em;
+    padding: .8em;
+    display: flex;
+    flex-direction: column;
+    color: #ccc;
+    top: 3em;
+    left: 0
+}
+
+.images span {
+    font-weight: bold
+}
+
+.images a {
+    color: #bbb
+}
+
+.images a:hover {
+    color: #fff
+}
+
+@media screen and (max-width: 40em) {
+    .images {
+        flex-direction: column;
+    }
+}
+
+@keyframes goBack {
+    0% {transform: var(--transformOffsetGoal)}
+    50% {filter: grayscale(70%)}
+    100% {transform: var(--transformOffsetStart)}
+}
+
+.essayBox {
+    background-color: var(--essay);
+    color: var(--essaytext);
+    padding: 1em 2em;
+    margin-top: 1em;
+    border-radius: .5em;
+    box-shadow: var(--shadow);
+}
+
 @media screen and (min-width: 80em) {
     :root {
         --font: 20px;
-        --large: 40px
+        --large: 40px;
+        --larger: 28px;
     }
 
     .main {
         max-width: 80em;
-        padding: 1em 6em;
-        margin: 0 auto
+        padding: 0 6em;
+        margin: 0 auto;
+        margin-top: 120px;
+        margin-bottom: 85px;
     }
 
     .top {
-        max-width: 80em;
-        padding: 2em 6em;
-        margin: 0 auto
+        margin: 0 auto;
+        padding: 0 4em;
     }
 }
 
-@media screen and (min-width: 58em) and (max-width: 80em) {
+@media screen and (min-width: 65em) and (max-width: 80em) {
     :root {
         --font: 18px;
-        --large: 38px
+        --large: 38px;
+        --larger: 25px;
     }
 
     .main {
-        padding: 1em 4em
+        padding: 0 4em;
+        margin-top: 120px
     }
 
     .top {
-        padding: 2em 4em
+        padding: 0 3em;
     }
 }
 
-@media screen and (max-width: 58em) {
+@media screen and (min-width: 50em) and (max-width: 65em) {
     :root {
         --font: 16px;
-        --large: 32px
+        --large: 32px;
+        --larger: 23px;
     }
 
     .main {
-        padding: 1em 1em
+        padding: 0 1em;
+        margin-top: 120px
     }
 
     .top {
-        padding: 2em 1em
+        padding: 0 1em;
+        gap: 20px
+    }
+
+    .top img:first-child {
+        height: 27px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 35em) and (max-width: 50em) {
+    :root {
+        --font: 16px;
+        --large: 32px;
+        --larger: 23px;
+    }
+
+    .main {
+        padding: 0 1em;
+        margin-top: 120px
+    }
+
+    .top {
+        padding: 0 1em;
+    }
+
+    .top a:first-child {
+        display: none
+    }
+}
+
+@media screen and (max-width: 35em) {
+    :root {
+        --font: 16px;
+        --large: 32px;
+        --larger: 20px;
+    }
+
+    .main {
+        padding: 0 1em;
+        margin-top: 100px
+    }
+
+    .top {
+        padding: 1em;
+        flex-direction: column;
+        align-items: normal;
+        height: auto;
+        gap: 6px;
+        height: 70px
     }
 
     .flex {
         flex-direction: column
     }
 
-    .top a {
-        display: none
+    .top *:not(:nth-child(7)) {
+        display: none;
     }
 
     .top.active a:not(:first-child) {
-        padding-top: 1em;
         display: block;
-        text-align: left;
-        float: none
+        width: fit-content;
     }
 
-    .top > img {
-        display: inline;
+    .top.active {
+        height: auto
+    }
+
+    .top.active + .main {
+        margin-top: 200px;
+    }
+
+    .top img:last-child {
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+    .top > img:not(:last-child) {
+        right: 50px;
+        left: auto
     }
 }
 

@@ -11,7 +11,8 @@
             .main img {
                 width: 60%;
                 border-radius: .3em;
-                margin-bottom: 1em
+                margin-bottom: 1em;
+                box-shadow: var(--shadow);
             }
 
             div {
@@ -19,7 +20,8 @@
                 border-radius: .3em;
                 color: var(--cursor);
                 padding: 1em;
-                margin-bottom: 1em
+                margin-bottom: 1em;
+                box-shadow: var(--shadow);
             }
 
             div span {
@@ -43,13 +45,13 @@
     <body>
         <section class = top>
             <a href = "/"><img src = assets/images/icons/title.png></a>
-            <img onclick = bars(this) src = assets/images/icons/bars.png>
+            <a href = works>works</a>
+            <a href = projects>projects</a>
+            <a href = about class = this>about</a>
+            <a href = book>book</a>
+            <a class = youtube href = https://youtu.be/aJqjSGwKxBc target = _blank><img src = assets/images/icons/youtube.svg></a>
             <img onclick = theme(this) class = theme></i>
-            <a href = works><img src = assets/images/icons/works.png></a>
-            <a href = projects><img src = assets/images/icons/projects.png></a>
-            <a href = about class = this><img src = assets/images/icons/about.png></a>
-            <a href = book><img src = assets/images/icons/book.png></a>
-            <a href = https://youtu.be/aJqjSGwKxBc target = _blank><img src = assets/images/icons/youtube.svg></a>
+            <img onclick = bars(this) src = assets/images/icons/bars.png>
         </section>
 
         <section class = main>
@@ -206,12 +208,12 @@
                 <li>New English Art Club, Mall Galleries, London. 2000</li>
                 <li>Young Artists' Britain, Hampton Court Palace, London. 1999</li>
                 <li>Worshipful Company of Painter-Stainers, Livery Hall, London. 1998</li>
-                
             </ul>
 
             <footer>
                 <a href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
-                &copy; Copyright Nathan Ford, <span year></span>. Website by <a href = https://greyhope.uk target = _blank>Reuben Ford</a>.
+                <span>&copy; Copyright Nathan Ford, <span year></span>.</span>
+                <span>Website by Reuben and  <a href = https://joachimford.uk target = _blank>Joachim Ford</a>.</span>
             </footer>
         </section>
     </body>

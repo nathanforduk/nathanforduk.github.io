@@ -3,93 +3,46 @@
         <meta name = viewport content = "width=device-width,initial-scale=1">
 
         <script src = js/main.js></script>
-        <script src = js/pageflip.js></script>
         <link rel = stylesheet href = css/main.css>
 
         <style>
-            body {
-                overflow-x: hidden
-            }
-
-            .banner {
+            .container {
                 position: relative;
-                aspect-ratio: 44 / 28
+                width: 100%;
+                padding-bottom: 63.63%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 4em;
             }
 
-            .book {
-                position: absolute;
-                right: 0
-            }
-
-            .book#wide {
-                transform: translateX(0)
-            }
-
-            .book#start {
-                transform: translateX(-25%)
-            }
-
-            .book#end {
-                transform: translateX(25%)
-            }
-
-            .book * {
-                transition-duration: 0s
-            }
-
-            .--left {
-                border-radius: .3em 0 0 .3em
-            }
-
-            .--right {
-                border-radius: 0 .3em .3em 0
-            }
-
-            .images {
-                margin-top: 3em;
-                display: flex;
-                gap: 3em;
-                width: 100%
-            }
-
-            .images img {
+            .cover {
+                background-color: var(--bookcover);
                 border-radius: .3em;
-                width: 100%
+                display: flex;
+                width: 100%;
+                padding: 1em;
+                margin-bottom: 1.5em;
+                gap: 20px;
+                box-shadow: var(--shadow);
+                font-size: var(--larger);
+                flex-wrap: wrap;
             }
 
-            .images > div {
-                position: relative
-            }
-
-            .images > div div {
-                position: absolute;
-                background-color: #777;
-                border-top-right-radius: .3em;
-                border-bottom-right-radius: .3em;
-                padding: .8em;
+            .cover div {
                 display: flex;
                 flex-direction: column;
-                color: #ccc;
-                top: 3em;
-                left: 0
             }
 
-            .images span {
-                font-weight: bold
+            .cover > img {
+                border-radius: .3em;
+                display: flex;
+                width: 100%;
+                max-width: 500px;
+                box-shadow: var(--shadow);
             }
 
-            .images a {
-                color: #aaa
-            }
-
-            .images a:hover {
-                color: #555
-            }
-
-            @media screen and (max-width: 48em) {
-                .images {
-                    flex-direction: column
-                }
+            * {
+                font-family: elite;
             }
         </style>
 
@@ -99,102 +52,97 @@
     <body>
         <section class = top>
             <a href = "/"><img src = assets/images/icons/title.png></a>
-            <img onclick = bars(this) src = assets/images/icons/bars.png>
+            <a href = works>works</a>
+            <a href = projects>projects</a>
+            <a href = about class = this>about</a>
+            <a href = book>book</a>
+            <a class = youtube href = https://youtu.be/aJqjSGwKxBc target = _blank><img src = assets/images/icons/youtube.svg></a>
             <img onclick = theme(this) class = theme></i>
-            <a href = works><img src = assets/images/icons/works.png></a>
-            <a href = projects><img src = assets/images/icons/projects.png></a>
-            <a href = about><img src = assets/images/icons/about.png></a>
-            <a href = book class = this><img src = assets/images/icons/book.png></a>
-            <a href = https://youtu.be/aJqjSGwKxBc target = _blank><img src = assets/images/icons/youtube.svg></a>
+            <img onclick = bars(this) src = assets/images/icons/bars.png>
         </section>
 
         <section class = main>
-            <div class = banner>
-                <div class = book id = start>
-                    <img src = assets/images/book/Front.jpg>
-                    <img src = assets/images/book/Inside-1.jpg>
-                    <img src = assets/images/book/Inside-2.jpg>
-                    <img src = assets/images/book/Page-1.jpg>
-                    <img src = assets/images/book/Page-2.jpg>
-                    <img src = assets/images/book/Page-3.jpg>
-                    <img src = assets/images/book/Page-4.jpg>
-                    <img src = assets/images/book/Page-5.jpg>
-                    <img src = assets/images/book/Page-6.jpg>
-                    <img src = assets/images/book/Page-7.jpg>
-                    <img src = assets/images/book/Page-8.jpg>
-                    <img src = assets/images/book/Page-9.jpg>
-                    <img src = assets/images/book/Page-10.jpg>
-                    <img src = assets/images/book/Page-11.jpg>
-                    <img src = assets/images/book/Page-12.jpg>
-                    <img src = assets/images/book/Page-13.jpg>
-                    <img src = assets/images/book/Page-14.jpg>
-                    <img src = assets/images/book/Page-15.jpg>
-                    <img src = assets/images/book/Page-16.jpg>
-                    <img src = assets/images/book/Page-17.jpg>
-                    <img src = assets/images/book/Page-18.jpg>
-                    <img src = assets/images/book/Page-19.jpg>
-                    <img src = assets/images/book/Page-20.jpg>
-                    <img src = assets/images/book/Page-21.jpg>
-                    <img src = assets/images/book/Page-22.jpg>
-                    <img src = assets/images/book/Page-23.jpg>
-                    <img src = assets/images/book/Page-24.jpg>
-                    <img src = assets/images/book/Page-25.jpg>
-                    <img src = assets/images/book/Page-26.jpg>
-                    <img src = assets/images/book/Page-27.jpg>
-                    <img src = assets/images/book/Page-28.jpg>
-                    <img src = assets/images/book/Page-29.jpg>
-                    <img src = assets/images/book/Page-30.jpg>
-                    <img src = assets/images/book/Page-31.jpg>
-                    <img src = assets/images/book/Page-32.jpg>
-                    <img src = assets/images/book/Page-33.jpg>
-                    <img src = assets/images/book/Page-34.jpg>
-                    <img src = assets/images/book/Page-35.jpg>
-                    <img src = assets/images/book/Page-36.jpg>
-                    <img src = assets/images/book/Page-37.jpg>
-                    <img src = assets/images/book/Page-38.jpg>
-                    <img src = assets/images/book/Page-39.jpg>
-                    <img src = assets/images/book/Page-40.jpg>
-                    <img src = assets/images/book/Page-41.jpg>
-                    <img src = assets/images/book/Page-42.jpg>
-                    <img src = assets/images/book/Inside-1.jpg>
-                    <img src = assets/images/book/Inside-2.jpg>
-                    <img src = assets/images/book/Back.jpg>
+            <h1>Book Preview</h1>
+            <div class = container>
+                <div class = banner>
+                    <div class = slider>
+                        <img src = assets/images/book/Back.jpg>
+                        <img src = assets/images/book/Front.jpg>
+                        <img src = assets/images/book/Page-1.jpg>
+                        <img src = assets/images/book/Page-2.jpg>
+                        <img src = assets/images/book/Page-3.jpg>
+                        <img src = assets/images/book/Page-4.jpg>
+                        <img src = assets/images/book/Page-5.jpg>
+                        <img src = assets/images/book/Page-6.jpg>
+                        <img src = assets/images/book/Page-7.jpg>
+                        <img src = assets/images/book/Page-8.jpg>
+                        <img src = assets/images/book/Page-9.jpg>
+                        <img src = assets/images/book/Page-10.jpg>
+                        <img src = assets/images/book/Page-11.jpg>
+                        <img src = assets/images/book/Page-12.jpg>
+                        <img src = assets/images/book/Page-13.jpg>
+                        <img src = assets/images/book/Page-14.jpg>
+                        <img src = assets/images/book/Page-15.jpg>
+                        <img src = assets/images/book/Page-16.jpg>
+                        <img src = assets/images/book/Page-17.jpg>
+                        <img src = assets/images/book/Page-18.jpg>
+                        <img src = assets/images/book/Page-19.jpg>
+                        <img src = assets/images/book/Page-20.jpg>
+                        <img src = assets/images/book/Page-21.jpg>
+                        <img src = assets/images/book/Page-22.jpg>
+                        <img src = assets/images/book/Page-23.jpg>
+                        <img src = assets/images/book/Page-24.jpg>
+                        <img src = assets/images/book/Page-25.jpg>
+                        <img src = assets/images/book/Page-26.jpg>
+                        <img src = assets/images/book/Page-27.jpg>
+                        <img src = assets/images/book/Page-28.jpg>
+                        <img src = assets/images/book/Page-29.jpg>
+                        <img src = assets/images/book/Page-30.jpg>
+                        <img src = assets/images/book/Page-31.jpg>
+                        <img src = assets/images/book/Page-32.jpg>
+                        <img src = assets/images/book/Page-33.jpg>
+                        <img src = assets/images/book/Page-34.jpg>
+                        <img src = assets/images/book/Page-35.jpg>
+                        <img src = assets/images/book/Page-36.jpg>
+                        <img src = assets/images/book/Page-37.jpg>
+                        <img src = assets/images/book/Page-38.jpg>
+                        <img src = assets/images/book/Page-39.jpg>
+                        <img src = assets/images/book/Page-40.jpg>
+                        <img src = assets/images/book/Page-41.jpg>
+                        <img src = assets/images/book/Page-42.jpg>
+                    </div>
+
+                    <div onclick = change(-1,2,0) id=l><</div>
+                    <div onclick = change(1,2,0) id=r>></div>
                 </div>
             </div>
 
-            <div class = images>
-                <div>
-                    <img src = assets/images/book/soft.jpg>
-    
-                    <div>
-                        <span>Softback</span>
-                        <a href = https://www.beauxartsbath.co.uk/artists/nathan-ford-2 target = _blank>beauxartsbath.co.uk</a>
-                        <a href = tel:07775941458>07775941458</a>
-                    </div>
-                </div>
+            <h1>To Purchase</h1>
 
+            <div class = cover>
+                <img src = assets/images/book/softcover.jpg>
                 <div>
-                    <img src = assets/images/book/hard.jpg>
-
-                    <div>
-                        <span>Hardback</span>
-                        <a href = https://www.anderidabooks.co.uk/product/2237/HOW-TO-MAKE-A-PROPER-ALIEN-Signed-First-Edition-Hardback target = _blank>anderidabooks.co.uk</a>
-                        <a href = tel:07940038586>07940038586</a>
-                    </div>
+                    <span>Softback</span>
+                    <a href = https://www.beauxartsbath.co.uk/artists/nathan-ford-2 target = _blank>beauxartsbath.co.uk</a>
+                    <a href = mailto:info@beauxartsbath.co.uk>info@beauxartsbath.co.uk</a>
+                    <a href = tel:07775941458>+44 07775941458</a>
                 </div>
             </div>
 
-            <script>
-                const book = document.querySelector(".book")
-                const flip = new St.PageFlip(book, {width: 22, height: 28, showCover: true, maxShadowOpacity: .5, size: "stretch"})
-
-                flip.loadFromHTML(book.querySelectorAll("img"))
-                flip.on("flip", e => book.id = !e.data ? "start" : e.data == flip.getPageCount() - 1 ? "end" : "wide")
-            </script>
+            <div class = cover>
+                <img src = assets/images/book/hardcover.jpg>
+                <div>
+                    <span>Signed Hardback</span>
+                    <a href = https://www.anderidabooks.co.uk/product/2237/HOW-TO-MAKE-A-PROPER-ALIEN-Signed-First-Edition-Hardback target = _blank>anderidabooks.co.uk</a>
+                    <a href = mailto:anderidabooks@gmail.com>anderidabooks@gmail.com</a>
+                    <a href = tel:07940038586>+44 07940038586</a>
+                </div>
+            </div>
 
             <footer>
                 <a href = mailto:info@nathanford.co.uk>info@nathanford.co.uk</a>
-                &copy; Copyright Nathan Ford, <span year></span>. Website by <a href = https://greyhope.uk target = _blank>Reuben Ford</a>.
+                <span>&copy; Copyright Nathan Ford, <span year></span>.</span>
+                <span>Website by Reuben and  <a href = https://joachimford.uk target = _blank>Joachim Ford</a>.</span>
             </footer>
         </section>
     </body>
