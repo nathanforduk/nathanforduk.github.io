@@ -25,10 +25,14 @@ function change(dir, jump = 2, index) {
     const increment = tempImage.width * jump
 
     // move div in specified direction
-    item.transitioning = true
     item.pos -= increment * dir
-    if (item.pos > 0) item.pos = 0
+    if (item.pos > 0) {
+        item.pos = 0
+        return
+    }
     if (item.pos <= -increment * images.length) item.pos = 0
+
+    item.transitioning = true
     item.slider.style.transform = 'translateX(' + item.pos + 'px)'
 }
 
@@ -75,6 +79,7 @@ onresize = () => {
     for (let i = 0; i < slidersContainer.length; i ++) {
         const item = slidersContainer[i]
         item.pos = 0
+        item.transitioning = false
         item.slider.style.transform = 'translateX(0)'
     }
 }
