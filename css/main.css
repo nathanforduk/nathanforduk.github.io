@@ -204,16 +204,7 @@ footer > a {
     width: max-content;
     align-items: center;
     height: 100%;
-    transform: var(--transformOffsetStart);
-}
-
-#scroll {
-    --transformOffsetStart: translateX(0);
-    --transformOffsetGoal: translateX(0);
-
-    animation-name: goBack;
-    animation-duration: 1s;
-    animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+    transition-duration: 1s;
 }
 
 .slider img {
@@ -267,12 +258,6 @@ footer > a {
     .images {
         flex-direction: column;
     }
-}
-
-@keyframes goBack {
-    from {transform: var(--transformOffsetGoal)}
-    50% {filter: grayscale(70%)}
-    to {transform: var(--transformOffsetStart)}
 }
 
 .essayBox {
