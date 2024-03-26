@@ -270,9 +270,9 @@ footer > a {
 }
 
 @keyframes goBack {
-    0% {transform: var(--transformOffsetGoal)}
+    from {transform: var(--transformOffsetGoal)}
     50% {filter: grayscale(70%)}
-    100% {transform: var(--transformOffsetStart)}
+    to {transform: var(--transformOffsetStart)}
 }
 
 .essayBox {
