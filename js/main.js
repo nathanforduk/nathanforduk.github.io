@@ -16,12 +16,19 @@ function change(dir, jump = 2, index) {
     // get the slider div element
     const item = slidersContainer[index]
 
+    // stop if already transitioning
+    if (item.transitioning) return
+
     // get the width of a template image
-    const tempImage = item.slider.children[0]
+    const images = item.slider.children
+    const tempImage = images[0]
     const increment = tempImage.width * jump
 
     // move div in specified direction
+    item.transitioning = true
     item.pos -= increment * dir
+    if (item.pos > 0) item.pos = 0
+    if (item.pos <= -increment * images.length) item.pos = 0
     item.slider.style.transform = 'translateX(' + item.pos + 'px)'
 }
 
@@ -56,8 +63,11 @@ onload = () => {
     icon.src = path(document.body.getAttribute("theme"))
 
     const sliders = document.querySelectorAll('.slider')
-    for (let i = 0; i < sliders.length; i ++)
-        slidersContainer.push({slider: sliders[i], pos: 0})
+    for (let i = 0; i < sliders.length; i ++) {
+        const item = {slider: sliders[i], pos: 0, transitioning: false}
+        item.slider.addEventListener('transitionend', () => item.transitioning = false)
+        slidersContainer.push(item)
+    }
 }
 
 onresize = () => {

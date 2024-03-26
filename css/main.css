@@ -204,7 +204,7 @@ footer > a {
     width: max-content;
     align-items: center;
     height: 100%;
-    transition-duration: 1s;
+    transition-duration: .6s;
 }
 
 .slider img {
