@@ -175,7 +175,7 @@ footer > a {
 .banner #l, .banner #r {
     position: absolute;
     top: 0;
-    background-color: #1118;
+    background-color: #1117;
     height: 100%;
     display: flex;
     align-items: center;
@@ -193,7 +193,7 @@ footer > a {
 }
 
 .banner #l:hover, .banner #r:hover {
-    background-color: #111;
+    background-color: #111a;
     cursor: pointer;
 }
 
@@ -204,7 +204,7 @@ footer > a {
     width: max-content;
     align-items: center;
     height: 100%;
-    transition-duration: .6s;
+    transition-duration: 1s;
 }
 
 .slider img {

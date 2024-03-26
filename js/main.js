@@ -21,8 +21,8 @@ function change(dir, jump = 2, index) {
 
     // get the width of a template image
     const images = item.slider.children
-    const tempImage = images[0]
-    const increment = tempImage.width * jump
+    const tempW = images[0].width
+    const increment = tempW * jump
 
     // move div in specified direction
     item.pos -= increment * dir
@@ -30,7 +30,8 @@ function change(dir, jump = 2, index) {
         item.pos = 0
         return
     }
-    if (item.pos <= -increment * images.length) item.pos = 0
+
+    if (item.pos <= (-increment) * images.length / jump) item.pos = 0
 
     item.transitioning = true
     item.slider.style.transform = 'translateX(' + item.pos + 'px)'
